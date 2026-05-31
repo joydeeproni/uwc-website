@@ -1,0 +1,133 @@
+/*
+ * Urban Woodcraft — Design System
+ * Source: Figma file YMcjZDwEk3buSTr0mrCz8a (Tactile)
+ *
+ * Each .text-* class encapsulates the full Figma text style
+ * (family, size, weight, line-height, letter-spacing). Sizes are
+ * responsive: base = mobile, md = tablet, lg = desktop (matches
+ * Figma at 1512px).
+ *
+ * Usage: <h2 class="text-h2 text-dark">Title</h2>
+ *
+ * Color tokens live in tailwind.config.mjs:
+ *   text-dark / bg-dark        #20160e
+ *   text-cream / bg-cream      #fdfcfb  (alias: cream-1)
+ *   text-orange / bg-orange    #ca670b
+ *   text-secondary             #2e1d0f99 (dark @ 60%)
+ *   border-brand-border        #ffffff1a (white @ 10%)
+ */
+
+/* ── Headings ───────────────────────────────────────────── */
+.text-h1 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  font-size: 44px;
+}
+.text-h2 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  font-size: 28px;
+}
+.text-h3 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  font-size: 24px;
+}
+
+/* ── Body ───────────────────────────────────────────────── */
+.text-body-1 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 0;
+  font-size: 18px;
+}
+.text-body-2 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0;
+  font-size: 16px;
+}
+.text-body-2-emph {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0;
+  font-size: 16px;
+}
+.text-body-3 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0;
+  font-size: 14px;
+}
+
+/* ── Utility text ──────────────────────────────────────── */
+.text-button {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.text-chip {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0;
+  font-size: 14px;
+}
+.text-eyebrow {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.167em;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+/* ── Display sizes (oversized wordmarks) ──────────────── */
+.text-display-wordmark {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-size: 64px;
+}
+.text-display-hero {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  font-size: 56px;
+}
+
+/* ── Responsive scale-ups (md = 768, lg = 1024) ──────── */
+@media (min-width: 768px) {
+  .text-h1 { font-size: 60px; }
+  .text-h2 { font-size: 36px; }
+  .text-display-wordmark { font-size: 160px; }
+  .text-display-hero { font-size: 128px; }
+}
+
+@media (min-width: 1024px) {
+  .text-h1 { font-size: 78px; }
+  .text-h2 { font-size: 42px; }
+  .text-h3 { font-size: 32px; }
+  .text-body-1 { font-size: 22px; }
+  .text-body-2 { font-size: 18px; }
+  .text-body-2-emph { font-size: 18px; }
+  .text-body-3 { font-size: 16px; }
+  .text-chip { font-size: 16px; }
+  .text-display-wordmark { font-size: 240px; }
+  .text-display-hero { font-size: 216px; letter-spacing: -8.64px; }
+}

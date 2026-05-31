@@ -2,12 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Design system tokens (text styles) */
+@import './design-system.css';
+
 :root {
   --dark: #20160e;
+  --cream-1: #fdfcfb;
+  --orange: #ca670b;
+  --secondary: #2e1d0f99;
   --white: #ffffff;
-  --secondary: rgba(46, 29, 15, 0.6);
-  --accent: #facc15;
+  --brand-border: #ffffff1a;
 }
 
-html, body { background: #ffffff; color: var(--dark); }
-body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+html, body { background: #fdfcfb; color: #20160e; }
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

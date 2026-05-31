@@ -4,13 +4,17 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Brand color tokens — mirror Figma variables (file: YMcjZDwEk3buSTr0mrCz8a)
         dark: '#20160e',
-        secondary: 'rgba(46,29,15,0.6)',
-        accent: '#facc15',
+        cream: '#fdfcfb',
+        orange: '#ca670b',
+        secondary: '#2e1d0f99',
+        'brand-border': '#ffffff1a',
+        // Aliases used in templates
+        'cream-1': '#fdfcfb',
       },
       fontFamily: {
         sans: ['"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
-        display: ['"Saans-TRIAL"', '"Helvetica Neue"', 'Helvetica', 'sans-serif'],
       },
     },
   },
