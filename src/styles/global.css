@@ -1,9 +1,9 @@
+/* @import must come first (CSS spec) — pulls in our design system text styles. */
+@import './design-system.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Design system tokens (text styles) */
-@import './design-system.css';
 
 :root {
   --dark: #20160e;
