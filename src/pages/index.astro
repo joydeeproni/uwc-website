@@ -1,0 +1,875 @@
+---
+import Base from '../layouts/Base.astro';
+import '../styles/global.css';
+
+const A = '/assets';
+// SVG assets
+const imgEllipse2 = `${A}/imgEllipse2.svg`;
+const imgVector = `${A}/imgVector.svg`;
+const imgPointer2 = `${A}/imgPointer2.svg`;
+const imgPointerLine2 = `${A}/imgPointerLine2.svg`;
+// PNG assets
+const imgImage10 = `${A}/imgImage10.png`;
+const imgRectangle = `${A}/imgRectangle.png`;
+const imgRectangle1 = `${A}/imgRectangle1.png`;
+const imgRectangle2 = `${A}/imgRectangle2.png`;
+const imgRectangle3 = `${A}/imgRectangle3.png`;
+const imgRectangle4 = `${A}/imgRectangle4.png`;
+const imgRectangle5 = `${A}/imgRectangle5.png`;
+const imgFrame15 = `${A}/imgFrame15.png`;
+const imgFrame20 = `${A}/imgFrame20.png`;
+const imgFrame13 = `${A}/imgFrame13.png`;
+const imgFrame18 = `${A}/imgFrame18.png`;
+const imgImageBand = `${A}/imgImageBand.png`;
+const imgRectangle6 = `${A}/imgRectangle6.png`;
+const imgRectangle7 = `${A}/imgRectangle7.png`;
+const imgRectangle8 = `${A}/imgRectangle8.png`;
+const imgRectangle9 = `${A}/imgRectangle9.png`;
+const imgRectangle10 = `${A}/imgRectangle10.png`;
+const imgRectangle11 = `${A}/imgRectangle11.png`;
+const imgRectangle12 = `${A}/imgRectangle12.png`;
+const imgRectangle13 = `${A}/imgRectangle13.png`;
+const imgRectangle14 = `${A}/imgRectangle14.png`;
+const imgRectangle15 = `${A}/imgRectangle15.png`;
+const imgRectangle16 = `${A}/imgRectangle16.png`;
+const imgRectangle17 = `${A}/imgRectangle17.png`;
+const imgImage1 = `${A}/imgImage1.png`;
+const imgImage2 = `${A}/imgImage2.png`;
+const imgImage3 = `${A}/imgImage3.png`;
+const imgRectangle18 = `${A}/imgRectangle18.png`;
+const imgRectangle19 = `${A}/imgRectangle19.png`;
+const imgRectangle20 = `${A}/imgRectangle20.png`;
+const imgCleanShot = `${A}/imgCleanShot20260529At1042102X1.png`;
+const imgRectangle29 = `${A}/imgRectangle29.png`;
+const imgRectangle30 = `${A}/imgRectangle30.png`;
+const imgRectangle31 = `${A}/imgRectangle31.png`;
+const imgRectangle21 = `${A}/imgRectangle21.png`;
+const imgRectangle22 = `${A}/imgRectangle22.png`;
+const imgRectangle23 = `${A}/imgRectangle23.png`;
+const imgRectangle24 = `${A}/imgRectangle24.png`;
+const imgRectangle27 = `${A}/imgRectangle27.png`;
+const imgRectangle28 = `${A}/imgRectangle28.png`;
+const imgImage12 = `${A}/imgImage12.png`;
+const imgImage13 = `${A}/imgImage13.png`;
+const imgFrame63 = `${A}/imgFrame63.png`;
+---
+<Base>
+  <div class="bg-[#fdfcfb] border border-[#bebebe] border-solid flex flex-col items-start relative w-[1512px] mx-auto">
+
+    <!-- Editorial — Hero -->
+    <div class="flex flex-col gap-[24px] h-[960px] items-start overflow-clip relative shrink-0 w-[1512px] bg-cover bg-center" style={`background-image: linear-gradient(rgba(32,22,14,0.55),rgba(32,22,14,0.55)), url(${imgRectangle3})`}>
+      <!-- TopNav -->
+      <div class="flex h-[120px] items-center justify-between px-[120px] relative shrink-0 w-full">
+        <p class="leading-none text-[96px] text-white tracking-[-3.84px] whitespace-nowrap font-sans">
+          <span class="font-light tracking-[-0.64px]">urban</span><span class="font-bold tracking-[-0.64px]">woodcraft</span>
+        </p>
+        <div class="flex gap-[24px] items-center font-bold text-[12px] text-white uppercase whitespace-nowrap">
+          <p>Menu</p>
+          <p>Search</p>
+          <p>account</p>
+          <p>Cart (0)</p>
+        </div>
+        <div class="bg-white flex items-center px-[18px] py-[12px] rounded-full">
+          <p class="font-bold text-[12px] text-dark uppercase whitespace-nowrap">SALE!</p>
+        </div>
+      </div>
+      <!-- MetaStrip -->
+      <div class="border-white/10 border-b border-t flex font-bold h-[72px] items-center justify-between px-[120px] text-[12px] text-white uppercase w-full whitespace-nowrap">
+        <p>dining</p>
+        <p>living</p>
+        <p>bedroom</p>
+        <p>STORAGE</p>
+        <p>BARN DOORS</p>
+        <p>vanities</p>
+        <p>occassional</p>
+      </div>
+      <!-- Hero content -->
+      <div class="flex flex-1 flex-col items-start justify-center min-h-px pb-[80px] pt-[72px] px-[80px] relative w-full">
+        <div class="flex flex-1 gap-[32px] items-end relative w-full">
+          <div class="flex flex-1 flex-col items-start min-w-px relative">
+            <div class="flex gap-[56px] items-end relative w-full">
+              <div class="text-[78px] text-white tracking-[-2.34px] whitespace-nowrap leading-none font-medium">
+                <p class="leading-[1.1] mb-0">Real wood.</p>
+                <p class="leading-[1.1] mb-0">Real craft.</p>
+                <p class="leading-[1.1]">Real good.</p>
+              </div>
+              <div class="flex items-center justify-center py-[6px] relative">
+                <p class="text-[22px] text-white w-[259px]">
+                  Furniture crafted from solid, reclaimed wood, built to make every room feel more like home.
+                </p>
+              </div>
+              <div class="size-[100px]"></div>
+            </div>
+          </div>
+          <div class="border border-white border-solid flex items-center justify-center p-[8px] rounded-full size-[160px]">
+            <p class="font-bold text-[12px] text-white uppercase whitespace-nowrap">discover</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shop by Room -->
+    <div class="flex flex-col gap-[64px] items-start px-[80px] py-[160px] relative shrink-0 w-full">
+      <div class="flex flex-col gap-[10px] items-start w-full">
+        <div class="flex gap-[8px] items-center">
+          <div class="bg-[#ca670b] size-[6px]"></div>
+          <p class="capitalize font-mono text-[12px] text-secondary tracking-[0.24px] whitespace-nowrap">Shop by room</p>
+        </div>
+        <p class="text-[42px] text-dark whitespace-nowrap">Solid Wood in Every Form</p>
+      </div>
+      <div class="flex flex-wrap content-start gap-[32px] items-start w-full">
+        <div class="flex flex-col gap-[16px] items-start w-[915px]">
+          <div class="h-[500px] relative w-full">
+            <img alt="" class="absolute inset-0 max-w-none object-cover size-full" src={imgRectangle} />
+          </div>
+          <p class="leading-[1.6] text-[18px] text-dark whitespace-nowrap">Dining</p>
+        </div>
+        <div class="flex flex-col gap-[16px] items-start w-[405px]">
+          <div class="h-[320px] relative w-full">
+            <img alt="" class="absolute inset-0 max-w-none object-cover size-full" src={imgRectangle1} />
+          </div>
+          <p class="leading-[1.6] text-[18px] text-dark whitespace-nowrap">Storage</p>
+        </div>
+        <div class="flex flex-col gap-[16px] items-start w-[405px]">
+          <div class="h-[320px] relative w-full overflow-hidden">
+            <img alt="" class="absolute h-[294.18%] left-[-39.52%] max-w-none top-[-166.77%] w-[154.32%]" src={imgRectangle2} />
+          </div>
+          <p class="leading-[1.6] text-[18px] text-dark whitespace-nowrap">Living</p>
+        </div>
+        <div class="flex flex-col gap-[16px] items-start w-[843px]">
+          <div class="h-[500px] relative w-full">
+            <img alt="" class="absolute inset-0 max-w-none object-cover size-full" src={imgRectangle3} />
+          </div>
+          <p class="leading-[1.6] text-[18px] text-dark whitespace-nowrap">Bedroom</p>
+        </div>
+        <div class="flex flex-col gap-[16px] items-start w-[405px]">
+          <div class="h-[320px] relative w-full overflow-hidden">
+            <img alt="" class="absolute h-[216.41%] left-[-16.94%] max-w-none top-[-71.23%] w-[170.99%]" src={imgRectangle4} />
+          </div>
+          <p class="leading-[1.6] text-[18px] text-dark whitespace-nowrap">Bathroom</p>
+        </div>
+        <div class="flex flex-col items-start w-[405px]">
+          <div class="flex flex-col gap-[16px] items-start w-full">
+            <div class="h-[320px] relative w-full overflow-hidden">
+              <img alt="" class="absolute h-[126.56%] left-0 max-w-none top-[-0.1%] w-full" src={imgRectangle5} />
+            </div>
+            <p class="leading-[1.6] text-[18px] text-dark whitespace-nowrap">Barn Doors</p>
+          </div>
+        </div>
+        <div class="flex flex-1 items-center min-w-px relative">
+          <div class="border border-dark border-solid flex items-center justify-center p-[8px] rounded-full size-[160px]">
+            <p class="font-bold text-[12px] text-dark uppercase whitespace-nowrap">discover</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Marquee strip -->
+    <div class="flex gap-[102px] items-center justify-center w-full">
+      <p class="text-[42px] text-dark text-center whitespace-nowrap">This is a sale text</p>
+      <div class="bg-[#d9d9d9] size-[87px]"></div>
+      <p class="text-[42px] text-dark text-center whitespace-nowrap">Save upto $100 on new Madera Collection</p>
+      <p class="text-[42px] text-dark text-center whitespace-nowrap">Free white-glove delivery over $1000</p>
+      <div class="bg-[#d9d9d9] size-[87px]"></div>
+      <p class="text-[42px] text-dark text-center whitespace-nowrap">Save</p>
+      <div class="bg-[#d9d9d9] size-[87px]"></div>
+      <p class="text-[42px] text-dark text-center whitespace-nowrap">This is a sale text</p>
+    </div>
+
+    <!-- Shop by Collections -->
+    <div class="flex flex-col gap-[24px] h-[1168px] items-start overflow-clip py-[120px] relative shrink-0 w-[1526px]">
+      <div class="flex h-[120px] items-center justify-between px-[120px] w-full">
+        <div class="flex flex-1 flex-col gap-[10px] items-start min-w-px">
+          <div class="flex gap-[8px] items-center">
+            <div class="bg-[#ca670b] size-[6px]"></div>
+            <p class="capitalize font-mono text-[12px] text-secondary tracking-[0.24px] whitespace-nowrap">shop by collections</p>
+          </div>
+          <p class="text-[42px] text-dark whitespace-nowrap">Design For Everyone</p>
+        </div>
+      </div>
+      <div class="flex flex-1 gap-[24px] items-center min-h-px relative">
+        <!-- collection card 1 - Madera -->
+        <div class="flex h-full items-end p-[24px] relative w-[320px]">
+          <div aria-hidden class="absolute inset-0 pointer-events-none">
+            <div class="absolute bg-[rgba(61,43,31,0.05)] inset-0"></div>
+            <div class="absolute inset-0 overflow-hidden">
+              <img alt="" class="absolute h-[81.27%] left-[-17.36%] max-w-none top-[12.93%] w-[199.31%]" src={imgFrame15} />
+            </div>
+          </div>
+          <p class="relative text-[32px] text-dark whitespace-nowrap">Madera</p>
+        </div>
+        <!-- collection card 2 - Osaka -->
+        <div class="flex h-full items-end p-[24px] relative w-[602px]">
+          <div aria-hidden class="absolute inset-0 pointer-events-none">
+            <div class="absolute bg-white inset-0"></div>
+            <img alt="" class="absolute max-w-none object-contain size-full" src={imgFrame20} />
+          </div>
+          <p class="relative text-[32px] text-dark whitespace-nowrap">Osaka</p>
+        </div>
+        <!-- collection card 3 - Hudson -->
+        <div class="flex h-full items-end p-[24px] relative w-[320px]">
+          <div aria-hidden class="absolute inset-0 pointer-events-none">
+            <div class="absolute bg-[rgba(61,43,31,0.05)] inset-0"></div>
+            <div class="absolute inset-0 overflow-hidden">
+              <img alt="" class="absolute h-[81.27%] left-[0.46%] max-w-none top-[21.6%] w-[199.31%]" src={imgFrame13} />
+            </div>
+          </div>
+          <p class="relative text-[32px] text-dark whitespace-nowrap">Hudson</p>
+        </div>
+        <!-- collection card 4 - Camden (Popular) -->
+        <div class="flex gap-[8px] h-full items-end p-[24px] relative w-[320px]">
+          <div aria-hidden class="absolute inset-0 pointer-events-none">
+            <div class="absolute bg-[rgba(61,43,31,0.05)] inset-0"></div>
+            <div class="absolute inset-0 overflow-hidden">
+              <img alt="" class="absolute h-[94.87%] left-[5.97%] max-w-none top-[17.01%] w-[232.66%]" src={imgFrame18} />
+            </div>
+          </div>
+          <p class="relative text-[32px] text-dark whitespace-nowrap">Camden</p>
+          <div class="absolute bg-white flex items-center justify-center left-[14.33px] p-[8px] top-[17px]">
+            <p class="font-medium text-[16px] text-dark whitespace-nowrap">Popular</p>
+          </div>
+        </div>
+        <!-- collection card 5 - Hudson (duplicate) -->
+        <div class="flex h-full items-end p-[24px] relative w-[320px]">
+          <div aria-hidden class="absolute inset-0 pointer-events-none">
+            <div class="absolute bg-[rgba(61,43,31,0.05)] inset-0"></div>
+            <div class="absolute inset-0 overflow-hidden">
+              <img alt="" class="absolute h-[81.27%] left-[-17.36%] max-w-none top-[12.93%] w-[199.31%]" src={imgFrame15} />
+            </div>
+          </div>
+          <p class="relative text-[32px] text-dark whitespace-nowrap">Hudson</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section — Image over Text -->
+    <div class="bg-[#fdfcfb] flex flex-col items-start w-full">
+      <div class="h-[630px] relative w-full overflow-hidden pointer-events-none">
+        <img alt="" class="absolute h-[359.8%] left-0 max-w-none top-[-165.69%] w-full object-cover" src={imgImageBand} />
+      </div>
+      <div class="flex gap-[168px] items-start px-[80px] py-[48px] w-full">
+        <div class="flex flex-1 flex-col gap-[10px] items-start min-w-px">
+          <div class="flex gap-[8px] items-center">
+            <div class="bg-[#ca670b] size-[6px]"></div>
+            <p class="capitalize font-mono text-[12px] text-secondary tracking-[0.24px] whitespace-nowrap">New In</p>
+          </div>
+          <p class="text-[42px] text-dark whitespace-nowrap">Pieces Worth Making Room For.</p>
+        </div>
+        <div class="flex flex-1 flex-col gap-[24px] items-start leading-[1.6] min-w-px text-[18px] text-dark">
+          <p class="min-w-full">The kind of furniture that gets better with every passing year.</p>
+          <p class="w-[486px]">Each one starts as reclaimed teak with its own story. We shape it, build around it, and finish it by hand. Designed to feel like it's always belonged, and built to prove it.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Highlight trio + filler -->
+    <div class="bg-[#fdfcfb] flex flex-col items-start py-[160px] w-full">
+      <div class="flex flex-col items-start px-[80px] py-[40px]">
+        <div class="flex gap-[24px] items-start">
+          <div class="flex flex-col gap-[16px] items-start justify-center">
+            <div class="h-[548px] relative w-[500px] overflow-hidden">
+              <img alt="" class="absolute h-full left-[0.01%] max-w-none top-0 w-[125.01%] object-cover" src={imgRectangle6} />
+            </div>
+            <div class="flex flex-col gap-[6px] items-start whitespace-nowrap">
+              <p class="text-[22px] text-dark">Save upto $1000 on this Atelier Dining Tables</p>
+              <p class="leading-[1.6] text-[18px] text-secondary">One of the last from this run.</p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-[16px] items-start justify-center">
+            <div class="h-[548px] relative w-[500px]">
+              <img alt="" class="absolute inset-0 max-w-none object-cover size-full" src={imgRectangle7} />
+            </div>
+            <div class="flex flex-col gap-[6px] items-start whitespace-nowrap">
+              <p class="text-[22px] text-dark">Discover Personal Shopping</p>
+              <p class="leading-[1.6] text-[18px] text-secondary">Get assistance in picking what fits your needs</p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-[16px] items-start justify-center">
+            <div class="h-[548px] relative w-[500px]">
+              <img alt="" class="absolute inset-0 max-w-none object-cover size-full" src={imgRectangle8} />
+            </div>
+            <div class="flex flex-col gap-[6px] items-start whitespace-nowrap">
+              <p class="text-[22px] text-dark">Grand X Barn Doors</p>
+              <p class="leading-[1.6] text-[18px] text-secondary">Now $885 was $1,075</p>
+            </div>
+          </div>
+          <div class="bg-[#d9d9d9] h-[522px] w-[476px]"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Most Loved (product grid 3x3) -->
+    <div class="bg-[#fdfcfb] flex flex-col gap-[40px] items-center pb-[160px] pt-[24px] px-[80px] w-full">
+      <div class="flex items-start w-full">
+        <div class="flex flex-1 flex-col gap-[10px] items-start min-w-px">
+          <div class="flex gap-[8px] items-center">
+            <div class="bg-[#ca670b] size-[6px]"></div>
+            <p class="capitalize font-mono text-[12px] text-secondary tracking-[0.24px] whitespace-nowrap">Most Loved</p>
+          </div>
+          <p class="text-[42px] text-dark whitespace-nowrap">Consumer Favourites, Season After Season</p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-[64px] items-start w-full">
+        <!-- Row 1 -->
+        <div class="flex gap-[24px] items-center w-full">
+          {[
+            { img: imgRectangle9, title: 'Madera Dining Table', price: 'from $1,870', desc: 'Natural Reclaimed Teak', badge: 'New' },
+            { img: imgRectangle10, title: 'Osaka Dining Table', price: 'from $1,990', desc: 'Natural Reclaimed Teak + Grey Concrete' },
+            { img: imgRectangle11, title: 'Lugano Bed', price: 'from $1,925', desc: 'Natural Reclaimed Teak', badge: 'Limited Stock', dot: true },
+          ].map((p) => (
+            <div class="flex flex-1 flex-col gap-[20px] items-start justify-center min-w-px relative">
+              <div class="h-[500px] relative w-full">
+                <img alt="" class="absolute inset-0 max-w-none object-cover size-full" src={p.img} />
+              </div>
+              {p.badge && (
+                <div class={`absolute bg-white flex gap-[8px] items-center left-[14px] ${p.dot ? 'px-[12px] py-[8px]' : 'p-[8px] justify-center'} top-[17px]`}>
+                  <p class="font-medium text-[16px] text-dark whitespace-nowrap">{p.badge}</p>
+                  {p.dot && <div class="bg-[#ca670b] size-[8px]"></div>}
+                </div>
+              )}
+              <div class="absolute overflow-clip right-[17.67px] size-[32px] top-[21px]">
+                <img alt="" class="absolute inset-[20.83%_16.66%_20.83%_16.67%] block max-w-none" src={imgVector} />
+              </div>
+              <div class="flex flex-col gap-[2px] items-start w-full">
+                <div class="flex gap-[20px] items-start font-medium text-[18px] text-dark w-full">
+                  <p class="flex-1 min-w-px">{p.title}</p>
+                  <p class="text-right whitespace-nowrap">{p.price}</p>
+                </div>
+                <p class="leading-[1.6] text-[16px] text-secondary w-full">{p.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <!-- Row 2 -->
+        <div class="flex gap-[24px] items-center w-full">
+          {[
+            { img: imgRectangle12, title: 'Camden Dining Table', price: 'from $1,425', desc: 'Natural Reclaimed Teak' },
+            { img: imgRectangle13, title: 'Wadi Sideboard', price: '$1,145', desc: 'Natural Mango Wood', soldOut: true },
+            { img: imgRectangle14, title: 'Riviera Bed', price: 'from $2,199', desc: 'Natural Wood', badge: 'New' },
+          ].map((p) => (
+            <div class="flex flex-1 flex-col gap-[20px] items-start justify-center min-w-px relative">
+              <div class={`h-[500px] relative w-full ${p.soldOut ? 'opacity-20' : ''}`}>
+                <img alt="" class="absolute inset-0 max-w-none object-cover size-full" src={p.img} />
+              </div>
+              {p.soldOut && (
+                <div class="absolute bg-white flex items-center justify-center left-[14px] opacity-50 p-[8px] top-[17px]">
+                  <p class="font-medium text-[16px] text-dark whitespace-nowrap">Sold Out</p>
+                </div>
+              )}
+              {p.badge && (
+                <div class="absolute bg-white flex items-center justify-center left-[14px] p-[8px] top-[17px]">
+                  <p class="font-medium text-[16px] text-dark whitespace-nowrap">{p.badge}</p>
+                </div>
+              )}
+              {!p.soldOut && (
+                <div class="absolute overflow-clip right-[17.67px] size-[32px] top-[21px]">
+                  <img alt="" class="absolute inset-[20.83%_16.66%_20.83%_16.67%] block max-w-none" src={imgVector} />
+                </div>
+              )}
+              <div class={`flex flex-col gap-[2px] items-start text-dark w-full ${p.soldOut ? 'opacity-100' : ''}`}>
+                <div class="flex gap-[20px] items-start font-medium text-[18px] w-full">
+                  <p class="flex-1 min-w-px">{p.title}</p>
+                  <p class="text-right whitespace-nowrap">{p.price}</p>
+                </div>
+                <p class={`leading-[1.6] text-[16px] w-full ${p.soldOut ? 'opacity-50' : 'opacity-50'}`}>{p.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <!-- Row 3 -->
+        <div class="flex gap-[24px] items-center w-full">
+          {[
+            { img: imgRectangle15, title: 'Osaka TV Stand', price: '$1,425', desc: 'Natural Reclaimed Teak + Grey Concrete', badge: 'Limited Stock', dot: true },
+            { img: imgRectangle16, title: 'Villa Coffee Table', price: 'from $1,450', desc: 'Natural Reclaimed Teak' },
+            { img: imgRectangle17, title: 'Vamo Bathroom Vanity', price: '$2,035', desc: 'Rustic Grey Finish', soldOut: true },
+          ].map((p) => (
+            <div class="flex flex-1 flex-col gap-[20px] items-start justify-center min-w-px relative">
+              <div class={`h-[500px] relative w-full ${p.soldOut ? 'opacity-20' : ''}`}>
+                <img alt="" class="absolute inset-0 max-w-none object-cover size-full" src={p.img} />
+              </div>
+              {p.badge && (
+                <div class={`absolute bg-white flex gap-[8px] items-center left-[14px] ${p.dot ? 'px-[12px] py-[8px]' : 'p-[8px] justify-center'} top-[17px]`}>
+                  <p class="font-medium text-[16px] text-dark whitespace-nowrap">{p.badge}</p>
+                  {p.dot && <div class="bg-[#ca670b] size-[8px]"></div>}
+                </div>
+              )}
+              {p.soldOut && (
+                <div class="absolute bg-white flex items-center justify-center left-[14px] opacity-50 p-[8px] top-[17px]">
+                  <p class="font-medium text-[16px] text-dark whitespace-nowrap">Sold Out</p>
+                </div>
+              )}
+              {!p.soldOut && (
+                <div class="absolute overflow-clip right-[17.67px] size-[32px] top-[21px]">
+                  <img alt="" class="absolute inset-[20.83%_16.66%_20.83%_16.67%] block max-w-none" src={imgVector} />
+                </div>
+              )}
+              <div class="flex flex-col gap-[2px] items-start text-dark w-full">
+                <div class="flex gap-[20px] items-start font-medium text-[18px] w-full">
+                  <p class="flex-1 min-w-px">{p.title}</p>
+                  <p class="text-right whitespace-nowrap">{p.price}</p>
+                </div>
+                <p class="leading-[1.6] text-[16px] opacity-50 w-full">{p.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- Editorial — Texture: Madera + COLLECTIONS wordmark -->
+    <div class="bg-[#fdfcfb] flex flex-col h-[807px] items-start overflow-clip w-full">
+      <div class="flex h-[120px] items-center justify-between px-[80px] w-full">
+        <div class="h-[15px] w-[324px]"></div>
+        <p class="leading-none text-[#3d2b1f] text-[96px] whitespace-nowrap font-medium">Madera</p>
+      </div>
+      <div class="flex gap-[120px] h-[520px] items-start px-[80px] w-full">
+        <div class="flex flex-col gap-[12px] h-full items-start w-[378px]">
+          <div class="flex gap-[8px] items-center">
+            <div class="bg-[#ca670b] size-[6px]"></div>
+            <p class="capitalize font-mono text-[12px] text-secondary tracking-[0.24px] whitespace-nowrap">collections</p>
+          </div>
+          <p class="min-w-full text-[#3d2b1f] text-[42px]">Each Collection, Its Own World</p>
+          <p class="leading-[1.6] min-w-full text-[16px] text-secondary">Each collection is its own design world, built around a distinct material and a clear aesthetic. We don't build collections for the sake of range. We build them when we have something worth saying. Each one is considered from the first sketch to the final finish, and built to feel like it was always meant to be in your home.</p>
+        </div>
+        <div class="flex flex-1 h-full items-start min-w-px">
+          <div class="flex-1 h-full min-w-px relative overflow-hidden">
+            <img alt="" class="absolute h-[190.96%] left-[-11.71%] max-w-none top-[-54.97%] w-[239.28%]" src={imgImage1} />
+          </div>
+          <div class="flex-1 h-full min-w-px relative">
+            <img alt="" class="absolute max-w-none object-cover size-full" src={imgImage2} />
+            <div class="absolute inset-0 overflow-hidden">
+              <img alt="" class="absolute h-[191.51%] left-[-111.09%] max-w-none top-[-55.19%] w-[239.96%]" src={imgImage3} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col items-center px-[120px] w-full">
+        <p class="leading-none text-[#3d2b1f] text-[240px] text-center whitespace-nowrap font-medium">COLLECTIONS</p>
+      </div>
+    </div>
+
+    <!-- Same Build. Friendlier Prices. + Sale timer -->
+    <div class="flex flex-col gap-[80px] items-start pt-[160px] w-full">
+      <div class="flex flex-col gap-[24px] items-start px-[80px] py-[40px]">
+        <div class="flex flex-col gap-[10px] items-start w-full">
+          <div class="flex gap-[8px] items-center">
+            <div class="bg-[#ca670b] size-[6px]"></div>
+            <p class="capitalize font-mono text-[12px] text-dark tracking-[0.24px] whitespace-nowrap">select prices</p>
+          </div>
+          <p class="text-[42px] text-dark whitespace-nowrap">Same Build. Friendlier Prices.</p>
+        </div>
+        <div class="flex gap-[24px] items-start">
+          <div class="flex flex-col gap-[16px] items-start justify-center">
+            <div class="h-[548px] relative w-[500px] overflow-hidden">
+              <img alt="" class="absolute h-full left-[0.01%] max-w-none top-0 w-[125.01%] object-cover" src={imgRectangle6} />
+            </div>
+            <div class="flex flex-col gap-[6px] items-start whitespace-nowrap">
+              <p class="text-[22px] text-dark">Save upto $1000 on this Atelier Dining Tables</p>
+              <p class="leading-[1.6] text-[18px] text-secondary">One of the last from this run.</p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-[16px] items-start justify-center">
+            <div class="h-[548px] relative w-[500px]">
+              <img alt="" class="absolute inset-0 max-w-none object-cover size-full" src={imgRectangle8} />
+            </div>
+            <div class="flex flex-col gap-[6px] items-start whitespace-nowrap">
+              <p class="text-[22px] text-dark">Grand X Barn Doors</p>
+              <p class="leading-[1.6] text-[18px] text-secondary">Now $885, was $1,075</p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-[16px] items-start justify-center">
+            <div class="h-[548px] relative w-[500px]">
+              <img alt="" class="absolute inset-0 max-w-none object-cover size-full" src={imgRectangle18} />
+            </div>
+            <div class="flex flex-col gap-[6px] items-start">
+              <p class="text-[22px] text-dark whitespace-nowrap">Priced to move them home.</p>
+              <p class="leading-[1.6] text-[18px] text-secondary whitespace-pre">$1,180  •  previously $2,195</p>
+            </div>
+          </div>
+          <div class="bg-[#d9d9d9] h-[522px] w-[476px]"></div>
+        </div>
+      </div>
+      <div class="bg-[#ca670b] flex items-center justify-between p-[80px] w-full">
+        <p class="text-[42px] text-center text-white whitespace-nowrap">Sale ends in</p>
+        <p class="text-[42px] text-center text-white whitespace-nowrap">09:23:13</p>
+        <div class="border-b border-solid border-white flex items-center justify-center py-[20px]">
+          <p class="font-bold text-[12px] text-white uppercase whitespace-nowrap">Access Now</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Editorial — Details (Dining bundle) -->
+    <div class="bg-white flex items-start overflow-clip py-[64px] w-[1512px]">
+      <div class="flex flex-1 flex-col gap-[48px] h-[1025px] items-start min-w-px">
+        <!-- top row 3 images -->
+        <div class="flex flex-1 gap-[72px] items-center min-h-px w-full">
+          <div class="flex-1 h-full min-w-px relative overflow-hidden">
+            <img alt="" class="absolute h-[147.26%] left-0 max-w-none top-[-41.02%] w-full object-cover" src={imgRectangle19} />
+          </div>
+          <div class="flex-1 h-full min-w-px relative">
+            <img alt="" class="absolute inset-0 max-w-none object-contain size-full" src={imgRectangle20} />
+          </div>
+          <div class="flex-1 h-full min-w-px relative">
+            <img alt="" class="absolute inset-0 max-w-none object-contain size-full" src={imgRectangle20} />
+          </div>
+        </div>
+        <!-- middle row image+text+image -->
+        <div class="flex flex-1 gap-[72px] items-center min-h-px w-full">
+          <div class="flex-1 h-full min-w-px relative">
+            <img alt="" class="absolute inset-0 max-w-none object-contain size-full" src={imgRectangle20} />
+          </div>
+          <div class="flex flex-col gap-[48px] items-start">
+            <div class="text-[32px] text-dark whitespace-nowrap">
+              <p class="leading-[normal] mb-0">Dining Table + Chairs</p>
+              <p class="leading-[normal]">Save upto $560 – if bought together</p>
+            </div>
+            <div class="text-[22px] text-dark w-[512px] whitespace-pre-wrap">
+              <p class="leading-[normal] mb-0">Adel Dining Table                        $625  / from $980</p>
+              <p class="leading-[normal]">Adel Chair Set         .                   $599  / from $915</p>
+            </div>
+            <div class="opacity-50 text-[18px] text-dark whitespace-nowrap">
+              <p class="leading-[1.6] mb-0">The final pieces from these runs.</p>
+              <p class="leading-[1.6]">Reclaimed teak. Built to remain.</p>
+            </div>
+            <div class="flex items-center justify-center py-[20px]">
+              <p class="font-bold text-[12px] text-dark uppercase whitespace-nowrap">view bundle</p>
+            </div>
+          </div>
+          <div class="flex-1 h-full min-w-px relative">
+            <img alt="" class="absolute inset-0 max-w-none object-contain size-full" src={imgRectangle20} />
+          </div>
+        </div>
+        <!-- bottom row 3 images -->
+        <div class="flex flex-1 gap-[72px] items-center min-h-px w-full">
+          <div class="flex-1 h-full min-w-px relative">
+            <img alt="" class="absolute inset-0 max-w-none object-contain size-full" src={imgRectangle20} />
+          </div>
+          <div class="flex-1 h-full min-w-px relative">
+            <img alt="" class="absolute inset-0 max-w-none object-contain size-full" src={imgRectangle20} />
+          </div>
+          <div class="flex-1 h-full min-w-px relative">
+            <img alt="" class="absolute inset-0 max-w-none object-contain size-full" src={imgRectangle20} />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- People love us — bento -->
+    <div class="bg-[#fdfcfb] flex flex-col gap-[48px] items-start px-[80px] py-[120px] w-full">
+      <div class="flex flex-col gap-[120px] items-start w-full">
+        <div class="flex flex-col items-start overflow-clip w-full">
+          <div class="flex gap-[56px] items-end w-full">
+            <div class="aspect-[1136/355] flex-1 min-w-px relative overflow-hidden">
+              <img alt="" class="absolute h-[112.89%] left-[0.01%] max-w-none top-[-12.8%] w-[99.98%] object-cover" src={imgCleanShot} />
+            </div>
+            <div class="border-2 border-dark border-solid flex items-center justify-center p-[8px] rounded-[99px] size-[160px]">
+              <p class="font-bold text-[12px] text-dark uppercase whitespace-nowrap">More Stories</p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-[16px] items-start pt-[32px] w-full">
+            <div class="flex flex-col gap-[8px] items-start w-full">
+              <div class="flex gap-[8px] items-center">
+                <div class="bg-[#ca670b] size-[6px]"></div>
+                <p class="capitalize font-mono text-[12px] text-secondary tracking-[0.24px] whitespace-nowrap">testimonials</p>
+              </div>
+              <p class="min-w-full text-[42px] text-dark">People love us</p>
+            </div>
+            <div class="h-[29px] w-full"></div>
+            <div class="h-[15px] w-full"></div>
+          </div>
+        </div>
+        <div class="flex gap-[24px] items-start w-full">
+          <div class="h-[567px] relative w-[427px]">
+            <img alt="" class="absolute inset-0 max-w-none object-cover size-full" src={imgRectangle29} />
+          </div>
+          <div class="flex flex-1 items-center min-w-px pt-[260px] relative">
+            <div class="h-[567px] relative w-[427px]">
+              <img alt="" class="absolute inset-0 max-w-none object-cover size-full" src={imgRectangle30} />
+            </div>
+          </div>
+          <div class="flex flex-1 flex-col h-[520px] items-start min-w-px overflow-clip relative">
+            <div class="flex flex-col gap-[12px] h-[260px] items-start text-[#111827] w-full">
+              <p class="leading-[normal] text-[22px] w-full">Sasha & William loves their new bed that was handcrafted for them</p>
+              <p class="leading-[1.6] text-[16px] w-full">In the final step, reclaimed teak meets fresh wood in a way that's entirely our own. A quiet union of history and making.</p>
+            </div>
+            <div class="flex-1 min-h-px relative w-full">
+              <img alt="" class="absolute inset-0 max-w-none object-cover size-full" src={imgRectangle31} />
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="font-sans font-semibold text-[#ca670b] text-[12px] tracking-[0.96px] uppercase whitespace-nowrap">#urbanwoodcrafters</p>
+    </div>
+
+    <!-- Our Process: 14 Days From First Cut -->
+    <div class="bg-[#fdfcfb] flex flex-col gap-[100px] items-start px-[80px] py-[40px] w-full">
+      <div class="flex items-end justify-between w-full">
+        <div class="flex flex-col gap-[24px] items-start">
+          <div class="flex gap-[8px] items-center">
+            <div class="bg-[#ca670b] size-[6px]"></div>
+            <p class="capitalize font-mono text-[12px] text-secondary tracking-[0.24px] whitespace-nowrap">Our Process</p>
+          </div>
+          <p class="text-[42px] text-dark whitespace-pre">14 Days From First Cut, <br aria-hidden />To Your Front Door</p>
+        </div>
+        <div class="flex flex-col items-start justify-center">
+          <p class="leading-[1.6] text-[#111827] text-[18px] w-[526px]">From the first cut to the final finish, every piece is built by hand and delivered to your door in 14 days.</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap content-start gap-[32px] items-start w-full">
+        <div class="flex flex-col gap-[32px] items-start pb-[80px] w-[624px]">
+          <div class="h-[400px] relative w-full">
+            <img alt="" class="absolute inset-0 max-w-none object-cover size-full" src={imgRectangle21} />
+          </div>
+          <p class="opacity-10 text-[#111827] text-[42px] text-center whitespace-nowrap">02</p>
+          <div class="flex flex-col gap-[16px] items-start leading-[1.6] text-[#111827] w-full">
+            <p class="text-[18px] whitespace-nowrap">We reveal what's underneath, without erasing its story.</p>
+            <p class="opacity-50 text-[16px] w-[543px]">The wood is cleaned, smoothed, and prepared – carefully, without losing what makes it worth using in the first place. Every mark that belongs there, stays there.</p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-[32px] items-start pb-[80px] w-[624px]">
+          <p class="opacity-10 text-[#111827] text-[42px] text-center whitespace-nowrap">01</p>
+          <div class="flex flex-col gap-[16px] items-start leading-[1.6] text-[#111827] w-full">
+            <p class="text-[18px] whitespace-nowrap">It starts with wood that's already lived a life.</p>
+            <p class="opacity-50 text-[16px] w-[503px]">Every board arrives carrying its own history – knots, grain patterns, weathered edges earned over decades. We don't see imperfections. We see character worth building around.</p>
+          </div>
+          <div class="h-[400px] relative w-full">
+            <img alt="" class="absolute inset-0 max-w-none object-cover size-full" src={imgRectangle22} />
+          </div>
+        </div>
+        <div class="flex flex-col gap-[32px] items-start pb-[80px] w-[624px]">
+          <div class="h-[400px] relative w-full">
+            <img alt="" class="absolute inset-0 max-w-none object-cover size-full" src={imgRectangle23} />
+          </div>
+          <p class="opacity-10 text-[#111827] text-[42px] text-center whitespace-nowrap">03</p>
+          <div class="flex flex-col gap-[16px] items-start leading-[1.6] text-[#111827] w-full">
+            <p class="text-[18px] whitespace-nowrap">We build with intention.</p>
+            <p class="opacity-50 text-[16px] w-[486px]">New hardwood forms the bones of every piece we build. Cut by hand, joined tightly, built to hold without shifting, loosening, or giving way. The kind of structure that only comes from doing it the slow way.</p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-[32px] items-start pb-[80px] w-[624px]">
+          <p class="leading-none opacity-10 text-[#111827] text-[42px] text-center whitespace-nowrap font-light">04</p>
+          <div class="h-[400px] relative w-full">
+            <img alt="" class="absolute inset-0 max-w-none object-cover size-full" src={imgRectangle24} />
+          </div>
+          <div class="flex flex-col gap-[16px] items-start leading-[1.6] text-[#111827] w-full">
+            <p class="text-[18px] whitespace-nowrap">This is where it all comes together.</p>
+            <p class="opacity-50 text-[16px] w-[462px]">The reclaimed teak top is laid, fitted, and finished onto its hardwood frame by hand. Two kinds of wood, two histories, one piece of furniture. This is what makes every Urban Woodcraft piece entirely its own.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Yellow CTA: The Space You Want Starts Here -->
+    <div class="bg-[#c48900] flex gap-[88px] items-center justify-center p-[80px] w-full">
+      <div class="flex flex-col gap-[20px] items-start text-white w-[360px]">
+        <p class="min-w-full text-[42px]">The Space You Want Starts Here</p>
+        <p class="leading-[1.6] text-[18px] w-[370px]">Save the pieces you love and come back to them whenever you're ready.</p>
+      </div>
+      <div class="border-2 border-white border-solid flex items-center justify-center p-[8px] rounded-[99px] size-[160px]">
+        <div class="font-bold text-[12px] text-white uppercase whitespace-nowrap text-center">
+          <p class="leading-normal mb-0 whitespace-pre">BUILD YOUR </p>
+          <p class="leading-normal whitespace-pre">COLLECTION</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Editorial — Desktop / Visit Us -->
+    <div class="bg-white flex flex-col gap-[150px] items-end overflow-clip p-[120px] w-[1512px]">
+      <div class="flex items-end justify-between w-[1272px]">
+        <div class="flex flex-col gap-[24px] items-start">
+          <div class="flex gap-[8px] items-center">
+            <div class="bg-[#ca670b] size-[6px]"></div>
+            <p class="capitalize font-mono text-[12px] text-secondary tracking-[0.24px] whitespace-nowrap">VIsit Us</p>
+          </div>
+          <p class="text-[42px] text-dark w-[314px]">Not a showroom.</p>
+        </div>
+        <div class="flex flex-col gap-[8px] items-start font-medium text-[#111827] text-[16px] whitespace-nowrap">
+          <p>155 DELTA PARK BLVD.</p>
+          <p>BRAMPTON, TORONTO</p>
+          <p>APPOINTMENTS ONLY</p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-[24px] items-start w-[970px]">
+        <div class="flex gap-[24px] items-start w-full">
+          <div class="flex-1 h-[476px] min-w-px relative">
+            <img alt="" class="absolute inset-0 max-w-none object-cover size-full" src={imgRectangle27} />
+          </div>
+          <div class="flex-1 h-[476px] min-w-px relative">
+            <img alt="" class="absolute inset-0 max-w-none object-cover size-full" src={imgRectangle28} />
+          </div>
+        </div>
+        <div class="flex flex-col gap-[12px] items-start text-[#111827] w-full">
+          <p class="text-[22px] w-full">Where the furniture lives before it lives with you.</p>
+          <p class="leading-[1.6] text-[16px] w-full">Our founder lives with every piece we make. The Toronto residence is furnished entirely in Urban Woodcraft — tables that have hosted dinners, beds that have been slept in, wood that has settled into a family's daily rhythm. A small number of clients are invited each month to visit in person. No sales floor. No pressure. Just the work, as it was intended to be lived with.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ: Still Have Questions -->
+    <div class="bg-white flex flex-col gap-[100px] items-start px-[80px] py-[88px] w-full">
+      <div class="flex items-end justify-between w-full">
+        <div class="flex flex-col gap-[24px] items-start w-[515px]">
+          <div class="flex gap-[8px] items-center">
+            <div class="bg-[#ca670b] size-[6px]"></div>
+            <p class="capitalize font-mono text-[12px] text-secondary tracking-[0.24px] whitespace-nowrap">FAQ</p>
+          </div>
+          <p class="text-[42px] text-dark w-[314px]">Still Have Questions?</p>
+        </div>
+        <div class="flex flex-1 flex-col items-start justify-center min-w-px">
+          <p class="leading-[1.6] text-[16px] text-dark w-[407px]">Join 500+ homeowners who've found their perfect piece through our guided showroom experiences.</p>
+        </div>
+        <div class="border-dark border-b border-solid flex items-center justify-center py-[20px]">
+          <p class="font-bold text-[12px] text-dark uppercase whitespace-nowrap">Text Specialist</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap content-start gap-[32px] items-start w-full">
+        <div class="flex flex-col items-start pb-[32px] w-[624px]">
+          <div class="flex flex-col gap-[16px] items-start leading-[1.6] text-dark w-full">
+            <p class="text-[18px] whitespace-nowrap">How long does it take to make and deliver?</p>
+            <p class="opacity-50 text-[16px] w-[543px]">Every piece is built to order and delivered to your door in 14 days. Free shipping across Canada and the US, no minimums.</p>
+          </div>
+        </div>
+        <div class="flex flex-col items-start pb-[32px] w-[624px]">
+          <div class="flex flex-col gap-[16px] items-start leading-[1.6] text-dark w-full">
+            <p class="text-[18px] whitespace-nowrap">Can I return it if it doesn't work in my space?</p>
+            <p class="opacity-50 text-[16px] w-[503px]">Yes – all returns are accepted within 7 days of receipt, provided the piece is in its original, unused condition. A return freight fee applies ($100 Canada / $149 US). Custom-stained or custom-made orders are final sale. Full details at our returns page.</p>
+          </div>
+        </div>
+        <div class="flex flex-col items-start pb-[32px] w-[624px]">
+          <div class="flex flex-col gap-[16px] items-start text-dark w-full">
+            <p class="leading-[1.6] text-[18px] whitespace-nowrap">What if it arrives damaged?</p>
+            <p class="leading-[1.6] opacity-50 text-[16px] w-[436px]">
+              It shouldn't. But if it does, we'll repair or replace it at no cost to you. Reach out immediately at <a class="underline" href="mailto:info@urbanwoodcraft.com">info@urbanwoodcraft.com</a> or call us toll-free and we'll sort it out.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col items-start pb-[32px] w-[624px]">
+          <div class="flex flex-col gap-[16px] items-start leading-[1.6] text-dark w-full">
+            <p class="text-[18px] whitespace-nowrap">Can I order a custom size or finish?</p>
+            <p class="opacity-50 text-[16px] w-[479px]">Yes – we offer custom staining and finishing on most pieces. Please note that custom orders are final sale once the work order is signed. Get in touch and we'll walk you through the options.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Financing strip -->
+    <div class="bg-white flex items-center justify-center pb-[88px] pt-[24px] px-[80px] w-full">
+      <div class="flex flex-1 gap-[50px] items-center min-w-px">
+        <p class="leading-[1.6] text-[18px] text-dark whitespace-nowrap">Financing starts at $148/mo</p>
+        <p class="leading-[1.6] opacity-50 text-[16px] text-dark whitespace-nowrap">Officia eiusmod anim est est proident non aliquip id qui id anim eiusmod est eu. Irure sit officia minim irure elit veniam et.</p>
+        <div class="flex gap-[40px] items-center">
+          <div class="h-[48px] relative w-[47px]">
+            <img alt="" class="absolute inset-0 max-w-none object-cover size-full" src={imgImage12} />
+          </div>
+          <div class="h-[28px] relative w-[55px]">
+            <img alt="" class="absolute inset-0 max-w-none object-cover size-full" src={imgImage13} />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERE TO HELP big banner -->
+    <div class="flex flex-col gap-[72px] h-[469px] items-center justify-center overflow-clip pb-[120px] px-[24px] relative w-full">
+      <div aria-hidden class="absolute inset-0 pointer-events-none">
+        <div class="absolute inset-0 overflow-hidden">
+          <img alt="" class="absolute h-[483.58%] left-0 max-w-none top-[-241.86%] w-full object-cover" src={imgFrame63} />
+        </div>
+        <div class="absolute bg-[rgba(46,29,15,0.5)] inset-0"></div>
+      </div>
+      <p class="leading-[0.8] min-w-full text-[216px] text-white text-center tracking-[-8.64px] relative font-medium">HERE TO HELP</p>
+      <div class="flex flex-col gap-[32px] items-center justify-center w-[638px] relative">
+        <div class="flex flex-col items-center w-full">
+          <p class="leading-[1.6] text-[18px] text-white text-center w-full">Every purchase deserves a little confidence. Book a private viewing to see your shortlisted pieces in person, or join a guided shopping call for one-on-one advice on finishes, sizes, and what works best for your space.</p>
+        </div>
+        <div class="flex gap-[32px] items-start">
+          <div class="border-white border-b border-solid flex items-center justify-center py-[20px]">
+            <p class="font-bold text-[12px] text-white uppercase whitespace-nowrap">book private meeting</p>
+          </div>
+          <div class="flex items-center justify-center py-[20px]">
+            <p class="font-bold text-[12px] text-white uppercase whitespace-nowrap">Guided shopping</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="bg-white flex flex-col gap-[64px] items-center overflow-clip pb-[48px] pt-[64px] w-[1512px]">
+      <div class="flex flex-col items-start px-[32px] w-[1512px]">
+        <div class="flex flex-wrap content-start gap-x-[32px] gap-y-[48px] items-start w-[1448px]">
+          <div class="flex flex-col gap-[32px] items-start w-[239px]">
+            <div class="h-[32px] relative w-full">
+              <img alt="Urban Woodcraft" class="absolute inset-0 max-w-none object-contain size-full" src={imgImage10} />
+            </div>
+            <div class="flex flex-col gap-[16px] items-start text-[16px] whitespace-nowrap">
+              <div class="leading-[0] text-dark">
+                <p class="leading-[1.6] mb-0">Urban Woodcraft</p>
+                <p class="leading-[1.6] mb-0">155 Delta Park Boulevard</p>
+                <p class="leading-[1.6]">Brampton, ON – L6T 5M8</p>
+              </div>
+              <p class="leading-[1.6] text-secondary">By appointments only</p>
+            </div>
+            <div class="flex flex-col gap-[16px] items-start leading-[1.6] text-[16px] text-dark whitespace-nowrap">
+              <a class="underline" href="mailto:info@urbanwoodcraft.com">info@urbanwoodcraft.com</a>
+              <p>1 (855) 738-1378 (toll-free)</p>
+            </div>
+          </div>
+          <div class="flex flex-1 gap-[32px] items-start justify-end min-w-px text-[16px] text-dark whitespace-nowrap">
+            <div class="flex flex-col gap-[16px] items-start min-w-[96px] w-[192px]">
+              <p class="font-medium opacity-50">Company</p>
+              <div class="flex flex-col gap-[16px] items-start leading-[1.6]">
+                <p>About Us</p>
+                <p>Inspiration For You</p>
+                <p>Your Account</p>
+                <p>Custom Finishing</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-[16px] items-start min-w-[96px] w-[192px]">
+              <p class="font-medium opacity-50">Services</p>
+              <div class="flex flex-col gap-[16px] items-start leading-[1.6] w-[192px]">
+                <p>Help Centre</p>
+                <p>Personal Shopping</p>
+                <p>Terms &amp; Conditions</p>
+                <p>Home Decor</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-[16px] items-start min-w-[96px]">
+              <p class="font-medium opacity-50">Support</p>
+              <div class="flex flex-col gap-[16px] items-start leading-[1.6] w-[192px]">
+                <p>Help Centre</p>
+                <p>Website Policies</p>
+                <p>Returns, Claims</p>
+                <p>Terms &amp; Conditions</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-[16px] items-start min-w-[96px]">
+              <p class="font-medium opacity-50">Partner</p>
+              <div class="flex flex-col gap-[16px] items-start leading-[1.6] w-[192px]">
+                <p>Help Centre</p>
+                <p>Website Policies</p>
+                <p>Returns, Claims</p>
+                <p>Terms &amp; Conditions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col items-start px-[32px] w-[1512px]">
+        <div class="border-[#e9eaeb] border-solid border-t flex flex-wrap items-end justify-between gap-y-[24px] pt-[32px] w-[1448px]">
+          <div class="flex gap-[16px] items-center justify-center">
+            <p class="leading-[1.6] text-[16px] text-dark whitespace-nowrap">Instagram</p>
+            <div class="size-[4px]"><img alt="" class="block size-full" src={imgEllipse2} /></div>
+            <p class="leading-[1.6] text-[16px] text-dark whitespace-nowrap">Facebook</p>
+            <div class="size-[4px]"><img alt="" class="block size-full" src={imgEllipse2} /></div>
+            <p class="leading-[1.6] text-[16px] text-dark whitespace-nowrap">Twitter</p>
+            <div class="size-[4px]"><img alt="" class="block size-full" src={imgEllipse2} /></div>
+            <p class="leading-[1.6] text-[16px] text-dark whitespace-nowrap">Pinterest</p>
+            <div class="size-[4px]"><img alt="" class="block size-full" src={imgEllipse2} /></div>
+            <p class="leading-[1.6] text-[16px] text-dark whitespace-nowrap">YouTube</p>
+          </div>
+          <p class="leading-[1.6] text-[16px] text-secondary whitespace-nowrap">© 2077 Urban Woodcrafts. Made in Canada.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</Base>
