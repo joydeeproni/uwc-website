@@ -2,100 +2,105 @@
  * Urban Woodcraft — Design System
  * Source: Figma file YMcjZDwEk3buSTr0mrCz8a (Tactile)
  *
- * Each .text-* class encapsulates the full Figma text style
- * (family, size, weight, line-height, letter-spacing). Sizes are
- * responsive: base = mobile, md = tablet, lg = desktop (matches
- * Figma at 1512px).
+ * Each .text-* class encapsulates the exact Figma text style.
+ *
+ * Headings scale down on mobile / tablet (so 78px H1 fits a phone).
+ * Body / Chip / Button / Eyebrow keep their Figma sizes at every
+ * breakpoint — they're already small enough.
  *
  * Usage: <h2 class="text-h2 text-dark">Title</h2>
  *
  * Color tokens live in tailwind.config.mjs:
  *   text-dark / bg-dark        #20160e
- *   text-cream / bg-cream      #fdfcfb  (alias: cream-1)
+ *   text-cream / bg-cream      #fdfcfb
  *   text-orange / bg-orange    #ca670b
- *   text-secondary             #2e1d0f99 (dark @ 60%)
- *   border-brand-border        #ffffff1a (white @ 10%)
+ *   text-secondary             #2e1d0f99  (dark @ 60%)
+ *   border-brand-border        #ffffff1a  (white @ 10%)
  */
 
-/* ── Headings ───────────────────────────────────────────── */
+/* ── Headings (scale-responsive) ───────────────────────── */
 .text-h1 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
-  line-height: 1.1;
+  line-height: 1.1;            /* Figma 110% */
   letter-spacing: -0.04em;
-  font-size: 44px;
+  font-size: 44px;             /* mobile */
 }
 .text-h2 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  line-height: 1;
+  line-height: normal;         /* Figma Auto */
   letter-spacing: 0;
-  font-size: 28px;
+  font-size: 28px;             /* mobile */
 }
 .text-h3 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  line-height: 1;
+  line-height: normal;         /* Figma Auto */
   letter-spacing: 0;
-  font-size: 24px;
+  font-size: 24px;             /* mobile */
 }
 
-/* ── Body ───────────────────────────────────────────────── */
+/* ── Body (fixed Figma sizes) ──────────────────────────── */
 .text-body-1 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: normal;         /* Figma Auto */
   letter-spacing: 0;
-  font-size: 18px;
+  font-size: 22px;
 }
 .text-body-2 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.6;            /* Figma 160% */
   letter-spacing: 0;
-  font-size: 16px;
+  font-size: 18px;
 }
 .text-body-2-emph {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
-  line-height: 1;
+  line-height: normal;         /* Figma Auto */
   letter-spacing: 0;
-  font-size: 16px;
+  font-size: 18px;
 }
 .text-body-3 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.6;            /* Figma 160% */
   letter-spacing: 0;
-  font-size: 14px;
+  font-size: 16px;
 }
 
-/* ── Utility text ──────────────────────────────────────── */
-.text-button {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: 0.1em;
-  font-size: 12px;
-  text-transform: uppercase;
-}
+/* ── Utility text (fixed Figma sizes) ─────────────────── */
 .text-chip {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
-  line-height: 1;
+  line-height: normal;         /* Figma Auto */
   letter-spacing: 0;
-  font-size: 14px;
+  font-size: 16px;
+}
+.text-button {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: normal;         /* Figma Auto */
+  letter-spacing: 0.1em;       /* Figma letterSpacing 1.2 ≈ 10% on 12px */
+  font-size: 12px;
+  text-transform: uppercase;
 }
 .text-eyebrow {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
+  /* Figma reports lineHeight 30 for eyebrow — eyebrows are always
+     single-line so the value has no visible effect; using 1 to keep
+     the bounding box snug for layout alignment. */
   line-height: 1;
-  letter-spacing: 0.167em;
+  letter-spacing: 0.167em;     /* Figma letterSpacing 2 = 2/12 em */
   font-size: 12px;
   text-transform: uppercase;
 }
 
-/* ── Display sizes (oversized wordmarks) ──────────────── */
+/* ── Display sizes (not Figma styles — used for the giant
+ *    HERE TO HELP banner and COLLECTIONS wordmark) ─────── */
 .text-display-wordmark {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
@@ -111,7 +116,7 @@
   font-size: 56px;
 }
 
-/* ── Responsive scale-ups (md = 768, lg = 1024) ──────── */
+/* ── Heading scale-ups (md = 768, lg = 1024) ─────────── */
 @media (min-width: 768px) {
   .text-h1 { font-size: 60px; }
   .text-h2 { font-size: 36px; }
@@ -123,11 +128,6 @@
   .text-h1 { font-size: 78px; }
   .text-h2 { font-size: 42px; }
   .text-h3 { font-size: 32px; }
-  .text-body-1 { font-size: 22px; }
-  .text-body-2 { font-size: 18px; }
-  .text-body-2-emph { font-size: 18px; }
-  .text-body-3 { font-size: 16px; }
-  .text-chip { font-size: 16px; }
   .text-display-wordmark { font-size: 240px; }
   .text-display-hero { font-size: 216px; letter-spacing: -8.64px; }
 }
