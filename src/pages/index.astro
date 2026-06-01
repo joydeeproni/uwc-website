@@ -2,7 +2,9 @@
 import Base from '../layouts/Base.astro';
 import '../styles/global.css';
 
-const A = '/assets';
+// Asset prefix — respects Astro `base` for GitHub Pages deploys.
+// In dev BASE_URL is '/', in production it's '/uwc-website/'.
+const A = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/assets`;
 // SVGs
 const imgEllipse2 = `${A}/imgEllipse2.svg`;
 // PNGs
@@ -105,7 +107,7 @@ const marqueeItems = [
 ];
 ---
 <Base>
-  <main class="bg-cream border border-[#bebebe] flex flex-col items-stretch relative w-full max-w-[1512px] mx-auto overflow-x-hidden">
+  <main class="bg-cream flex flex-col items-stretch relative w-full overflow-x-hidden">
 
     <!-- ───────────────────────────── Editorial — Hero ───────────────────────────── -->
     <section
