@@ -5,7 +5,6 @@ import '../styles/global.css';
 const A = '/assets';
 // SVGs
 const imgEllipse2 = `${A}/imgEllipse2.svg`;
-const imgVector = `${A}/imgVector.svg`;
 // PNGs
 const imgImage10 = `${A}/imgImage10.png`;
 const imgRectangle = `${A}/imgRectangle.png`;
@@ -62,43 +61,82 @@ const mostLoved = [
   { img: imgRectangle16, title: 'Villa Coffee Table',   price: 'from $1,450', desc: 'Natural Reclaimed Teak' },
   { img: imgRectangle17, title: 'Vamo Bathroom Vanity', price: '$2,035',      desc: 'Rustic Grey Finish', soldOut: true },
 ];
+
+const collections = [
+  { name: 'Madera', img: imgFrame15, default: 'h-[81.27%] left-[-17.36%] top-[12.93%] w-[199.31%]' },
+  { name: 'Osaka',  img: imgFrame20, default: 'h-[81.27%] left-[-17.36%] top-[12.93%] w-[199.31%]' },
+  { name: 'Hudson', img: imgFrame13, default: 'h-[81.27%] left-[0.46%] top-[21.6%] w-[199.31%]' },
+  { name: 'Camden', img: imgFrame18, default: 'h-[94.87%] left-[5.97%] top-[17.01%] w-[232.66%]', badge: 'Popular' },
+  { name: 'Lugano', img: imgFrame15, default: 'h-[81.27%] left-[-17.36%] top-[12.93%] w-[199.31%]' },
+  { name: 'Atelier',img: imgFrame20, default: 'h-[81.27%] left-[-17.36%] top-[12.93%] w-[199.31%]' },
+  { name: 'Wadi',   img: imgFrame13, default: 'h-[81.27%] left-[0.46%] top-[21.6%] w-[199.31%]' },
+  { name: 'Riviera',img: imgFrame18, default: 'h-[94.87%] left-[5.97%] top-[17.01%] w-[232.66%]' },
+  { name: 'Villa',  img: imgFrame15, default: 'h-[81.27%] left-[-17.36%] top-[12.93%] w-[199.31%]' },
+  { name: 'Vamo',   img: imgFrame20, default: 'h-[81.27%] left-[-17.36%] top-[12.93%] w-[199.31%]' },
+];
+
+const newInCards = [
+  { img: imgRectangle6,  title: 'Save upto $1000 on Atelier Dining Tables', sub: 'One of the last from this run.' },
+  { img: imgRectangle7,  title: 'Discover Personal Shopping',               sub: 'Get assistance in picking what fits your needs' },
+  { img: imgRectangle8,  title: 'Grand X Barn Doors',                        sub: 'Now $885 was $1,075' },
+  { img: imgRectangle18, title: 'Madera Sideboard',                          sub: 'Limited finishing run' },
+  { img: imgRectangle6,  title: 'Riviera Bed Set',                           sub: 'Bundled with linens' },
+  { img: imgRectangle7,  title: 'Hudson Coffee Table',                       sub: 'New Spring collection' },
+];
+
+const friendlierPrices = [
+  { img: imgRectangle6,  title: 'Save upto $1000 on Atelier Dining Tables', sub: 'One of the last from this run.' },
+  { img: imgRectangle8,  title: 'Grand X Barn Doors',                        sub: 'Now $885, was $1,075' },
+  { img: imgRectangle18, title: 'Priced to move them home.',                 sub: '$1,180 • previously $2,195' },
+  { img: imgRectangle7,  title: 'Camden Console',                            sub: 'Save $400' },
+  { img: imgRectangle6,  title: 'Villa Coffee Table',                        sub: 'Was $1,890, now $1,425' },
+  { img: imgRectangle8,  title: 'Vamo Vanity',                               sub: 'Reduced for shop closing' },
+];
+
+const marqueeItems = [
+  { text: 'This is a sale text' },
+  { dot: true },
+  { text: 'Save upto $100 on new Madera Collection' },
+  { text: 'Free white-glove delivery over $1000' },
+  { dot: true },
+  { text: 'Same Build. Friendlier Prices.' },
+  { dot: true },
+  { text: '14 Days From First Cut To Your Front Door' },
+];
 ---
 <Base>
   <main class="bg-cream border border-[#bebebe] flex flex-col items-stretch relative w-full max-w-[1512px] mx-auto overflow-x-hidden">
 
     <!-- ───────────────────────────── Editorial — Hero ───────────────────────────── -->
     <section
-      class="flex flex-col gap-6 lg:gap-[24px] min-h-[560px] lg:h-[960px] items-stretch overflow-clip relative w-full bg-cover bg-center"
+      class="reveal flex flex-col gap-6 lg:gap-[24px] min-h-[560px] lg:h-[960px] items-stretch overflow-clip relative w-full bg-cover bg-center"
       style={`background-image: linear-gradient(rgba(32,22,14,0.55),rgba(32,22,14,0.55)), url(${imgRectangle3})`}
     >
-      <!-- TopNav -->
       <div class="flex flex-wrap gap-4 lg:gap-0 h-auto lg:h-[120px] items-center justify-between px-5 md:px-12 lg:px-[120px] py-5 lg:py-0 w-full">
-        <p class="leading-none text-[44px] sm:text-[64px] lg:text-[96px] text-white tracking-tight lg:tracking-[-3.84px] whitespace-nowrap">
+        <a href="#" class="leading-none text-[44px] sm:text-[64px] lg:text-[96px] text-white tracking-tight lg:tracking-[-3.84px] whitespace-nowrap">
           <span class="font-light lg:tracking-[-0.64px]">urban</span><span class="font-bold lg:tracking-[-0.64px]">woodcraft</span>
-        </p>
+        </a>
         <nav class="hidden md:flex gap-4 lg:gap-[24px] items-center text-button text-white order-3 lg:order-none w-full lg:w-auto justify-center lg:justify-start">
-          <a href="#">Menu</a>
-          <a href="#">Search</a>
-          <a href="#">account</a>
-          <a href="#">Cart (0)</a>
+          <a href="#" class="link-hover">Menu</a>
+          <a href="#" class="link-hover">Search</a>
+          <a href="#" class="link-hover">account</a>
+          <a href="#" class="link-hover">Cart (0)</a>
         </nav>
-        <div class="bg-white flex items-center px-[18px] py-[12px] rounded-full">
+        <a href="#" class="bg-white flex items-center px-[18px] py-[12px] rounded-full transition-transform duration-200 hover:scale-105">
           <p class="text-button text-dark">SALE!</p>
-        </div>
+        </a>
       </div>
-      <!-- MetaStrip -->
-      <div class="border-brand-border border-b border-t text-button text-white w-full">
+      <nav class="border-brand-border border-b border-t text-button text-white w-full">
         <div class="flex gap-6 lg:gap-0 h-[56px] lg:h-[72px] items-center lg:justify-between px-5 md:px-12 lg:px-[120px] overflow-x-auto whitespace-nowrap [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          <a href="#">dining</a>
-          <a href="#">living</a>
-          <a href="#">bedroom</a>
-          <a href="#">STORAGE</a>
-          <a href="#">BARN DOORS</a>
-          <a href="#">vanities</a>
-          <a href="#">occassional</a>
+          <a href="#" class="link-hover">dining</a>
+          <a href="#" class="link-hover">living</a>
+          <a href="#" class="link-hover">bedroom</a>
+          <a href="#" class="link-hover">STORAGE</a>
+          <a href="#" class="link-hover">BARN DOORS</a>
+          <a href="#" class="link-hover">vanities</a>
+          <a href="#" class="link-hover">occassional</a>
         </div>
-      </div>
-      <!-- Hero copy -->
+      </nav>
       <div class="flex flex-1 flex-col gap-6 items-start justify-end pb-10 lg:pb-[80px] pt-8 lg:pt-[72px] px-5 md:px-12 lg:px-[80px] w-full">
         <div class="flex flex-col lg:flex-row gap-6 lg:gap-[32px] items-start lg:items-end w-full">
           <div class="flex flex-col lg:flex-row flex-1 gap-6 lg:gap-[56px] items-start lg:items-end">
@@ -111,15 +149,15 @@ const mostLoved = [
               Furniture crafted from solid, reclaimed wood, built to make every room feel more like home.
             </p>
           </div>
-          <a href="#" class="border border-white flex items-center justify-center p-[8px] rounded-full size-[120px] lg:size-[160px] shrink-0">
-            <p class="text-button text-white">discover</p>
+          <a href="#" class="btn-pill btn-pill-light border size-[120px] lg:size-[160px] shrink-0">
+            <p class="text-button">discover</p>
           </a>
         </div>
       </div>
     </section>
 
     <!-- ───────────────────────────── Shop by Room ───────────────────────────── -->
-    <section class="flex flex-col gap-10 lg:gap-[64px] px-5 md:px-12 lg:px-[80px] py-20 lg:py-[160px] w-full">
+    <section class="reveal flex flex-col gap-10 lg:gap-[64px] px-5 md:px-12 lg:px-[80px] py-20 lg:py-[160px] w-full">
       <header class="flex flex-col gap-[10px] items-start">
         <div class="flex gap-[8px] items-center">
           <div class="bg-orange size-[6px]"></div>
@@ -128,66 +166,65 @@ const mostLoved = [
         <h2 class="text-h2 text-dark">Solid Wood in Every Form</h2>
       </header>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-[16px] md:gap-[24px] lg:gap-[32px]">
-        <a class="flex flex-col gap-[16px] lg:col-span-7 lg:row-span-2" href="#">
+        <a class="group flex flex-col gap-[16px] lg:col-span-7 lg:row-span-2" href="#">
           <div class="aspect-[915/500] lg:aspect-auto lg:h-[500px] w-full overflow-hidden">
-            <img alt="" class="size-full object-cover" src={imgRectangle} loading="lazy" />
+            <img alt="" class="card-img size-full object-cover" src={imgRectangle} loading="lazy" />
           </div>
-          <p class="text-body-2 text-dark">Dining</p>
+          <p class="card-caption text-body-2 text-dark">Dining</p>
         </a>
-        <a class="flex flex-col gap-[16px] lg:col-span-5" href="#">
+        <a class="group flex flex-col gap-[16px] lg:col-span-5" href="#">
           <div class="aspect-[405/320] w-full overflow-hidden">
-            <img alt="" class="size-full object-cover" src={imgRectangle1} loading="lazy" />
+            <img alt="" class="card-img size-full object-cover" src={imgRectangle1} loading="lazy" />
           </div>
-          <p class="text-body-2 text-dark">Storage</p>
+          <p class="card-caption text-body-2 text-dark">Storage</p>
         </a>
-        <a class="flex flex-col gap-[16px] lg:col-span-5" href="#">
+        <a class="group flex flex-col gap-[16px] lg:col-span-5" href="#">
           <div class="aspect-[405/320] w-full overflow-hidden">
-            <img alt="" class="size-full object-cover" src={imgRectangle2} loading="lazy" />
+            <img alt="" class="card-img size-full object-cover object-center" src={imgRectangle2} loading="lazy" />
           </div>
-          <p class="text-body-2 text-dark">Living</p>
+          <p class="card-caption text-body-2 text-dark">Living</p>
         </a>
-        <a class="flex flex-col gap-[16px] lg:col-span-7 lg:row-span-2" href="#">
+        <a class="group flex flex-col gap-[16px] lg:col-span-7 lg:row-span-2" href="#">
           <div class="aspect-[843/500] lg:aspect-auto lg:h-[500px] w-full overflow-hidden">
-            <img alt="" class="size-full object-cover" src={imgRectangle3} loading="lazy" />
+            <img alt="" class="card-img size-full object-cover" src={imgRectangle3} loading="lazy" />
           </div>
-          <p class="text-body-2 text-dark">Bedroom</p>
+          <p class="card-caption text-body-2 text-dark">Bedroom</p>
         </a>
-        <a class="flex flex-col gap-[16px] lg:col-span-3" href="#">
+        <a class="group flex flex-col gap-[16px] lg:col-span-3" href="#">
           <div class="aspect-[405/320] w-full overflow-hidden">
-            <img alt="" class="size-full object-cover" src={imgRectangle4} loading="lazy" />
+            <img alt="" class="card-img size-full object-cover" src={imgRectangle4} loading="lazy" />
           </div>
-          <p class="text-body-2 text-dark">Bathroom</p>
+          <p class="card-caption text-body-2 text-dark">Bathroom</p>
         </a>
-        <a class="flex flex-col gap-[16px] lg:col-span-2" href="#">
+        <a class="group flex flex-col gap-[16px] lg:col-span-2" href="#">
           <div class="aspect-[405/320] w-full overflow-hidden">
-            <img alt="" class="size-full object-cover" src={imgRectangle5} loading="lazy" />
+            <img alt="" class="card-img size-full object-cover" src={imgRectangle5} loading="lazy" />
           </div>
-          <p class="text-body-2 text-dark">Barn Doors</p>
+          <p class="card-caption text-body-2 text-dark">Barn Doors</p>
         </a>
         <div class="flex items-center justify-center md:col-span-2 lg:col-span-2">
-          <a href="#" class="border border-dark flex items-center justify-center p-[8px] rounded-full size-[120px] lg:size-[160px]">
-            <p class="text-button text-dark">discover</p>
+          <a href="#" class="btn-pill btn-pill-dark border size-[120px] lg:size-[160px]">
+            <p class="text-button">discover</p>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- ───────────────────────────── Marquee strip ───────────────────────────── -->
-    <section class="w-full overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-      <div class="flex gap-10 lg:gap-[102px] items-center justify-start lg:justify-center py-6 lg:py-0 px-5 md:px-8 lg:px-0 w-max lg:w-full whitespace-nowrap text-dark">
-        <p class="text-h2">This is a sale text</p>
-        <div class="bg-[#d9d9d9] size-[40px] lg:size-[87px] shrink-0"></div>
-        <p class="text-h2">Save upto $100 on new Madera Collection</p>
-        <p class="text-h2">Free white-glove delivery over $1000</p>
-        <div class="bg-[#d9d9d9] size-[40px] lg:size-[87px] shrink-0"></div>
-        <p class="text-h2">Save</p>
-        <div class="bg-[#d9d9d9] size-[40px] lg:size-[87px] shrink-0"></div>
-        <p class="text-h2">This is a sale text</p>
+    <!-- ───────────────────────────── Marquee (auto-scroll) ───────────────────────────── -->
+    <section class="reveal w-full">
+      <div class="marquee py-6 lg:py-10 text-dark">
+        <div class="marquee-track">
+          {[...marqueeItems, ...marqueeItems].map((item, i) => (
+            item.dot
+              ? <div class="bg-[#d9d9d9] size-[40px] lg:size-[87px] shrink-0" aria-hidden={i >= marqueeItems.length}></div>
+              : <p class="text-h2 whitespace-nowrap" aria-hidden={i >= marqueeItems.length}>{item.text}</p>
+          ))}
+        </div>
       </div>
     </section>
 
-    <!-- ───────────────────────────── Shop by Collections ───────────────────────────── -->
-    <section class="flex flex-col gap-6 lg:gap-[24px] py-20 lg:py-[120px] w-full overflow-hidden">
+    <!-- ───────────────────────────── Shop by Collections (carousel + hover expand) ───────────────────────────── -->
+    <section class="reveal flex flex-col gap-6 lg:gap-[24px] py-20 lg:py-[120px] w-full">
       <header class="flex flex-col gap-[10px] items-start px-5 md:px-12 lg:px-[120px] w-full">
         <div class="flex gap-[8px] items-center">
           <div class="bg-orange size-[6px]"></div>
@@ -195,35 +232,24 @@ const mostLoved = [
         </div>
         <h2 class="text-h2 text-dark">Design For Everyone</h2>
       </header>
-      <div class="flex gap-4 lg:gap-[24px] items-stretch h-[420px] md:h-[600px] lg:h-[680px] px-5 md:px-12 lg:px-0 overflow-x-auto lg:overflow-visible [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-        <a href="#" class="relative flex items-end p-[24px] w-[240px] lg:w-[320px] shrink-0 bg-[rgba(61,43,31,0.05)] overflow-hidden">
-          <img alt="" class="absolute h-[81.27%] left-[-17.36%] max-w-none top-[12.93%] w-[199.31%]" src={imgFrame15} loading="lazy" />
-          <p class="relative text-h3 text-dark">Madera</p>
-        </a>
-        <a href="#" class="relative flex items-end p-[24px] w-[320px] lg:w-[602px] shrink-0 bg-white overflow-hidden">
-          <img alt="" class="absolute inset-0 size-full object-contain" src={imgFrame20} loading="lazy" />
-          <p class="relative text-h3 text-dark">Osaka</p>
-        </a>
-        <a href="#" class="relative flex items-end p-[24px] w-[240px] lg:w-[320px] shrink-0 bg-[rgba(61,43,31,0.05)] overflow-hidden">
-          <img alt="" class="absolute h-[81.27%] left-[0.46%] max-w-none top-[21.6%] w-[199.31%]" src={imgFrame13} loading="lazy" />
-          <p class="relative text-h3 text-dark">Hudson</p>
-        </a>
-        <a href="#" class="relative flex items-end p-[24px] w-[240px] lg:w-[320px] shrink-0 bg-[rgba(61,43,31,0.05)] overflow-hidden">
-          <img alt="" class="absolute h-[94.87%] left-[5.97%] max-w-none top-[17.01%] w-[232.66%]" src={imgFrame18} loading="lazy" />
-          <p class="relative text-h3 text-dark">Camden</p>
-          <div class="absolute bg-white flex items-center justify-center left-[14px] p-[8px] top-[17px]">
-            <p class="text-chip text-dark">Popular</p>
-          </div>
-        </a>
-        <a href="#" class="relative flex items-end p-[24px] w-[240px] lg:w-[320px] shrink-0 bg-[rgba(61,43,31,0.05)] overflow-hidden">
-          <img alt="" class="absolute h-[81.27%] left-[-17.36%] max-w-none top-[12.93%] w-[199.31%]" src={imgFrame15} loading="lazy" />
-          <p class="relative text-h3 text-dark">Hudson</p>
-        </a>
+      <div class="carousel h-[420px] md:h-[600px] lg:h-[680px] px-5 md:px-12 lg:px-[120px]">
+        {collections.map((c) => (
+          <a href="#" class="group collection-card w-[240px] lg:w-[320px]">
+            <img alt="" class={`collection-card-img-default ${c.default} max-w-none`} src={c.img} loading="lazy" />
+            <img alt="" class="collection-card-img-hover" src={c.img} loading="lazy" />
+            <p class="relative text-h3 text-dark">{c.name}</p>
+            {c.badge && (
+              <div class="absolute bg-white flex items-center justify-center left-[24px] p-[8px] top-[24px]">
+                <p class="text-chip text-dark">{c.badge}</p>
+              </div>
+            )}
+          </a>
+        ))}
       </div>
     </section>
 
-    <!-- ───────────────────────────── Image over Text / New In ───────────────────────────── -->
-    <section class="bg-cream flex flex-col w-full">
+    <!-- ───────────────────────────── New In (image band + carousel) ───────────────────────────── -->
+    <section class="reveal bg-cream flex flex-col w-full">
       <div class="h-[280px] md:h-[440px] lg:h-[630px] relative w-full overflow-hidden">
         <img alt="" class="absolute h-[359.8%] left-0 max-w-none top-[-165.69%] w-full object-cover" src={imgImageBand} loading="lazy" />
       </div>
@@ -240,44 +266,24 @@ const mostLoved = [
           <p class="text-body-2 max-w-[486px]">Each one starts as reclaimed teak with its own story. We shape it, build around it, and finish it by hand. Designed to feel like it's always belonged, and built to prove it.</p>
         </div>
       </div>
-    </section>
-
-    <!-- ───────────────────────────── Highlight trio ───────────────────────────── -->
-    <section class="bg-cream py-16 lg:py-[160px] w-full">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-[24px] px-5 md:px-12 lg:px-[80px]">
-        <article class="flex flex-col gap-[16px]">
-          <div class="aspect-[500/548] w-full overflow-hidden">
-            <img alt="" class="size-full object-cover" src={imgRectangle6} loading="lazy" />
-          </div>
-          <div class="flex flex-col gap-[6px]">
-            <p class="text-body-1 text-dark">Save upto $1000 on this Atelier Dining Tables</p>
-            <p class="text-body-2 text-secondary">One of the last from this run.</p>
-          </div>
-        </article>
-        <article class="flex flex-col gap-[16px]">
-          <div class="aspect-[500/548] w-full overflow-hidden">
-            <img alt="" class="size-full object-cover" src={imgRectangle7} loading="lazy" />
-          </div>
-          <div class="flex flex-col gap-[6px]">
-            <p class="text-body-1 text-dark">Discover Personal Shopping</p>
-            <p class="text-body-2 text-secondary">Get assistance in picking what fits your needs</p>
-          </div>
-        </article>
-        <article class="flex flex-col gap-[16px]">
-          <div class="aspect-[500/548] w-full overflow-hidden">
-            <img alt="" class="size-full object-cover" src={imgRectangle8} loading="lazy" />
-          </div>
-          <div class="flex flex-col gap-[6px]">
-            <p class="text-body-1 text-dark">Grand X Barn Doors</p>
-            <p class="text-body-2 text-secondary">Now $885 was $1,075</p>
-          </div>
-        </article>
-        <div class="bg-[#d9d9d9] hidden lg:block aspect-[476/522]" aria-hidden="true"></div>
+      <!-- New In carousel -->
+      <div class="carousel pb-16 lg:pb-[160px] pt-2 lg:pt-0 px-5 md:px-12 lg:px-[80px]">
+        {newInCards.map((card) => (
+          <a href="#" class="group flex flex-col gap-[16px] w-[280px] md:w-[380px] lg:w-[500px]">
+            <div class="aspect-[500/548] w-full overflow-hidden">
+              <img alt="" class="card-img size-full object-cover" src={card.img} loading="lazy" />
+            </div>
+            <div class="flex flex-col gap-[6px]">
+              <p class="card-caption text-body-1 text-dark">{card.title}</p>
+              <p class="text-body-2 text-secondary">{card.sub}</p>
+            </div>
+          </a>
+        ))}
       </div>
     </section>
 
-    <!-- ───────────────────────────── Most Loved ───────────────────────────── -->
-    <section class="bg-cream flex flex-col gap-10 lg:gap-[40px] pb-16 lg:pb-[160px] pt-6 lg:pt-[24px] px-5 md:px-12 lg:px-[80px] w-full">
+    <!-- ───────────────────────────── Most Loved (product grid with + icon) ───────────────────────────── -->
+    <section class="reveal bg-cream flex flex-col gap-10 lg:gap-[40px] pb-16 lg:pb-[160px] pt-6 lg:pt-[24px] px-5 md:px-12 lg:px-[80px] w-full">
       <header class="flex flex-col gap-[10px] items-start">
         <div class="flex gap-[8px] items-center">
           <div class="bg-orange size-[6px]"></div>
@@ -287,38 +293,47 @@ const mostLoved = [
       </header>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-12 lg:gap-x-[24px] lg:gap-y-[64px]">
         {mostLoved.map((p) => (
-          <article class="flex flex-col gap-[20px] relative">
-            <div class={`aspect-[440/500] w-full relative ${p.soldOut ? 'opacity-20' : ''}`}>
-              <img alt="" class="size-full object-cover" src={p.img} loading="lazy" />
+          <a href="#" class="group flex flex-col gap-[20px] relative">
+            <div class={`aspect-[440/500] w-full relative overflow-hidden ${p.soldOut ? 'opacity-20' : ''}`}>
+              <img alt="" class="card-img size-full object-cover" src={p.img} loading="lazy" />
             </div>
             {p.badge && (
-              <div class={`absolute bg-white flex gap-[8px] items-center left-[14px] top-[17px] ${p.dot ? 'px-[12px] py-[8px]' : 'p-[8px] justify-center'}`}>
+              <div class={`absolute z-10 bg-white flex gap-[8px] items-center left-[14px] top-[17px] ${p.dot ? 'px-[12px] py-[8px]' : 'p-[8px] justify-center'}`}>
                 <p class="text-chip text-dark">{p.badge}</p>
                 {p.dot && <div class="bg-orange size-[8px]"></div>}
               </div>
             )}
             {p.soldOut && (
-              <div class="absolute bg-white flex items-center justify-center left-[14px] opacity-50 p-[8px] top-[17px]">
+              <div class="absolute z-10 bg-white flex items-center justify-center left-[14px] opacity-50 p-[8px] top-[17px]">
                 <p class="text-chip text-dark">Sold Out</p>
               </div>
             )}
             {!p.soldOut && (
-              <img alt="" src={imgVector} class="absolute right-[14px] top-[18px] size-[28px] lg:size-[32px]" loading="lazy" />
+              <button
+                type="button"
+                aria-label={`Add ${p.title} to collection`}
+                onclick="event.preventDefault();event.stopPropagation();"
+                class="btn-fav absolute right-[10px] top-[14px] z-10 group/fav"
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="size-[18px] text-dark">
+                  <path d="M12 5v14M5 12h14" stroke-linecap="round" />
+                </svg>
+              </button>
             )}
             <div class="flex flex-col gap-[2px] text-dark">
               <div class="flex gap-[20px] items-start">
-                <p class="text-body-2-emph flex-1 min-w-0">{p.title}</p>
+                <p class="card-caption text-body-2-emph flex-1 min-w-0">{p.title}</p>
                 <p class="text-body-2-emph text-right whitespace-nowrap">{p.price}</p>
               </div>
               <p class="text-body-2 opacity-50">{p.desc}</p>
             </div>
-          </article>
+          </a>
         ))}
       </div>
     </section>
 
     <!-- ───────────────────────────── Editorial — Texture ───────────────────────────── -->
-    <section class="bg-cream flex flex-col overflow-clip w-full">
+    <section class="reveal bg-cream flex flex-col overflow-clip w-full">
       <div class="flex h-auto lg:h-[120px] items-center justify-between px-5 md:px-12 lg:px-[80px] py-6 lg:py-0 w-full">
         <div class="hidden lg:block h-[15px] w-[324px]"></div>
         <p class="leading-none text-[#3d2b1f] text-[40px] md:text-[60px] lg:text-[96px] font-medium">Madera</p>
@@ -347,72 +362,55 @@ const mostLoved = [
       </div>
     </section>
 
-    <!-- ───────────────────────────── Same Build. Friendlier Prices. ───────────────────────────── -->
-    <section class="flex flex-col gap-16 lg:gap-[80px] pt-20 lg:pt-[160px] w-full">
-      <div class="flex flex-col gap-6 lg:gap-[24px] px-5 md:px-12 lg:px-[80px] py-10 lg:py-[40px]">
-        <header class="flex flex-col gap-[10px] items-start">
+    <!-- ───────────────────────────── Same Build. Friendlier Prices. (carousel) ───────────────────────────── -->
+    <section class="reveal flex flex-col gap-16 lg:gap-[80px] pt-20 lg:pt-[160px] w-full">
+      <div class="flex flex-col gap-6 lg:gap-[24px] py-10 lg:py-[40px]">
+        <header class="flex flex-col gap-[10px] items-start px-5 md:px-12 lg:px-[80px]">
           <div class="flex gap-[8px] items-center">
             <div class="bg-orange size-[6px]"></div>
             <p class="text-eyebrow text-dark">select prices</p>
           </div>
           <h2 class="text-h2 text-dark">Same Build. Friendlier Prices.</h2>
         </header>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-[24px]">
-          <article class="flex flex-col gap-[16px]">
-            <div class="aspect-[500/548] w-full overflow-hidden">
-              <img alt="" class="size-full object-cover" src={imgRectangle6} loading="lazy" />
-            </div>
-            <div class="flex flex-col gap-[6px]">
-              <p class="text-body-1 text-dark">Save upto $1000 on this Atelier Dining Tables</p>
-              <p class="text-body-2 text-secondary">One of the last from this run.</p>
-            </div>
-          </article>
-          <article class="flex flex-col gap-[16px]">
-            <div class="aspect-[500/548] w-full overflow-hidden">
-              <img alt="" class="size-full object-cover" src={imgRectangle8} loading="lazy" />
-            </div>
-            <div class="flex flex-col gap-[6px]">
-              <p class="text-body-1 text-dark">Grand X Barn Doors</p>
-              <p class="text-body-2 text-secondary">Now $885, was $1,075</p>
-            </div>
-          </article>
-          <article class="flex flex-col gap-[16px]">
-            <div class="aspect-[500/548] w-full overflow-hidden">
-              <img alt="" class="size-full object-cover" src={imgRectangle18} loading="lazy" />
-            </div>
-            <div class="flex flex-col gap-[6px]">
-              <p class="text-body-1 text-dark">Priced to move them home.</p>
-              <p class="text-body-2 text-secondary">$1,180 • previously $2,195</p>
-            </div>
-          </article>
-          <div class="bg-[#d9d9d9] hidden lg:block aspect-[476/522]" aria-hidden="true"></div>
+        <div class="carousel px-5 md:px-12 lg:px-[80px]">
+          {friendlierPrices.map((card) => (
+            <a href="#" class="group flex flex-col gap-[16px] w-[280px] md:w-[380px] lg:w-[500px]">
+              <div class="aspect-[500/548] w-full overflow-hidden">
+                <img alt="" class="card-img size-full object-cover" src={card.img} loading="lazy" />
+              </div>
+              <div class="flex flex-col gap-[6px]">
+                <p class="card-caption text-body-1 text-dark">{card.title}</p>
+                <p class="text-body-2 text-secondary">{card.sub}</p>
+              </div>
+            </a>
+          ))}
         </div>
       </div>
       <div class="bg-orange flex flex-col lg:flex-row items-center lg:justify-between gap-6 lg:gap-0 p-10 lg:p-[80px] w-full">
         <p class="text-h2 text-white">Sale ends in</p>
         <p class="text-h2 text-white tabular-nums">09:23:13</p>
-        <a class="border-b border-white flex items-center justify-center py-[20px]" href="#">
+        <a class="btn-text border-b border-white" href="#">
           <p class="text-button text-white">Access Now</p>
         </a>
       </div>
     </section>
 
-    <!-- ───────────────────────────── Editorial — Details ───────────────────────────── -->
-    <section class="bg-white py-10 lg:py-[64px] w-full overflow-clip">
+    <!-- ───────────────────────────── Editorial — Details (Dining bundle) ───────────────────────────── -->
+    <section class="reveal bg-white py-10 lg:py-[64px] w-full overflow-clip">
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-x-[72px] lg:gap-y-[48px] px-5 md:px-12 lg:px-[120px]">
-        <div class="aspect-[4/5] overflow-hidden">
-          <img alt="" class="size-full object-cover" src={imgRectangle19} loading="lazy" />
-        </div>
-        <div class="aspect-[4/5] overflow-hidden">
-          <img alt="" class="size-full object-contain" src={imgRectangle20} loading="lazy" />
-        </div>
-        <div class="aspect-[4/5] overflow-hidden">
-          <img alt="" class="size-full object-contain" src={imgRectangle20} loading="lazy" />
-        </div>
+        <a href="#" class="group aspect-[4/5] overflow-hidden">
+          <img alt="" class="card-img size-full object-cover" src={imgRectangle19} loading="lazy" />
+        </a>
+        <a href="#" class="group aspect-[4/5] overflow-hidden">
+          <img alt="" class="card-img size-full object-contain" src={imgRectangle20} loading="lazy" />
+        </a>
+        <a href="#" class="group aspect-[4/5] overflow-hidden">
+          <img alt="" class="card-img size-full object-contain" src={imgRectangle20} loading="lazy" />
+        </a>
 
-        <div class="aspect-[4/5] overflow-hidden">
-          <img alt="" class="size-full object-contain" src={imgRectangle20} loading="lazy" />
-        </div>
+        <a href="#" class="group aspect-[4/5] overflow-hidden">
+          <img alt="" class="card-img size-full object-contain" src={imgRectangle20} loading="lazy" />
+        </a>
         <div class="flex flex-col gap-8 lg:gap-[48px] items-start py-6 lg:py-0">
           <div class="text-h3 text-dark">
             <p>Dining Table + Chairs</p>
@@ -426,36 +424,36 @@ const mostLoved = [
             <p>The final pieces from these runs.</p>
             <p>Reclaimed teak. Built to remain.</p>
           </div>
-          <a class="border-b border-dark py-[20px]" href="#">
+          <a class="btn-text border-b border-dark" href="#">
             <p class="text-button text-dark">view bundle</p>
           </a>
         </div>
-        <div class="aspect-[4/5] overflow-hidden">
-          <img alt="" class="size-full object-contain" src={imgRectangle20} loading="lazy" />
-        </div>
+        <a href="#" class="group aspect-[4/5] overflow-hidden">
+          <img alt="" class="card-img size-full object-contain" src={imgRectangle20} loading="lazy" />
+        </a>
 
-        <div class="aspect-[4/5] overflow-hidden">
-          <img alt="" class="size-full object-contain" src={imgRectangle20} loading="lazy" />
-        </div>
-        <div class="aspect-[4/5] overflow-hidden">
-          <img alt="" class="size-full object-contain" src={imgRectangle20} loading="lazy" />
-        </div>
-        <div class="aspect-[4/5] overflow-hidden">
-          <img alt="" class="size-full object-contain" src={imgRectangle20} loading="lazy" />
-        </div>
+        <a href="#" class="group aspect-[4/5] overflow-hidden">
+          <img alt="" class="card-img size-full object-contain" src={imgRectangle20} loading="lazy" />
+        </a>
+        <a href="#" class="group aspect-[4/5] overflow-hidden">
+          <img alt="" class="card-img size-full object-contain" src={imgRectangle20} loading="lazy" />
+        </a>
+        <a href="#" class="group aspect-[4/5] overflow-hidden">
+          <img alt="" class="card-img size-full object-contain" src={imgRectangle20} loading="lazy" />
+        </a>
       </div>
     </section>
 
     <!-- ───────────────────────────── People love us ───────────────────────────── -->
-    <section class="bg-cream flex flex-col gap-12 lg:gap-[48px] px-5 md:px-12 lg:px-[80px] py-16 lg:py-[120px] w-full">
+    <section class="reveal bg-cream flex flex-col gap-12 lg:gap-[48px] px-5 md:px-12 lg:px-[80px] py-16 lg:py-[120px] w-full">
       <div class="flex flex-col gap-12 lg:gap-[120px]">
         <div class="flex flex-col gap-8 lg:gap-0">
           <div class="flex flex-col lg:flex-row gap-6 lg:gap-[56px] lg:items-end">
-            <div class="aspect-[1136/355] flex-1 overflow-hidden">
-              <img alt="" class="size-full object-cover" src={imgCleanShot} loading="lazy" />
-            </div>
-            <a href="#" class="border-2 border-dark flex items-center justify-center p-[8px] rounded-[99px] size-[120px] lg:size-[160px] shrink-0">
-              <p class="text-button text-dark text-center">More Stories</p>
+            <a href="#" class="group aspect-[1136/355] flex-1 overflow-hidden">
+              <img alt="" class="card-img size-full object-cover" src={imgCleanShot} loading="lazy" />
+            </a>
+            <a href="#" class="btn-pill btn-pill-dark border-2 size-[120px] lg:size-[160px] shrink-0">
+              <p class="text-button text-center">More Stories</p>
             </a>
           </div>
           <div class="flex flex-col gap-[8px] items-start pt-6 lg:pt-[32px]">
@@ -467,18 +465,18 @@ const mostLoved = [
           </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-[24px] items-start">
-          <div class="aspect-[427/567] w-full">
-            <img alt="" class="size-full object-cover" src={imgRectangle29} loading="lazy" />
-          </div>
-          <div class="aspect-[427/567] w-full lg:mt-[260px]">
-            <img alt="" class="size-full object-cover" src={imgRectangle30} loading="lazy" />
-          </div>
+          <a href="#" class="group aspect-[427/567] w-full overflow-hidden">
+            <img alt="" class="card-img size-full object-cover" src={imgRectangle29} loading="lazy" />
+          </a>
+          <a href="#" class="group aspect-[427/567] w-full overflow-hidden lg:mt-[260px]">
+            <img alt="" class="card-img size-full object-cover" src={imgRectangle30} loading="lazy" />
+          </a>
           <div class="flex flex-col gap-3 lg:gap-[12px] md:col-span-2 lg:col-span-1">
             <p class="text-body-1 text-dark">Sasha &amp; William loves their new bed that was handcrafted for them</p>
             <p class="text-body-3 text-dark">In the final step, reclaimed teak meets fresh wood in a way that's entirely our own. A quiet union of history and making.</p>
-            <div class="aspect-[427/300] w-full mt-2">
-              <img alt="" class="size-full object-cover" src={imgRectangle31} loading="lazy" />
-            </div>
+            <a href="#" class="group aspect-[427/300] w-full mt-2 overflow-hidden">
+              <img alt="" class="card-img size-full object-cover" src={imgRectangle31} loading="lazy" />
+            </a>
           </div>
         </div>
       </div>
@@ -486,7 +484,7 @@ const mostLoved = [
     </section>
 
     <!-- ───────────────────────────── 14 Days From First Cut ───────────────────────────── -->
-    <section class="bg-cream flex flex-col gap-12 lg:gap-[100px] px-5 md:px-12 lg:px-[80px] py-10 lg:py-[40px] w-full">
+    <section class="reveal bg-cream flex flex-col gap-12 lg:gap-[100px] px-5 md:px-12 lg:px-[80px] py-10 lg:py-[40px] w-full">
       <header class="flex flex-col lg:flex-row gap-8 lg:items-end lg:justify-between">
         <div class="flex flex-col gap-6 lg:gap-[24px] items-start">
           <div class="flex gap-[8px] items-center">
@@ -499,15 +497,15 @@ const mostLoved = [
       </header>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-[32px]">
         {[
-          { num:'02', img:imgRectangle21, imgFirst:true, head:`We reveal what's underneath, without erasing its story.`, body:`The wood is cleaned, smoothed, and prepared – carefully, without losing what makes it worth using in the first place. Every mark that belongs there, stays there.` },
+          { num:'02', img:imgRectangle21, imgFirst:true,  head:`We reveal what's underneath, without erasing its story.`, body:`The wood is cleaned, smoothed, and prepared – carefully, without losing what makes it worth using in the first place. Every mark that belongs there, stays there.` },
           { num:'01', img:imgRectangle22, imgFirst:false, head:`It starts with wood that's already lived a life.`, body:`Every board arrives carrying its own history – knots, grain patterns, weathered edges earned over decades. We don't see imperfections. We see character worth building around.` },
-          { num:'03', img:imgRectangle23, imgFirst:true, head:`We build with intention.`, body:`New hardwood forms the bones of every piece we build. Cut by hand, joined tightly, built to hold without shifting, loosening, or giving way. The kind of structure that only comes from doing it the slow way.` },
+          { num:'03', img:imgRectangle23, imgFirst:true,  head:`We build with intention.`, body:`New hardwood forms the bones of every piece we build. Cut by hand, joined tightly, built to hold without shifting, loosening, or giving way. The kind of structure that only comes from doing it the slow way.` },
           { num:'04', img:imgRectangle24, imgFirst:false, head:`This is where it all comes together.`, body:`The reclaimed teak top is laid, fitted, and finished onto its hardwood frame by hand. Two kinds of wood, two histories, one piece of furniture. This is what makes every Urban Woodcraft piece entirely its own.` },
         ].map((s) => (
           <article class="flex flex-col gap-6 lg:gap-[32px] items-start pb-12 lg:pb-[80px]">
             {s.imgFirst && (
-              <div class="aspect-[624/400] w-full">
-                <img alt="" class="size-full object-cover" src={s.img} loading="lazy" />
+              <div class="group aspect-[624/400] w-full overflow-hidden">
+                <img alt="" class="card-img size-full object-cover" src={s.img} loading="lazy" />
               </div>
             )}
             <p class="text-h2 text-dark opacity-10 text-center w-full">{s.num}</p>
@@ -517,8 +515,8 @@ const mostLoved = [
                   <p class="text-body-2">{s.head}</p>
                   <p class="text-body-3 opacity-50 max-w-[543px]">{s.body}</p>
                 </div>
-                <div class="aspect-[624/400] w-full">
-                  <img alt="" class="size-full object-cover" src={s.img} loading="lazy" />
+                <div class="group aspect-[624/400] w-full overflow-hidden">
+                  <img alt="" class="card-img size-full object-cover" src={s.img} loading="lazy" />
                 </div>
               </>
             )}
@@ -534,18 +532,18 @@ const mostLoved = [
     </section>
 
     <!-- ───────────────────────────── Yellow CTA ───────────────────────────── -->
-    <section class="bg-[#c48900] flex flex-col lg:flex-row gap-10 lg:gap-[88px] items-center justify-center p-10 lg:p-[80px] w-full">
+    <section class="reveal bg-[#c48900] flex flex-col lg:flex-row gap-10 lg:gap-[88px] items-center justify-center p-10 lg:p-[80px] w-full">
       <div class="flex flex-col gap-[20px] items-start text-white max-w-[360px]">
         <h2 class="text-h2">The Space You Want Starts Here</h2>
         <p class="text-body-2">Save the pieces you love and come back to them whenever you're ready.</p>
       </div>
-      <a href="#" class="border-2 border-white flex items-center justify-center p-[8px] rounded-[99px] size-[140px] lg:size-[160px] shrink-0">
-        <p class="text-button text-white text-center leading-tight">BUILD YOUR<br />COLLECTION</p>
+      <a href="#" class="btn-pill btn-pill-light border-2 size-[140px] lg:size-[160px] shrink-0">
+        <p class="text-button text-center leading-tight">BUILD YOUR<br />COLLECTION</p>
       </a>
     </section>
 
     <!-- ───────────────────────────── Visit Us ───────────────────────────── -->
-    <section class="bg-white flex flex-col gap-16 lg:gap-[150px] overflow-clip p-5 md:p-12 lg:p-[120px] w-full">
+    <section class="reveal bg-white flex flex-col gap-16 lg:gap-[150px] overflow-clip p-5 md:p-12 lg:p-[120px] w-full">
       <div class="flex flex-col md:flex-row gap-6 md:items-end md:justify-between">
         <div class="flex flex-col gap-6 lg:gap-[24px] items-start">
           <div class="flex gap-[8px] items-center">
@@ -562,12 +560,12 @@ const mostLoved = [
       </div>
       <div class="flex flex-col gap-6 lg:gap-[24px] lg:w-[970px] lg:self-end">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-[24px]">
-          <div class="aspect-square w-full">
-            <img alt="" class="size-full object-cover" src={imgRectangle27} loading="lazy" />
-          </div>
-          <div class="aspect-square w-full">
-            <img alt="" class="size-full object-cover" src={imgRectangle28} loading="lazy" />
-          </div>
+          <a href="#" class="group aspect-square w-full overflow-hidden">
+            <img alt="" class="card-img size-full object-cover" src={imgRectangle27} loading="lazy" />
+          </a>
+          <a href="#" class="group aspect-square w-full overflow-hidden">
+            <img alt="" class="card-img size-full object-cover" src={imgRectangle28} loading="lazy" />
+          </a>
         </div>
         <div class="flex flex-col gap-3 lg:gap-[12px] text-dark">
           <p class="text-body-1">Where the furniture lives before it lives with you.</p>
@@ -577,7 +575,7 @@ const mostLoved = [
     </section>
 
     <!-- ───────────────────────────── FAQ ───────────────────────────── -->
-    <section class="bg-white flex flex-col gap-12 lg:gap-[100px] px-5 md:px-12 lg:px-[80px] py-16 lg:py-[88px] w-full">
+    <section class="reveal bg-white flex flex-col gap-12 lg:gap-[100px] px-5 md:px-12 lg:px-[80px] py-16 lg:py-[88px] w-full">
       <header class="flex flex-col lg:flex-row gap-8 lg:items-end lg:justify-between">
         <div class="flex flex-col gap-6 lg:gap-[24px] items-start">
           <div class="flex gap-[8px] items-center">
@@ -587,7 +585,7 @@ const mostLoved = [
           <h2 class="text-h2 text-dark">Still Have Questions?</h2>
         </div>
         <p class="text-body-3 text-dark max-w-[407px]">Join 500+ homeowners who've found their perfect piece through our guided showroom experiences.</p>
-        <a class="border-dark border-b py-[20px] self-start" href="#">
+        <a class="btn-text border-b border-dark self-start" href="#">
           <p class="text-button text-dark">Text Specialist</p>
         </a>
       </header>
@@ -607,7 +605,7 @@ const mostLoved = [
     </section>
 
     <!-- ───────────────────────────── Financing strip ───────────────────────────── -->
-    <section class="bg-white flex flex-col lg:flex-row gap-6 lg:gap-[50px] items-start lg:items-center pb-16 lg:pb-[88px] pt-6 lg:pt-[24px] px-5 md:px-12 lg:px-[80px] w-full">
+    <section class="reveal bg-white flex flex-col lg:flex-row gap-6 lg:gap-[50px] items-start lg:items-center pb-16 lg:pb-[88px] pt-6 lg:pt-[24px] px-5 md:px-12 lg:px-[80px] w-full">
       <p class="text-body-2 text-dark whitespace-nowrap">Financing starts at $148/mo</p>
       <p class="text-body-3 text-dark opacity-50">Officia eiusmod anim est est proident non aliquip id qui id anim eiusmod est eu. Irure sit officia minim irure elit veniam et.</p>
       <div class="flex gap-8 lg:gap-[40px] items-center">
@@ -617,7 +615,7 @@ const mostLoved = [
     </section>
 
     <!-- ───────────────────────────── HERE TO HELP ───────────────────────────── -->
-    <section class="flex flex-col gap-10 lg:gap-[72px] items-center justify-center min-h-[360px] lg:h-[469px] overflow-clip pb-16 lg:pb-[120px] pt-16 lg:pt-0 px-5 md:px-12 lg:px-[24px] relative w-full">
+    <section class="reveal flex flex-col gap-10 lg:gap-[72px] items-center justify-center min-h-[360px] lg:h-[469px] overflow-clip pb-16 lg:pb-[120px] pt-16 lg:pt-0 px-5 md:px-12 lg:px-[24px] relative w-full">
       <div aria-hidden class="absolute inset-0 pointer-events-none">
         <img alt="" class="absolute inset-0 size-full object-cover" src={imgFrame63} loading="lazy" />
         <div class="absolute bg-[rgba(46,29,15,0.5)] inset-0"></div>
@@ -626,10 +624,10 @@ const mostLoved = [
       <div class="flex flex-col gap-8 lg:gap-[32px] items-center justify-center max-w-[638px] relative">
         <p class="text-body-3 lg:text-body-2 text-white text-center">Every purchase deserves a little confidence. Book a private viewing to see your shortlisted pieces in person, or join a guided shopping call for one-on-one advice on finishes, sizes, and what works best for your space.</p>
         <div class="flex flex-col sm:flex-row gap-6 lg:gap-[32px] items-center">
-          <a class="border-white border-b py-[20px]" href="#">
+          <a class="btn-text border-b border-white" href="#">
             <p class="text-button text-white">book private meeting</p>
           </a>
-          <a class="py-[20px]" href="#">
+          <a class="btn-text" href="#">
             <p class="text-button text-white">Guided shopping</p>
           </a>
         </div>
@@ -637,7 +635,7 @@ const mostLoved = [
     </section>
 
     <!-- ───────────────────────────── Footer ───────────────────────────── -->
-    <footer class="bg-white flex flex-col gap-12 lg:gap-[64px] overflow-clip pb-12 lg:pb-[48px] pt-16 lg:pt-[64px] w-full">
+    <footer class="reveal bg-white flex flex-col gap-12 lg:gap-[64px] overflow-clip pb-12 lg:pb-[48px] pt-16 lg:pt-[64px] w-full">
       <div class="px-5 md:px-8 lg:px-[32px] w-full">
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 lg:gap-[48px] lg:gap-x-[32px] max-w-[1448px] mx-auto">
           <div class="flex flex-col gap-8 lg:gap-[32px] items-start col-span-2 md:col-span-3 lg:col-span-1">
@@ -651,7 +649,7 @@ const mostLoved = [
               <p class="text-body-3 text-secondary">By appointments only</p>
             </div>
             <div class="flex flex-col gap-[16px] items-start text-body-3 text-dark">
-              <a class="underline" href="mailto:info@urbanwoodcraft.com">info@urbanwoodcraft.com</a>
+              <a class="link-hover underline" href="mailto:info@urbanwoodcraft.com">info@urbanwoodcraft.com</a>
               <p>1 (855) 738-1378 (toll-free)</p>
             </div>
           </div>
@@ -664,7 +662,7 @@ const mostLoved = [
             <div class="flex flex-col gap-[16px] items-start">
               <p class="text-body-2-emph text-dark opacity-50">{col.title}</p>
               <ul class="flex flex-col gap-[16px] items-start text-body-3 text-dark">
-                {col.links.map((l) => <li>{l}</li>)}
+                {col.links.map((l) => <li><a class="link-hover" href="#">{l}</a></li>)}
               </ul>
             </div>
           ))}
@@ -673,15 +671,15 @@ const mostLoved = [
       <div class="px-5 md:px-8 lg:px-[32px] w-full">
         <div class="border-[#e9eaeb] border-t flex flex-col md:flex-row md:flex-wrap items-start md:items-center md:justify-between gap-4 md:gap-y-[24px] pt-8 lg:pt-[32px] max-w-[1448px] mx-auto">
           <div class="flex flex-wrap gap-x-4 gap-y-2 lg:gap-[16px] items-center text-body-3 text-dark">
-            <p>Instagram</p>
+            <a class="link-hover" href="#">Instagram</a>
             <img alt="" class="size-[4px]" src={imgEllipse2} />
-            <p>Facebook</p>
+            <a class="link-hover" href="#">Facebook</a>
             <img alt="" class="size-[4px]" src={imgEllipse2} />
-            <p>Twitter</p>
+            <a class="link-hover" href="#">Twitter</a>
             <img alt="" class="size-[4px]" src={imgEllipse2} />
-            <p>Pinterest</p>
+            <a class="link-hover" href="#">Pinterest</a>
             <img alt="" class="size-[4px]" src={imgEllipse2} />
-            <p>YouTube</p>
+            <a class="link-hover" href="#">YouTube</a>
           </div>
           <p class="text-body-3 text-secondary">© 2077 Urban Woodcrafts. Made in Canada.</p>
         </div>

@@ -83,9 +83,13 @@
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   line-height: normal;         /* Figma Auto */
-  letter-spacing: 0.1em;       /* Figma letterSpacing 1.2 ≈ 10% on 12px */
+  /* Bumped from 0.1em → 0.16em for proper caps kerning. The Figma
+     token value (1.2 = ~10%) reads too tight in body copy on the
+     web. */
+  letter-spacing: 0.16em;
   font-size: 12px;
   text-transform: uppercase;
+  font-feature-settings: "kern" 1, "liga" 0;
 }
 .text-eyebrow {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -130,4 +134,237 @@
   .text-h3 { font-size: 32px; }
   .text-display-wordmark { font-size: 240px; }
   .text-display-hero { font-size: 216px; letter-spacing: -8.64px; }
+}
+
+/* ─────────────────────────────────────────────────────── *
+ *  INTERACTIVE COMPONENTS — hover / focus / transitions
+ * ─────────────────────────────────────────────────────── */
+
+/* PILL BUTTON
+ * Round capsule (typically 120/160px). Two variants:
+ *  .btn-pill-light  → white border, on dark backgrounds
+ *  .btn-pill-dark   → dark border, on light backgrounds
+ * Add `border` or `border-2` and a size utility yourself.
+ *
+ * Usage:
+ *   <a class="btn-pill btn-pill-light border size-[120px] lg:size-[160px]">
+ *     <p class="text-button">discover</p>
+ *   </a>
+ */
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 9999px;
+  transition: background-color 220ms ease, color 220ms ease, border-color 220ms ease;
+  cursor: pointer;
+}
+.btn-pill p { transition: color 220ms ease; }
+
+.btn-pill-light { border-color: #ffffff; color: #ffffff; }
+.btn-pill-light:hover, .btn-pill-light:focus-visible { background-color: #ffffff; color: #20160e; }
+.btn-pill-light:hover p, .btn-pill-light:focus-visible p { color: #20160e; }
+
+.btn-pill-dark { border-color: #20160e; color: #20160e; }
+.btn-pill-dark:hover, .btn-pill-dark:focus-visible { background-color: #20160e; color: #ffffff; }
+.btn-pill-dark:hover p, .btn-pill-dark:focus-visible p { color: #ffffff; }
+
+/* TEXT BUTTON (underlined)
+ * Usage:
+ *   <a class="btn-text border-b border-dark">
+ *     <p class="text-button text-dark">view bundle</p>
+ *   </a>
+ */
+.btn-text {
+  display: inline-flex;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  transition: opacity 200ms ease, color 200ms ease;
+  cursor: pointer;
+}
+.btn-text:hover, .btn-text:focus-visible { opacity: 0.65; }
+
+/* SUBTLE LINK HOVER — nav, footer columns, social links, inline links */
+.link-hover {
+  transition: opacity 200ms ease;
+}
+.link-hover:hover, .link-hover:focus-visible { opacity: 0.6; }
+
+/* CARD IMAGE ZOOM
+ * Wrap the card in a `.group` element, set `overflow-hidden` on the
+ * image's bounding container, and apply `.card-img` to the image:
+ *   <a class="group block">
+ *     <div class="aspect-[4/3] overflow-hidden">
+ *       <img class="card-img size-full object-cover" />
+ *     </div>
+ *     <p>Caption</p>
+ *   </a>
+ */
+.card-img {
+  transition: transform 600ms cubic-bezier(0.2, 0.6, 0.2, 1);
+  will-change: transform;
+}
+.group:hover .card-img,
+.group:focus-visible .card-img { transform: scale(1.04); }
+
+/* Card captions/titles get a soft opacity shift in sync with the image */
+.card-caption { transition: opacity 200ms ease; }
+.group:hover .card-caption { opacity: 0.7; }
+
+/* "Add to collection" button (replaces the heart) — has its own
+ * hover state via Tailwind's named group `group/fav`. */
+.btn-fav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: background-color 220ms ease, transform 220ms ease;
+  cursor: pointer;
+}
+.btn-fav svg { transition: transform 220ms ease, color 220ms ease; }
+.btn-fav:hover, .btn-fav:focus-visible {
+  background-color: #ffffff;
+  transform: scale(1.06);
+}
+.btn-fav:hover svg, .btn-fav:focus-visible svg {
+  color: #ca670b;
+  transform: rotate(90deg);
+}
+
+/* COLLECTION CARD
+ * Used in "Shop by Collections". Each card defaults to the cropped
+ * off-white state; on hover the card expands, bg goes white, and a
+ * second (full / object-contain) image fades in. Compose with:
+ *   <a class="group collection-card ...">
+ *     <img class="collection-card-img-default" src=... />
+ *     <img class="collection-card-img-hover"   src=... />
+ *     <p>Madera</p>
+ *   </a>
+ */
+.collection-card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 24px;
+  flex-shrink: 0;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: rgba(61, 43, 31, 0.05);
+  transition: background-color 500ms ease, width 600ms cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+.collection-card:hover,
+.collection-card:focus-visible {
+  background-color: #ffffff;
+}
+.collection-card-img-default {
+  position: absolute;
+  transition: opacity 500ms ease;
+}
+.collection-card-img-hover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 500ms ease;
+}
+.collection-card:hover .collection-card-img-default,
+.collection-card:focus-visible .collection-card-img-default { opacity: 0; }
+.collection-card:hover .collection-card-img-hover,
+.collection-card:focus-visible .collection-card-img-hover { opacity: 1; }
+
+@media (min-width: 1024px) {
+  /* Desktop: hovered card expands to ~Osaka width.
+   * Cards default to 320px; on hover they grow to 602px.
+   * The flex parent has overflow-x: hidden so growth doesn't push
+   * siblings off-screen. */
+  .collection-card { width: 320px; }
+  .collection-card:hover,
+  .collection-card:focus-visible { width: 602px; }
+}
+
+/* ─────────────────────────────────────────────────────── *
+ *  REVEAL ON SCROLL — applied via IntersectionObserver
+ * ─────────────────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 700ms cubic-bezier(0.2, 0.6, 0.2, 1),
+              transform 700ms cubic-bezier(0.2, 0.6, 0.2, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .card-img,
+  .group:hover .card-img,
+  .collection-card,
+  .collection-card-img-default,
+  .collection-card-img-hover {
+    transition: none !important;
+  }
+  .marquee-track { animation: none !important; }
+}
+
+/* ─────────────────────────────────────────────────────── *
+ *  MARQUEE — auto-scrolling horizontal strip
+ * ─────────────────────────────────────────────────────── */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.marquee-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 40px;
+  width: max-content;
+  animation: marquee-scroll 80s linear infinite;
+  will-change: transform;
+}
+@keyframes marquee-scroll {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track { animation-play-state: paused; }
+
+@media (min-width: 1024px) {
+  .marquee-track { gap: 102px; }
+}
+
+/* ─────────────────────────────────────────────────────── *
+ *  CAROUSEL — horizontal-scroll card rail
+ * ─────────────────────────────────────────────────────── */
+.carousel {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  scroll-padding-left: 20px;
+}
+.carousel::-webkit-scrollbar { display: none; }
+.carousel > * { scroll-snap-align: start; flex-shrink: 0; }
+
+@media (min-width: 1024px) {
+  .carousel { gap: 24px; scroll-padding-left: 80px; }
 }
