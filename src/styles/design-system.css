@@ -235,12 +235,12 @@
 }
 
 /* COLLECTION CARD
- * Used in "Shop by Collections". Each card defaults to the cropped
- * off-white state; on hover the card expands, bg goes white, and a
- * second (full / object-contain) image fades in. Compose with:
+ * Used in "Shop by Collections". Each card defaults to a cropped,
+ * off-white state; on hover the card expands, the bg goes white, and
+ * the SAME line drawing transforms (scale + translate) from cropped
+ * to full-size — no cross-fade, no second image. Compose with:
  *   <a class="group collection-card ...">
- *     <img class="collection-card-img-default" src=... />
- *     <img class="collection-card-img-hover"   src=... />
+ *     <img class="collection-card-img" src=... />
  *     <p>Madera</p>
  *   </a>
  */
