@@ -83,13 +83,9 @@
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   line-height: normal;         /* Figma Auto */
-  /* Bumped from 0.1em → 0.16em for proper caps kerning. The Figma
-     token value (1.2 = ~10%) reads too tight in body copy on the
-     web. */
-  letter-spacing: 0.16em;
+  letter-spacing: 0;           /* no kerning, per design */
   font-size: 12px;
   text-transform: uppercase;
-  font-feature-settings: "kern" 1, "liga" 0;
 }
 .text-eyebrow {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
