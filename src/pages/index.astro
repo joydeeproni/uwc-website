@@ -63,16 +63,16 @@ const mostLoved = [
 ];
 
 const collections = [
-  { name: 'Madera', img: imgFrame15, default: 'h-[81.27%] left-[-17.36%] top-[12.93%] w-[199.31%]' },
-  { name: 'Osaka',  img: imgFrame20, default: 'h-[81.27%] left-[-17.36%] top-[12.93%] w-[199.31%]' },
-  { name: 'Hudson', img: imgFrame13, default: 'h-[81.27%] left-[0.46%] top-[21.6%] w-[199.31%]' },
-  { name: 'Camden', img: imgFrame18, default: 'h-[94.87%] left-[5.97%] top-[17.01%] w-[232.66%]', badge: 'Popular' },
-  { name: 'Lugano', img: imgFrame15, default: 'h-[81.27%] left-[-17.36%] top-[12.93%] w-[199.31%]' },
-  { name: 'Atelier',img: imgFrame20, default: 'h-[81.27%] left-[-17.36%] top-[12.93%] w-[199.31%]' },
-  { name: 'Wadi',   img: imgFrame13, default: 'h-[81.27%] left-[0.46%] top-[21.6%] w-[199.31%]' },
-  { name: 'Riviera',img: imgFrame18, default: 'h-[94.87%] left-[5.97%] top-[17.01%] w-[232.66%]' },
-  { name: 'Villa',  img: imgFrame15, default: 'h-[81.27%] left-[-17.36%] top-[12.93%] w-[199.31%]' },
-  { name: 'Vamo',   img: imgFrame20, default: 'h-[81.27%] left-[-17.36%] top-[12.93%] w-[199.31%]' },
+  { name: 'Madera',  img: imgFrame15 },
+  { name: 'Osaka',   img: imgFrame20 },
+  { name: 'Hudson',  img: imgFrame13 },
+  { name: 'Camden',  img: imgFrame18, badge: 'Popular' },
+  { name: 'Lugano',  img: imgFrame15 },
+  { name: 'Atelier', img: imgFrame20 },
+  { name: 'Wadi',    img: imgFrame13 },
+  { name: 'Riviera', img: imgFrame18 },
+  { name: 'Villa',   img: imgFrame15 },
+  { name: 'Vamo',    img: imgFrame20 },
 ];
 
 const newInCards = [
@@ -235,8 +235,7 @@ const marqueeItems = [
       <div class="carousel h-[420px] md:h-[600px] lg:h-[680px] px-5 md:px-12 lg:px-[120px]">
         {collections.map((c) => (
           <a href="#" class="group collection-card w-[240px] lg:w-[320px]">
-            <img alt="" class={`collection-card-img-default ${c.default} max-w-none`} src={c.img} loading="lazy" />
-            <img alt="" class="collection-card-img-hover" src={c.img} loading="lazy" />
+            <img alt="" class="collection-card-img" src={c.img} loading="lazy" />
             <p class="relative text-h3 text-dark">{c.name}</p>
             {c.badge && (
               <div class="absolute bg-white flex items-center justify-center left-[24px] p-[8px] top-[24px]">
