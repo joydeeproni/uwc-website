@@ -401,4 +401,17 @@
   will-change: transform;
 }
 
-/* Founder's Home hover is handled inline via Tailwind group-hover */
+/* BUNDLE ROW — smooth micro-transitions on hover/active */
+.bundle-row {
+  transition: border-color 300ms ease;
+}
+.bundle-row .bundle-title {
+  transition: color 300ms ease;
+}
+.bundle-row .bundle-sub,
+.bundle-row .bundle-btn {
+  transition: opacity 250ms ease;
+}
+.bundle-row:not(.is-active):hover .bundle-title {
+  opacity: 0.7;
+}
