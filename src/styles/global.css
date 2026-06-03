@@ -15,8 +15,18 @@
 }
 
 html, body { background: #fdfcfb; color: #20160e; }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Airy spacing — adds breathing room between major page sections */
+main > section + section,
+main > footer { margin-top: 24px; }
+@media (min-width: 1024px) {
+  main > section + section,
+  main > footer { margin-top: 48px; }
 }

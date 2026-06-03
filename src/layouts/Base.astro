@@ -13,8 +13,17 @@ const base = import.meta.env.BASE_URL.replace(/\/$/, '');
     <title>{title}</title>
   </head>
   <body class="bg-cream text-dark antialiased">
-    <slot />
+    <div data-lenis-wrapper>
+      <slot />
+    </div>
     <script>
+      // Lenis smooth scroll
+      import('https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.mjs').then(({ default: Lenis }) => {
+        const lenis = new Lenis({ duration: 1.2, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true });
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+      }).catch(() => { /* Lenis failed to load, native scroll is fine */ });
+
       // Reveal-on-scroll for any element with class="reveal"
       const init = () => {
         const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

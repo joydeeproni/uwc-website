@@ -19,10 +19,6 @@ const imgFrame15 = `${A}/imgFrame15.png`;
 const imgFrame20 = `${A}/imgFrame20.png`;
 const imgFrame13 = `${A}/imgFrame13.png`;
 const imgFrame18 = `${A}/imgFrame18.png`;
-const imgImageBand = `${A}/imgImageBand.png`;
-const imgRectangle6 = `${A}/imgRectangle6.png`;
-const imgRectangle7 = `${A}/imgRectangle7.png`;
-const imgRectangle8 = `${A}/imgRectangle8.png`;
 const imgRectangle9 = `${A}/imgRectangle9.png`;
 const imgRectangle10 = `${A}/imgRectangle10.png`;
 const imgRectangle11 = `${A}/imgRectangle11.png`;
@@ -35,7 +31,8 @@ const imgRectangle17 = `${A}/imgRectangle17.png`;
 const imgImage1 = `${A}/imgImage1.png`;
 const imgImage2 = `${A}/imgImage2.png`;
 const imgImage3 = `${A}/imgImage3.png`;
-const imgRectangle18 = `${A}/imgRectangle18.png`;
+const imgMaderaTable = `${A}/imgMaderaTable.png`;
+const imgPiecesWorth = `${A}/imgPiecesWorth.png`;
 const imgRectangle19 = `${A}/imgRectangle19.png`;
 const imgRectangle20 = `${A}/imgRectangle20.png`;
 const imgCleanShot = `${A}/imgCleanShot20260529At1042102X1.png`;
@@ -51,6 +48,22 @@ const imgRectangle28 = `${A}/imgRectangle28.png`;
 const imgImage12 = `${A}/imgImage12.png`;
 const imgImage13 = `${A}/imgImage13.png`;
 const imgFrame63 = `${A}/imgFrame63.png`;
+const imgShowroom = `${A}/imgShowroom.png`;
+const imgPersonalShopping = `${A}/imgPersonalShopping.png`;
+const imgOutletShowroom = `${A}/imgOutletShowroom.png`;
+const imgSaleOsaka = `${A}/imgSaleOsaka.png`;
+const imgSaleBarnDoors = `${A}/imgSaleBarnDoors.png`;
+const imgSaleDining = `${A}/imgSaleDining.png`;
+const imgSaleCountdownBg = `${A}/imgSaleCountdownBg.png`;
+const imgHudsonBundle = `${A}/imgHudsonBundle.png`;
+const imgSomaBench = `${A}/imgSomaBench.png`;
+const imgFoundersHome = `${A}/imgFoundersHome.png`;
+const imgMegaDiningPromo = `${A}/imgMegaDiningPromo.png`;
+const imgMegaLivingPromo = `${A}/imgMegaLivingPromo.png`;
+const imgHereToHelp = `${A}/imgHereToHelp.png`;
+const imgProcessBg = `${A}/imgProcessBg.png`;
+const imgHeartPlus = `${A}/imgHeartPlus.svg`;
+const imgBaggageClaim = `${A}/imgBaggageClaim.svg`;
 
 const mostLoved = [
   { img: imgRectangle9,  title: 'Madera Dining Table',  price: 'from $1,870', desc: 'Natural Reclaimed Teak', badge: 'New' },
@@ -77,24 +90,6 @@ const collections = [
   { name: 'Vamo',    img: imgFrame20 },
 ];
 
-const newInCards = [
-  { img: imgRectangle6,  title: 'Save upto $1000 on Atelier Dining Tables', sub: 'One of the last from this run.' },
-  { img: imgRectangle7,  title: 'Discover Personal Shopping',               sub: 'Get assistance in picking what fits your needs' },
-  { img: imgRectangle8,  title: 'Grand X Barn Doors',                        sub: 'Now $885 was $1,075' },
-  { img: imgRectangle18, title: 'Madera Sideboard',                          sub: 'Limited finishing run' },
-  { img: imgRectangle6,  title: 'Riviera Bed Set',                           sub: 'Bundled with linens' },
-  { img: imgRectangle7,  title: 'Hudson Coffee Table',                       sub: 'New Spring collection' },
-];
-
-const friendlierPrices = [
-  { img: imgRectangle6,  title: 'Save upto $1000 on Atelier Dining Tables', sub: 'One of the last from this run.' },
-  { img: imgRectangle8,  title: 'Grand X Barn Doors',                        sub: 'Now $885, was $1,075' },
-  { img: imgRectangle18, title: 'Priced to move them home.',                 sub: '$1,180 • previously $2,195' },
-  { img: imgRectangle7,  title: 'Camden Console',                            sub: 'Save $400' },
-  { img: imgRectangle6,  title: 'Villa Coffee Table',                        sub: 'Was $1,890, now $1,425' },
-  { img: imgRectangle8,  title: 'Vamo Vanity',                               sub: 'Reduced for shop closing' },
-];
-
 const marqueeItems = [
   { text: 'This is a sale text' },
   { dot: true },
@@ -109,13 +104,28 @@ const marqueeItems = [
 <Base>
   <main class="bg-cream flex flex-col items-stretch relative w-full overflow-x-hidden">
 
+    <!-- Utility Bar -->
+    <div class="bg-dark flex flex-wrap items-center justify-between px-5 md:px-12 lg:px-[80px] py-3 w-full text-body-3 text-white">
+      <div class="flex gap-6 items-center">
+        <p>Free shipping across US &amp; Canada</p>
+        <span class="bg-white/30 size-[4px] rounded-full shrink-0" aria-hidden></span>
+        <p>Free returns within 7 days</p>
+        <span class="bg-white/30 size-[4px] rounded-full shrink-0" aria-hidden></span>
+        <p>Book a private viewing · 1-855-738-1378</p>
+      </div>
+      <div class="hidden md:flex gap-4 text-body-3 text-white">
+        <p>EN</p>
+        <p>USD</p>
+      </div>
+    </div>
+
     <!-- ───────────────────────────── Editorial — Hero ───────────────────────────── -->
     <section
       class="reveal flex flex-col gap-6 lg:gap-[24px] min-h-[560px] lg:h-[960px] items-stretch overflow-clip relative w-full bg-cover bg-center"
-      style={`background-image: linear-gradient(rgba(32,22,14,0.55),rgba(32,22,14,0.55)), url(${imgRectangle3})`}
+      style={`background-image: linear-gradient(rgba(32,22,14,0.55),rgba(32,22,14,0.55)), url(${imgRectangle3}); background-attachment: fixed;`}
     >
       <div class="flex flex-wrap gap-4 lg:gap-0 h-auto lg:h-[120px] items-center justify-between px-5 md:px-12 lg:px-[120px] py-5 lg:py-0 w-full">
-        <a href="#" class="leading-none text-[44px] sm:text-[64px] lg:text-[96px] text-white tracking-tight lg:tracking-[-3.84px] whitespace-nowrap">
+        <a href="/uwc-website/" class="leading-none text-[44px] sm:text-[64px] lg:text-[96px] text-white tracking-tight lg:tracking-[-3.84px] whitespace-nowrap">
           <span class="font-light lg:tracking-[-0.64px]">urban</span><span class="font-bold lg:tracking-[-0.64px]">woodcraft</span>
         </a>
         <nav class="hidden md:flex gap-4 lg:gap-[24px] items-center text-button text-white order-3 lg:order-none w-full lg:w-auto justify-center lg:justify-start">
@@ -130,13 +140,13 @@ const marqueeItems = [
       </div>
       <nav class="border-brand-border border-b border-t text-button text-white w-full">
         <div class="flex gap-6 lg:gap-0 h-[56px] lg:h-[72px] items-center lg:justify-between px-5 md:px-12 lg:px-[120px] overflow-x-auto whitespace-nowrap [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          <a href="#" class="link-hover">dining</a>
-          <a href="#" class="link-hover">living</a>
-          <a href="#" class="link-hover">bedroom</a>
-          <a href="#" class="link-hover">STORAGE</a>
-          <a href="#" class="link-hover">BARN DOORS</a>
-          <a href="#" class="link-hover">vanities</a>
-          <a href="#" class="link-hover">occassional</a>
+          <a href="/uwc-website/dining/" class="link-hover" onmouseenter="openMega('mega-dining')" onmouseleave="closeMega('mega-dining')">dining</a>
+          <a href="#" class="link-hover" onmouseenter="openMega('mega-living')" onmouseleave="closeMega('mega-living')">living</a>
+          <a href="#" class="link-hover" onmouseenter="openMega('mega-bedroom')" onmouseleave="closeMega('mega-bedroom')">bedroom</a>
+          <a href="#" class="link-hover" onmouseenter="openMega('mega-storage')" onmouseleave="closeMega('mega-storage')">STORAGE</a>
+          <a href="#" class="link-hover" onmouseenter="openMega('mega-barndoors')" onmouseleave="closeMega('mega-barndoors')">BARN DOORS</a>
+          <a href="#" class="link-hover" onmouseenter="openMega('mega-vanities')" onmouseleave="closeMega('mega-vanities')">vanities</a>
+          <a href="#" class="link-hover" onmouseenter="openMega('mega-occasional')" onmouseleave="closeMega('mega-occasional')">occassional</a>
         </div>
       </nav>
       <div class="flex flex-1 flex-col gap-6 items-start justify-end pb-10 lg:pb-[80px] pt-8 lg:pt-[72px] px-5 md:px-12 lg:px-[80px] w-full">
@@ -168,41 +178,35 @@ const marqueeItems = [
         <h2 class="text-h2 text-dark">Solid Wood in Every Form</h2>
       </header>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-[16px] md:gap-[24px] lg:gap-[32px]">
-        <a class="group flex flex-col gap-[16px] lg:col-span-7 lg:row-span-2" href="#">
-          <div class="aspect-[915/500] lg:aspect-auto lg:h-[500px] w-full overflow-hidden">
-            <img alt="" class="card-img size-full object-cover" src={imgRectangle} loading="lazy" />
-          </div>
-          <p class="card-caption text-body-2 text-dark">Dining</p>
+        <a class="group relative overflow-hidden lg:col-span-7 lg:row-span-2 aspect-[915/500] lg:aspect-auto lg:h-[500px]" href="#">
+          <img alt="" class="card-img size-full object-cover" src={imgRectangle} loading="lazy" />
+          <div class="absolute bottom-0 inset-x-0 h-[80px] bg-gradient-to-t from-black/40 to-transparent"></div>
+          <p class="absolute bottom-4 left-4 text-body-3 text-white">Dining</p>
         </a>
-        <a class="group flex flex-col gap-[16px] lg:col-span-5" href="#">
-          <div class="aspect-[405/320] w-full overflow-hidden">
-            <img alt="" class="card-img size-full object-cover" src={imgRectangle1} loading="lazy" />
-          </div>
-          <p class="card-caption text-body-2 text-dark">Storage</p>
+        <a class="group relative overflow-hidden lg:col-span-5 aspect-[405/320]" href="#">
+          <img alt="" class="card-img size-full object-cover" src={imgRectangle1} loading="lazy" />
+          <div class="absolute bottom-0 inset-x-0 h-[80px] bg-gradient-to-t from-black/40 to-transparent"></div>
+          <p class="absolute bottom-4 left-4 text-body-3 text-white">Storage</p>
         </a>
-        <a class="group flex flex-col gap-[16px] lg:col-span-5" href="#">
-          <div class="aspect-[405/320] w-full overflow-hidden">
-            <img alt="" class="card-img size-full object-cover object-center" src={imgRectangle2} loading="lazy" />
-          </div>
-          <p class="card-caption text-body-2 text-dark">Living</p>
+        <a class="group relative overflow-hidden lg:col-span-5 aspect-[405/320]" href="#">
+          <img alt="" class="card-img size-full object-cover object-center" src={imgRectangle2} loading="lazy" />
+          <div class="absolute bottom-0 inset-x-0 h-[80px] bg-gradient-to-t from-black/40 to-transparent"></div>
+          <p class="absolute bottom-4 left-4 text-body-3 text-white">Living</p>
         </a>
-        <a class="group flex flex-col gap-[16px] lg:col-span-7 lg:row-span-2" href="#">
-          <div class="aspect-[843/500] lg:aspect-auto lg:h-[500px] w-full overflow-hidden">
-            <img alt="" class="card-img size-full object-cover" src={imgRectangle3} loading="lazy" />
-          </div>
-          <p class="card-caption text-body-2 text-dark">Bedroom</p>
+        <a class="group relative overflow-hidden lg:col-span-7 lg:row-span-2 aspect-[843/500] lg:aspect-auto lg:h-[500px]" href="#">
+          <img alt="" class="card-img size-full object-cover" src={imgRectangle3} loading="lazy" />
+          <div class="absolute bottom-0 inset-x-0 h-[80px] bg-gradient-to-t from-black/40 to-transparent"></div>
+          <p class="absolute bottom-4 left-4 text-body-3 text-white">Bedroom</p>
         </a>
-        <a class="group flex flex-col gap-[16px] lg:col-span-3" href="#">
-          <div class="aspect-[405/320] w-full overflow-hidden">
-            <img alt="" class="card-img size-full object-cover" src={imgRectangle4} loading="lazy" />
-          </div>
-          <p class="card-caption text-body-2 text-dark">Bathroom</p>
+        <a class="group relative overflow-hidden lg:col-span-3 aspect-[405/320]" href="#">
+          <img alt="" class="card-img size-full object-cover" src={imgRectangle4} loading="lazy" />
+          <div class="absolute bottom-0 inset-x-0 h-[80px] bg-gradient-to-t from-black/40 to-transparent"></div>
+          <p class="absolute bottom-4 left-4 text-body-3 text-white">Vanities</p>
         </a>
-        <a class="group flex flex-col gap-[16px] lg:col-span-2" href="#">
-          <div class="aspect-[405/320] w-full overflow-hidden">
-            <img alt="" class="card-img size-full object-cover" src={imgRectangle5} loading="lazy" />
-          </div>
-          <p class="card-caption text-body-2 text-dark">Barn Doors</p>
+        <a class="group relative overflow-hidden lg:col-span-2 aspect-[405/320]" href="#">
+          <img alt="" class="card-img size-full object-cover" src={imgRectangle5} loading="lazy" />
+          <div class="absolute bottom-0 inset-x-0 h-[80px] bg-gradient-to-t from-black/40 to-transparent"></div>
+          <p class="absolute bottom-4 left-4 text-body-3 text-white">Barn Doors</p>
         </a>
         <div class="flex items-center justify-center md:col-span-2 lg:col-span-2">
           <a href="#" class="btn-pill btn-pill-dark border size-[120px] lg:size-[160px]">
@@ -218,7 +222,7 @@ const marqueeItems = [
         <div class="marquee-track">
           {[...marqueeItems, ...marqueeItems].map((item, i) => (
             item.dot
-              ? <div class="bg-[#d9d9d9] size-[40px] lg:size-[87px] shrink-0" aria-hidden={i >= marqueeItems.length}></div>
+              ? <div class="bg-[#d9d9d9] size-[8px] shrink-0" aria-hidden={i >= marqueeItems.length}></div>
               : <p class="text-h2 whitespace-nowrap" aria-hidden={i >= marqueeItems.length}>{item.text}</p>
           ))}
         </div>
@@ -249,10 +253,10 @@ const marqueeItems = [
       </div>
     </section>
 
-    <!-- ───────────────────────────── New In (image band + carousel) ───────────────────────────── -->
+    <!-- ───────────────────────────── Pieces Worth Making Room For ───────────────────────────── -->
     <section class="reveal bg-cream flex flex-col w-full">
       <div class="h-[280px] md:h-[440px] lg:h-[630px] relative w-full overflow-hidden">
-        <img alt="" class="absolute h-[359.8%] left-0 max-w-none top-[-165.69%] w-full object-cover" src={imgImageBand} loading="lazy" />
+        <img alt="Lifestyle room setting" class="absolute inset-0 size-full object-cover" src={imgPiecesWorth} loading="lazy" />
       </div>
       <div class="flex flex-col lg:flex-row gap-10 lg:gap-[168px] items-start px-5 md:px-12 lg:px-[80px] py-10 lg:py-[48px] w-full">
         <header class="flex flex-1 flex-col gap-[10px] items-start min-w-0">
@@ -267,19 +271,44 @@ const marqueeItems = [
           <p class="text-body-2 max-w-[486px]">Each one starts as reclaimed teak with its own story. We shape it, build around it, and finish it by hand. Designed to feel like it's always belonged, and built to prove it.</p>
         </div>
       </div>
-      <!-- New In carousel -->
-      <div class="carousel pb-16 lg:pb-[160px] pt-2 lg:pt-0 px-5 md:px-12 lg:px-[80px]">
-        {newInCards.map((card) => (
-          <a href="#" class="group flex flex-col gap-[16px] w-[280px] md:w-[380px] lg:w-[500px]">
-            <div class="aspect-[500/548] w-full overflow-hidden">
-              <img alt="" class="card-img size-full object-cover" src={card.img} loading="lazy" />
-            </div>
-            <div class="flex flex-col gap-[6px]">
-              <p class="card-caption text-body-1 text-dark">{card.title}</p>
-              <p class="text-body-2 text-secondary">{card.sub}</p>
-            </div>
-          </a>
-        ))}
+    </section>
+
+    <!-- Visit / Showroom -->
+    <section class="reveal bg-cream flex flex-col gap-2 py-20 lg:py-[160px] w-full">
+      <div class="carousel px-5 md:px-12 lg:px-[80px] py-10">
+        <a href="#" class="group flex flex-col gap-4 w-[320px] md:w-[500px] lg:w-[796px] shrink-0">
+          <div class="aspect-[796/488] w-full overflow-hidden">
+            <img alt="" class="card-img size-full object-cover" src={imgShowroom} loading="lazy" />
+          </div>
+          <div class="flex flex-col gap-[6px] max-w-[445px]">
+            <p class="text-body-1 text-dark">Feel the furniture in-person</p>
+            <p class="text-body-2 text-secondary">Visit our outlet showroom to see furniture up close and enjoy a hands-on experience.</p>
+          </div>
+        </a>
+        <a href="#" class="group flex flex-col gap-4 w-[320px] md:w-[500px] lg:w-[750px] shrink-0">
+          <div class="aspect-[750/548] w-full overflow-hidden">
+            <img alt="" class="card-img size-full object-cover" src={imgPersonalShopping} loading="lazy" />
+          </div>
+          <div class="flex flex-col gap-[6px]">
+            <p class="text-body-1 text-dark">Discover Personal Shopping</p>
+            <p class="text-body-2 text-secondary">Get assistance in picking what fits your needs</p>
+          </div>
+        </a>
+        <a href="#" class="group flex flex-col gap-4 w-[280px] md:w-[380px] lg:w-[432px] shrink-0">
+          <div class="aspect-[432/473] w-full overflow-hidden">
+            <img alt="" class="card-img size-full object-cover" src={imgOutletShowroom} loading="lazy" />
+          </div>
+          <div class="flex flex-col gap-[6px]">
+            <p class="text-body-1 text-dark">Outlet Showroom</p>
+            <p class="text-body-2 text-secondary">Lorem ipsum</p>
+          </div>
+        </a>
+      </div>
+      <div class="px-5 md:px-12 lg:px-[80px]">
+        <div class="flex items-center w-full">
+          <div class="bg-dark h-[4px] w-[358px]"></div>
+          <div class="bg-black/10 h-[4px] flex-1"></div>
+        </div>
       </div>
     </section>
 
@@ -314,17 +343,16 @@ const marqueeItems = [
                 type="button"
                 aria-label={`Add ${p.title} to collection`}
                 onclick="event.preventDefault();event.stopPropagation();"
-                class="btn-fav absolute right-[10px] top-[14px] z-10 group/fav"
+                class="absolute right-[16px] top-[16px] z-10 mix-blend-difference"
               >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="size-[18px] text-dark">
-                  <path d="M12 5v14M5 12h14" stroke-linecap="round" />
-                </svg>
+                <img alt="" class="size-[32px]" src={imgHeartPlus} />
               </button>
             )}
             <div class="flex flex-col gap-[2px] text-dark">
               <div class="flex gap-[20px] items-start">
                 <p class="card-caption text-body-2-emph flex-1 min-w-0">{p.title}</p>
                 <p class="text-body-2-emph text-right whitespace-nowrap">{p.price}</p>
+                <img alt="" class="size-[22px] shrink-0 mix-blend-difference" src={imgBaggageClaim} />
               </div>
               <p class="text-body-2 opacity-50">{p.desc}</p>
             </div>
@@ -348,14 +376,8 @@ const marqueeItems = [
           <h2 class="text-h2 text-[#3d2b1f]">Each Collection, Its Own World</h2>
           <p class="text-body-2 text-secondary">Each collection is its own design world, built around a distinct material and a clear aesthetic. We don't build collections for the sake of range. We build them when we have something worth saying. Each one is considered from the first sketch to the final finish, and built to feel like it was always meant to be in your home.</p>
         </div>
-        <div class="grid grid-cols-2 gap-0 flex-1 w-full lg:h-full aspect-[2/1] lg:aspect-auto">
-          <div class="relative overflow-hidden">
-            <img alt="" class="absolute h-[190.96%] left-[-11.71%] max-w-none top-[-54.97%] w-[239.28%]" src={imgImage1} loading="lazy" />
-          </div>
-          <div class="relative overflow-hidden">
-            <img alt="" class="absolute inset-0 size-full object-cover" src={imgImage2} loading="lazy" />
-            <img alt="" class="absolute h-[191.51%] left-[-111.09%] max-w-none top-[-55.19%] w-[239.96%]" src={imgImage3} loading="lazy" />
-          </div>
+        <div class="relative flex-1 w-full lg:h-full aspect-[2/1] lg:aspect-auto overflow-hidden">
+          <img alt="Madera Dining Table" class="absolute inset-0 size-full object-cover" src={imgMaderaTable} loading="lazy" />
         </div>
       </div>
       <div class="px-5 md:px-12 lg:px-[120px] py-10 lg:py-12 w-full">
@@ -363,85 +385,323 @@ const marqueeItems = [
       </div>
     </section>
 
-    <!-- ───────────────────────────── Same Build. Friendlier Prices. (carousel) ───────────────────────────── -->
-    <section class="reveal flex flex-col gap-16 lg:gap-[80px] pt-20 lg:pt-[160px] w-full">
-      <div class="flex flex-col gap-6 lg:gap-[24px] py-10 lg:py-[40px]">
-        <header class="flex flex-col gap-[10px] items-start px-5 md:px-12 lg:px-[80px]">
+    <!-- Our Sale Is On! -->
+    <section class="reveal flex flex-col gap-16 lg:gap-[80px] pt-20 lg:pt-[120px] w-full bg-[#f9f6f1]">
+      <div class="flex flex-col gap-16 lg:gap-[100px] px-5 md:px-12 lg:px-[80px] py-10">
+        <header class="flex flex-col gap-[10px] items-start">
           <div class="flex gap-[8px] items-center">
             <div class="bg-orange size-[6px]"></div>
             <p class="text-eyebrow text-dark">select prices</p>
           </div>
-          <h2 class="text-h2 text-dark">Same Build. Friendlier Prices.</h2>
+          <h2 class="text-h2 text-dark">Our Sale Is On!</h2>
         </header>
-        <div class="carousel px-5 md:px-12 lg:px-[80px]">
-          {friendlierPrices.map((card) => (
-            <a href="#" class="group flex flex-col gap-[16px] w-[280px] md:w-[380px] lg:w-[500px]">
-              <div class="aspect-[500/548] w-full overflow-hidden">
-                <img alt="" class="card-img size-full object-cover" src={card.img} loading="lazy" />
-              </div>
-              <div class="flex flex-col gap-[6px]">
-                <p class="card-caption text-body-1 text-dark">{card.title}</p>
-                <p class="text-body-2 text-secondary">{card.sub}</p>
-              </div>
-            </a>
-          ))}
+        <div class="carousel">
+          <a href="#" class="group flex flex-col gap-4 w-[300px] md:w-[420px] lg:w-[476px] shrink-0 relative">
+            <div class="aspect-[476/522] w-full overflow-hidden">
+              <img alt="" class="card-img size-full object-cover" src={imgSaleOsaka} loading="lazy" />
+            </div>
+            <div class="absolute bg-orange flex items-center px-3 py-2 right-4 top-4">
+              <p class="text-chip text-white">Save 15%</p>
+            </div>
+            <div class="flex flex-col gap-[6px]">
+              <p class="text-body-1 text-dark">15% off on Osaka Collection</p>
+              <p class="text-body-2 text-secondary">Discover exclusive deals with the Osaka Collection</p>
+            </div>
+          </a>
+          <a href="#" class="group flex flex-col gap-4 w-[300px] md:w-[420px] lg:w-[476px] shrink-0 relative">
+            <div class="aspect-[476/522] w-full overflow-hidden">
+              <img alt="" class="card-img size-full object-cover" src={imgSaleBarnDoors} loading="lazy" />
+            </div>
+            <div class="absolute bg-orange flex items-center px-3 py-2 right-4 top-4">
+              <p class="text-chip text-white">20% Off</p>
+            </div>
+            <div class="flex flex-col gap-[6px]">
+              <p class="text-body-1 text-dark">Online Only! Barn Doors are 20% off right now.</p>
+              <p class="text-body-2 text-secondary">Hurry up discount is until stock lasts</p>
+            </div>
+          </a>
+          <a href="#" class="group flex flex-col gap-4 w-[300px] md:w-[420px] lg:w-[476px] shrink-0 relative">
+            <div class="aspect-[570/625] w-full overflow-hidden">
+              <img alt="" class="card-img size-full object-cover" src={imgSaleDining} loading="lazy" />
+            </div>
+            <div class="absolute bg-orange flex items-center px-3 py-2 right-4 top-4">
+              <p class="text-chip text-white">Save 15%</p>
+            </div>
+            <div class="flex flex-col gap-[6px]">
+              <p class="text-body-1 text-dark">30% off on the dining tables</p>
+              <p class="text-body-2 text-secondary">Your favorite dining tables are now lower than ever</p>
+            </div>
+          </a>
+          <a href="#" class="group flex flex-col gap-4 w-[300px] md:w-[420px] lg:w-[476px] shrink-0 relative">
+            <div class="aspect-[476/522] w-full overflow-hidden">
+              <img alt="" class="card-img size-full object-cover" src={imgSaleOsaka} loading="lazy" />
+            </div>
+            <div class="absolute bg-orange flex items-center px-3 py-2 right-4 top-4">
+              <p class="text-chip text-white">Save 10%</p>
+            </div>
+            <div class="flex flex-col gap-[6px]">
+              <p class="text-body-1 text-dark">Madera Collection is on Sale</p>
+              <p class="text-body-2 text-secondary">Selected finishes now reduced</p>
+            </div>
+          </a>
+          <a href="#" class="group flex flex-col gap-4 w-[300px] md:w-[420px] lg:w-[476px] shrink-0 relative">
+            <div class="aspect-[476/522] w-full overflow-hidden">
+              <img alt="" class="card-img size-full object-cover" src={imgSaleBarnDoors} loading="lazy" />
+            </div>
+            <div class="absolute bg-orange flex items-center px-3 py-2 right-4 top-4">
+              <p class="text-chip text-white">Save 25%</p>
+            </div>
+            <div class="flex flex-col gap-[6px]">
+              <p class="text-body-1 text-dark">Hudson Bundle Deal</p>
+              <p class="text-body-2 text-secondary">Table + bench combo at a special price</p>
+            </div>
+          </a>
+        </div>
+        <div class="flex items-center w-full">
+          <div class="bg-dark h-[4px] w-[358px]"></div>
+          <div class="bg-black/10 h-[4px] flex-1"></div>
         </div>
       </div>
-      <div class="bg-orange flex flex-col lg:flex-row items-center lg:justify-between gap-6 lg:gap-0 p-10 lg:p-[80px] w-full">
-        <p class="text-h2 text-white">Sale ends in</p>
-        <p class="text-h2 text-white tabular-nums">09:23:13</p>
-        <a class="btn-text border-b border-white" href="#">
+      <div class="flex flex-col lg:flex-row items-center lg:justify-between gap-6 p-10 lg:p-[80px] w-full relative overflow-hidden">
+        <img alt="" class="absolute inset-0 size-full object-cover pointer-events-none" src={imgSaleCountdownBg} loading="lazy" />
+        <p class="text-h2 text-white relative">Sale ends in</p>
+        <p class="text-h2 text-white tabular-nums relative">09:23:13</p>
+        <a class="btn-text border-b border-white relative" href="#">
           <p class="text-button text-white">Access Now</p>
         </a>
       </div>
     </section>
 
-    <!-- ───────────────────────────── Editorial — Details (Dining bundle) ───────────────────────────── -->
-    <section class="reveal bg-white py-10 lg:py-[64px] w-full overflow-clip">
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-x-[72px] lg:gap-y-[48px] px-5 md:px-12 lg:px-[120px]">
-        <a href="#" class="group aspect-[4/5] overflow-hidden">
-          <img alt="" class="card-img size-full object-cover" src={imgRectangle19} loading="lazy" />
-        </a>
-        <a href="#" class="group aspect-[4/5] overflow-hidden">
-          <img alt="" class="card-img size-full object-contain" src={imgRectangle20} loading="lazy" />
-        </a>
-        <a href="#" class="group aspect-[4/5] overflow-hidden">
-          <img alt="" class="card-img size-full object-contain" src={imgRectangle20} loading="lazy" />
-        </a>
-
-        <a href="#" class="group aspect-[4/5] overflow-hidden">
-          <img alt="" class="card-img size-full object-contain" src={imgRectangle20} loading="lazy" />
-        </a>
-        <div class="flex flex-col gap-8 lg:gap-[48px] items-start py-6 lg:py-0">
-          <div class="text-h3 text-dark">
-            <p>Dining Table + Chairs</p>
-            <p>Save upto $560 – if bought together</p>
+    <!-- Editorial — Details (Bundles) -->
+    <section class="reveal bg-cream flex flex-col lg:flex-row w-full overflow-clip" id="bundles-section">
+      <div class="flex flex-1 flex-col gap-14 px-5 md:px-12 lg:px-[80px] py-16 lg:py-[120px]">
+        <div class="flex flex-col gap-3">
+          <div class="flex gap-[8px] items-center">
+            <div class="bg-orange size-[6px]"></div>
+            <p class="text-eyebrow text-secondary">Bundles</p>
           </div>
-          <div class="text-body-1 text-dark w-full">
-            <p>Adel Dining Table — $625 / from $980</p>
-            <p>Adel Chair Set — $599 / from $915</p>
-          </div>
-          <div class="text-body-2 text-dark opacity-50">
-            <p>The final pieces from these runs.</p>
-            <p>Reclaimed teak. Built to remain.</p>
-          </div>
-          <a class="btn-text border-b border-dark" href="#">
-            <p class="text-button text-dark">view bundle</p>
-          </a>
+          <h2 class="text-h2 text-dark">Get Upto $500</h2>
+          <p class="text-body-3 text-dark">in savings when you buy set of chairs with dining tables or buffet, or even 3 of them all together. It's great deal for you and a great way to save time.</p>
         </div>
-        <a href="#" class="group aspect-[4/5] overflow-hidden">
-          <img alt="" class="card-img size-full object-contain" src={imgRectangle20} loading="lazy" />
-        </a>
-
-        <a href="#" class="group aspect-[4/5] overflow-hidden">
-          <img alt="" class="card-img size-full object-contain" src={imgRectangle20} loading="lazy" />
-        </a>
-        <a href="#" class="group aspect-[4/5] overflow-hidden">
-          <img alt="" class="card-img size-full object-contain" src={imgRectangle20} loading="lazy" />
-        </a>
-        <a href="#" class="group aspect-[4/5] overflow-hidden">
-          <img alt="" class="card-img size-full object-contain" src={imgRectangle20} loading="lazy" />
-        </a>
+        <div class="flex flex-col flex-1">
+          <div class="bundle-row border-b border-dark flex gap-2 items-center py-8 cursor-pointer is-active" data-bundle="0" onmouseenter="switchBundle(0)">
+            <div class="flex flex-col gap-2 flex-1">
+              <p class="text-h3 text-dark bundle-title">Gathering Bundle</p>
+              <p class="text-body-3 text-secondary text-[14px] bundle-sub">Table + Bench</p>
+            </div>
+            <a href="#" class="bg-dark flex items-center px-[18px] py-3 rounded-full bundle-btn">
+              <p class="text-button text-white">View DEAL</p>
+            </a>
+          </div>
+          <div class="bundle-row border-b border-black/10 flex gap-2 items-center py-8 cursor-pointer" data-bundle="1" onmouseenter="switchBundle(1)">
+            <div class="flex flex-col gap-2 flex-1">
+              <p class="text-h3 text-secondary bundle-title">The Long Setting</p>
+              <p class="text-body-3 text-secondary text-[14px] bundle-sub hidden">Table + Chairs</p>
+            </div>
+            <a href="#" class="bg-dark flex items-center px-[18px] py-3 rounded-full bundle-btn hidden">
+              <p class="text-button text-white">View DEAL</p>
+            </a>
+          </div>
+          <div class="bundle-row border-b border-black/10 flex gap-2 items-center py-8 cursor-pointer" data-bundle="2" onmouseenter="switchBundle(2)">
+            <div class="flex flex-col gap-2 flex-1">
+              <p class="text-h3 text-secondary bundle-title">Service Special Bundle</p>
+              <p class="text-body-3 text-secondary text-[14px] bundle-sub hidden">Buffet + Table</p>
+            </div>
+            <a href="#" class="bg-dark flex items-center px-[18px] py-3 rounded-full bundle-btn hidden">
+              <p class="text-button text-white">View DEAL</p>
+            </a>
+          </div>
+          <div class="bundle-row border-b border-black/10 flex gap-2 items-center py-8 cursor-pointer" data-bundle="3" onmouseenter="switchBundle(3)">
+            <div class="flex flex-col gap-2 flex-1">
+              <p class="text-h3 text-secondary bundle-title">The Threshold Combo</p>
+              <p class="text-body-3 text-secondary text-[14px] bundle-sub hidden">Console + Accessories</p>
+            </div>
+            <a href="#" class="bg-dark flex items-center px-[18px] py-3 rounded-full bundle-btn hidden">
+              <p class="text-button text-white">View DEAL</p>
+            </a>
+          </div>
+          <div class="bundle-row border-b border-black/10 flex gap-2 items-center py-8 cursor-pointer" data-bundle="4" onmouseenter="switchBundle(4)">
+            <div class="flex flex-col gap-2 flex-1">
+              <p class="text-h3 text-secondary bundle-title">The Host Bundle</p>
+              <p class="text-body-3 text-secondary text-[14px] bundle-sub hidden">Full Dining Set</p>
+            </div>
+            <a href="#" class="bg-dark flex items-center px-[18px] py-3 rounded-full bundle-btn hidden">
+              <p class="text-button text-white">View DEAL</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-1 flex-col gap-8 px-5 md:px-12 lg:px-[80px] py-16 lg:py-[120px] relative">
+        <!-- Bundle 0: Gathering -->
+        <div class="bundle-panel flex flex-col gap-8 flex-1" data-panel="0">
+          <div class="flex flex-col gap-[18px] flex-1">
+            <div class="flex-1 relative overflow-hidden min-h-[200px]">
+              <img alt="" class="absolute inset-0 size-full object-cover" src={imgHudsonBundle} loading="lazy" />
+            </div>
+            <div class="flex flex-col gap-[2px] text-dark">
+              <div class="flex gap-5 items-start text-body-2-emph">
+                <p class="flex-1">Hudson Dining Table</p>
+                <p class="text-right whitespace-nowrap">$1,855</p>
+              </div>
+              <p class="text-body-3 opacity-50">Natural Reclaimed Teak + Black Metal</p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-[18px] flex-1">
+            <div class="flex-1 relative overflow-hidden min-h-[200px]">
+              <img alt="" class="absolute inset-0 size-full object-cover" src={imgSomaBench} loading="lazy" />
+            </div>
+            <div class="flex flex-col gap-[2px] text-dark">
+              <div class="flex gap-5 items-start text-body-2-emph">
+                <p class="flex-1">Soma Dining Bench</p>
+                <p class="text-right whitespace-nowrap">from $925</p>
+              </div>
+              <p class="text-body-3 opacity-50">Natural Reclaimed Teak + Black Metal</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between py-6 text-body-1">
+            <p class="flex-1 text-dark font-bold">Total Savings</p>
+            <div class="flex gap-2 items-center text-right">
+              <p class="text-orange line-through">$2,780</p>
+              <p class="text-dark font-bold whitespace-nowrap">$1,999</p>
+            </div>
+          </div>
+        </div>
+        <!-- Bundle 1: The Long Setting -->
+        <div class="bundle-panel flex flex-col gap-8 flex-1 hidden" data-panel="1">
+          <div class="flex flex-col gap-[18px] flex-1">
+            <div class="flex-1 relative overflow-hidden min-h-[200px]">
+              <img alt="" class="absolute inset-0 size-full object-cover" src={imgRectangle9} loading="lazy" />
+            </div>
+            <div class="flex flex-col gap-[2px] text-dark">
+              <div class="flex gap-5 items-start text-body-2-emph">
+                <p class="flex-1">Madera Dining Table</p>
+                <p class="text-right whitespace-nowrap">$1,870</p>
+              </div>
+              <p class="text-body-3 opacity-50">Natural Reclaimed Teak</p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-[18px] flex-1">
+            <div class="flex-1 relative overflow-hidden min-h-[200px]">
+              <img alt="" class="absolute inset-0 size-full object-cover" src={imgRectangle11} loading="lazy" />
+            </div>
+            <div class="flex flex-col gap-[2px] text-dark">
+              <div class="flex gap-5 items-start text-body-2-emph">
+                <p class="flex-1">Alto Chair Set (x4)</p>
+                <p class="text-right whitespace-nowrap">$599</p>
+              </div>
+              <p class="text-body-3 opacity-50">Natural Reclaimed Teak</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between py-6 text-body-1">
+            <p class="flex-1 text-dark font-bold">Total Savings</p>
+            <div class="flex gap-2 items-center text-right">
+              <p class="text-orange line-through">$2,469</p>
+              <p class="text-dark font-bold whitespace-nowrap">$1,999</p>
+            </div>
+          </div>
+        </div>
+        <!-- Bundle 2: Service Special -->
+        <div class="bundle-panel flex flex-col gap-8 flex-1 hidden" data-panel="2">
+          <div class="flex flex-col gap-[18px] flex-1">
+            <div class="flex-1 relative overflow-hidden min-h-[200px]">
+              <img alt="" class="absolute inset-0 size-full object-cover" src={imgRectangle10} loading="lazy" />
+            </div>
+            <div class="flex flex-col gap-[2px] text-dark">
+              <div class="flex gap-5 items-start text-body-2-emph">
+                <p class="flex-1">Osaka Dining Table</p>
+                <p class="text-right whitespace-nowrap">$1,990</p>
+              </div>
+              <p class="text-body-3 opacity-50">Natural Reclaimed Teak + Grey Concrete</p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-[18px] flex-1">
+            <div class="flex-1 relative overflow-hidden min-h-[200px]">
+              <img alt="" class="absolute inset-0 size-full object-cover" src={imgRectangle13} loading="lazy" />
+            </div>
+            <div class="flex flex-col gap-[2px] text-dark">
+              <div class="flex gap-5 items-start text-body-2-emph">
+                <p class="flex-1">Wadi Sideboard</p>
+                <p class="text-right whitespace-nowrap">$1,145</p>
+              </div>
+              <p class="text-body-3 opacity-50">Natural Mango Wood</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between py-6 text-body-1">
+            <p class="flex-1 text-dark font-bold">Total Savings</p>
+            <div class="flex gap-2 items-center text-right">
+              <p class="text-orange line-through">$3,135</p>
+              <p class="text-dark font-bold whitespace-nowrap">$2,649</p>
+            </div>
+          </div>
+        </div>
+        <!-- Bundle 3: Threshold Combo -->
+        <div class="bundle-panel flex flex-col gap-8 flex-1 hidden" data-panel="3">
+          <div class="flex flex-col gap-[18px] flex-1">
+            <div class="flex-1 relative overflow-hidden min-h-[200px]">
+              <img alt="" class="absolute inset-0 size-full object-cover" src={imgRectangle12} loading="lazy" />
+            </div>
+            <div class="flex flex-col gap-[2px] text-dark">
+              <div class="flex gap-5 items-start text-body-2-emph">
+                <p class="flex-1">Camden Dining Table</p>
+                <p class="text-right whitespace-nowrap">$1,425</p>
+              </div>
+              <p class="text-body-3 opacity-50">Natural Reclaimed Teak</p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-[18px] flex-1">
+            <div class="flex-1 relative overflow-hidden min-h-[200px]">
+              <img alt="" class="absolute inset-0 size-full object-cover" src={imgRectangle15} loading="lazy" />
+            </div>
+            <div class="flex flex-col gap-[2px] text-dark">
+              <div class="flex gap-5 items-start text-body-2-emph">
+                <p class="flex-1">Osaka TV Stand</p>
+                <p class="text-right whitespace-nowrap">$1,425</p>
+              </div>
+              <p class="text-body-3 opacity-50">Natural Reclaimed Teak + Grey Concrete</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between py-6 text-body-1">
+            <p class="flex-1 text-dark font-bold">Total Savings</p>
+            <div class="flex gap-2 items-center text-right">
+              <p class="text-orange line-through">$2,850</p>
+              <p class="text-dark font-bold whitespace-nowrap">$2,399</p>
+            </div>
+          </div>
+        </div>
+        <!-- Bundle 4: Host Bundle -->
+        <div class="bundle-panel flex flex-col gap-8 flex-1 hidden" data-panel="4">
+          <div class="flex flex-col gap-[18px] flex-1">
+            <div class="flex-1 relative overflow-hidden min-h-[200px]">
+              <img alt="" class="absolute inset-0 size-full object-cover" src={imgRectangle14} loading="lazy" />
+            </div>
+            <div class="flex flex-col gap-[2px] text-dark">
+              <div class="flex gap-5 items-start text-body-2-emph">
+                <p class="flex-1">Riviera Bed</p>
+                <p class="text-right whitespace-nowrap">$2,199</p>
+              </div>
+              <p class="text-body-3 opacity-50">Natural Wood</p>
+            </div>
+          </div>
+          <div class="flex flex-col gap-[18px] flex-1">
+            <div class="flex-1 relative overflow-hidden min-h-[200px]">
+              <img alt="" class="absolute inset-0 size-full object-cover" src={imgRectangle16} loading="lazy" />
+            </div>
+            <div class="flex flex-col gap-[2px] text-dark">
+              <div class="flex gap-5 items-start text-body-2-emph">
+                <p class="flex-1">Villa Coffee Table</p>
+                <p class="text-right whitespace-nowrap">$1,450</p>
+              </div>
+              <p class="text-body-3 opacity-50">Natural Reclaimed Teak</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-between py-6 text-body-1">
+            <p class="flex-1 text-dark font-bold">Total Savings</p>
+            <div class="flex gap-2 items-center text-right">
+              <p class="text-orange line-through">$3,649</p>
+              <p class="text-dark font-bold whitespace-nowrap">$2,999</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -484,94 +744,71 @@ const marqueeItems = [
       <p class="text-eyebrow text-orange font-semibold">#urbanwoodcrafters</p>
     </section>
 
-    <!-- ───────────────────────────── 14 Days From First Cut ───────────────────────────── -->
-    <section class="reveal bg-cream flex flex-col gap-12 lg:gap-[100px] px-5 md:px-12 lg:px-[80px] py-10 lg:py-[40px] w-full">
-      <header class="flex flex-col lg:flex-row gap-8 lg:items-end lg:justify-between">
+    <!-- 14 Days From First Cut -->
+    <section class="reveal flex flex-col min-h-screen relative w-full overflow-clip">
+      <div aria-hidden class="absolute inset-0 pointer-events-none">
+        <img alt="" class="absolute inset-0 size-full object-cover" src={imgProcessBg} loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-b from-dark via-transparent to-transparent" style="background: linear-gradient(to bottom, #20160e 0%, transparent 30%);"></div>
+      </div>
+      <div class="flex flex-1 flex-col lg:flex-row gap-8 items-start justify-between px-5 md:px-12 lg:px-[80px] pt-10 lg:pt-[40px] relative">
         <div class="flex flex-col gap-6 lg:gap-[24px] items-start">
           <div class="flex gap-[8px] items-center">
             <div class="bg-orange size-[6px]"></div>
-            <p class="text-eyebrow text-secondary">Our Process</p>
+            <p class="text-eyebrow text-white">Our Process</p>
           </div>
-          <h2 class="text-h2 text-dark">14 Days From First Cut,<br />To Your Front Door</h2>
+          <h2 class="text-h2 text-white">14 Days From First Cut,<br />To Your Front Door</h2>
         </div>
-        <p class="text-body-2 text-dark max-w-[526px]">From the first cut to the final finish, every piece is built by hand and delivered to your door in 14 days.</p>
-      </header>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 lg:gap-x-[32px]">
-        {[
-          { num:'02', img:imgRectangle21, imgFirst:true,  head:`We reveal what's underneath, without erasing its story.`, body:`The wood is cleaned, smoothed, and prepared – carefully, without losing what makes it worth using in the first place. Every mark that belongs there, stays there.` },
-          { num:'01', img:imgRectangle22, imgFirst:false, head:`It starts with wood that's already lived a life.`, body:`Every board arrives carrying its own history – knots, grain patterns, weathered edges earned over decades. We don't see imperfections. We see character worth building around.` },
-          { num:'03', img:imgRectangle23, imgFirst:true,  head:`We build with intention.`, body:`New hardwood forms the bones of every piece we build. Cut by hand, joined tightly, built to hold without shifting, loosening, or giving way. The kind of structure that only comes from doing it the slow way.` },
-          { num:'04', img:imgRectangle24, imgFirst:false, head:`This is where it all comes together.`, body:`The reclaimed teak top is laid, fitted, and finished onto its hardwood frame by hand. Two kinds of wood, two histories, one piece of furniture. This is what makes every Urban Woodcraft piece entirely its own.` },
-        ].map((s) => (
-          <article class="flex flex-col gap-6 lg:gap-[32px] items-start pb-12 lg:pb-[80px]">
-            {s.imgFirst && (
-              <div class="group aspect-[624/400] w-full overflow-hidden">
-                <img alt="" class="card-img size-full object-cover" src={s.img} loading="lazy" />
-              </div>
-            )}
-            <p class="text-h2 text-dark opacity-10 text-center w-full">{s.num}</p>
-            {!s.imgFirst && (
-              <>
-                <div class="flex flex-col gap-[16px] text-dark">
-                  <p class="text-body-2">{s.head}</p>
-                  <p class="text-body-3 opacity-50 max-w-[543px]">{s.body}</p>
-                </div>
-                <div class="group aspect-[624/400] w-full overflow-hidden">
-                  <img alt="" class="card-img size-full object-cover" src={s.img} loading="lazy" />
-                </div>
-              </>
-            )}
-            {s.imgFirst && (
-              <div class="flex flex-col gap-[16px] text-dark">
-                <p class="text-body-2">{s.head}</p>
-                <p class="text-body-3 opacity-50 max-w-[543px]">{s.body}</p>
-              </div>
-            )}
-          </article>
-        ))}
+        <p class="text-body-2 text-white max-w-[526px]">From the first cut to the final finish, every piece is built by hand and delivered to your door in 14 days.</p>
+      </div>
+      <div class="relative mt-auto px-5 md:px-12 lg:px-[80px] pb-10 lg:pb-[80px] pt-20 lg:pt-[120px]" style="background: linear-gradient(to bottom, transparent 0%, #20160e 67%);">
+        <div class="flex flex-wrap lg:flex-nowrap gap-8 items-start">
+          <div class="flex items-center gap-4 shrink-0">
+            <div class="border-2 border-white flex items-center justify-center rounded-full size-[80px] lg:size-[104px]">
+              <p class="text-button text-white">01</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-6 flex-1 min-w-0">
+            <div class="bg-dark flex items-center justify-center rounded-full size-[80px] lg:size-[104px] shrink-0">
+              <p class="text-button text-white">02</p>
+            </div>
+            <div class="flex flex-col gap-2 text-white min-w-0">
+              <p class="text-body-2">We reveal what's underneath, without erasing its story.</p>
+              <p class="text-body-3 opacity-50">The wood is cleaned, smoothed, and prepared – carefully, without losing what makes it worth using in the first place. Every mark that belongs there, stays there.</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-4 shrink-0">
+            <div class="border-2 border-white flex items-center justify-center rounded-full size-[80px] lg:size-[104px]">
+              <p class="text-button text-white">03</p>
+            </div>
+            <div class="border-2 border-white flex items-center justify-center rounded-full size-[80px] lg:size-[104px]">
+              <p class="text-button text-white">04</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- ───────────────────────────── Yellow CTA ───────────────────────────── -->
-    <section class="reveal bg-[#c48900] flex flex-col lg:flex-row gap-10 lg:gap-[88px] items-center justify-center p-10 lg:p-[80px] w-full">
-      <div class="flex flex-col gap-[20px] items-start text-white max-w-[360px]">
-        <h2 class="text-h2">The Space You Want Starts Here</h2>
-        <p class="text-body-2">Save the pieces you love and come back to them whenever you're ready.</p>
+    <!-- Founder's Home -->
+    <section class="reveal bg-white flex flex-col gap-12 items-center px-5 md:px-12 lg:px-[80px] py-16 lg:py-[120px] w-full relative overflow-hidden group/founder">
+      <div class="text-display-wordmark text-dark text-center leading-none relative z-10">
+        <p>FOUNDER'S</p>
+        <p>HOME</p>
       </div>
-      <a href="#" class="btn-pill btn-pill-light border-2 size-[140px] lg:size-[160px] shrink-0">
-        <p class="text-button text-center leading-tight">BUILD YOUR<br />COLLECTION</p>
-      </a>
-    </section>
-
-    <!-- ───────────────────────────── Visit Us ───────────────────────────── -->
-    <section class="reveal bg-white flex flex-col gap-16 lg:gap-[150px] overflow-clip p-5 md:p-12 lg:p-[120px] w-full">
-      <div class="flex flex-col md:flex-row gap-6 md:items-end md:justify-between">
-        <div class="flex flex-col gap-6 lg:gap-[24px] items-start">
+      <img alt="" class="absolute top-[10px] left-1/2 -translate-x-1/2 w-[300px] md:w-[480px] lg:w-[680px] h-auto object-contain z-20 transition-transform duration-[1500ms] ease-out group-hover/founder:[transform:translateX(-50%)_rotateZ(3deg)_scale(1.02)]" src={imgFoundersHome} loading="lazy" />
+      <div class="flex flex-col lg:flex-row gap-10 lg:gap-[168px] items-start lg:items-end w-full relative z-10">
+        <div class="flex flex-1 flex-col gap-[10px]">
           <div class="flex gap-[8px] items-center">
             <div class="bg-orange size-[6px]"></div>
-            <p class="text-eyebrow text-secondary">VIsit Us</p>
+            <p class="text-eyebrow text-secondary">visit</p>
           </div>
-          <h2 class="text-h2 text-dark">Not a showroom.</h2>
+          <h2 class="text-h2 text-dark">Our founder lives with every piece we make</h2>
         </div>
-        <div class="flex flex-col gap-[8px] items-start text-body-2-emph text-dark whitespace-nowrap">
-          <p>155 DELTA PARK BLVD.</p>
-          <p>BRAMPTON, TORONTO</p>
-          <p>APPOINTMENTS ONLY</p>
+        <div class="flex flex-1 flex-col">
+          <p class="text-body-2 text-dark max-w-[428px]">A small number of clients are invited each month to visit in person. No sales floor. No pressure. Just the work, as it was intended to be lived with.</p>
         </div>
-      </div>
-      <div class="flex flex-col gap-6 lg:gap-[24px] lg:w-[970px] lg:self-end">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-[24px]">
-          <a href="#" class="group aspect-square w-full overflow-hidden">
-            <img alt="" class="card-img size-full object-cover" src={imgRectangle27} loading="lazy" />
-          </a>
-          <a href="#" class="group aspect-square w-full overflow-hidden">
-            <img alt="" class="card-img size-full object-cover" src={imgRectangle28} loading="lazy" />
-          </a>
-        </div>
-        <div class="flex flex-col gap-3 lg:gap-[12px] text-dark">
-          <p class="text-body-1">Where the furniture lives before it lives with you.</p>
-          <p class="text-body-3">Our founder lives with every piece we make. The Toronto residence is furnished entirely in Urban Woodcraft — tables that have hosted dinners, beds that have been slept in, wood that has settled into a family's daily rhythm. A small number of clients are invited each month to visit in person. No sales floor. No pressure. Just the work, as it was intended to be lived with.</p>
-        </div>
+        <a href="#" class="btn-pill btn-pill-dark border size-[120px] lg:size-[160px] shrink-0">
+          <p class="text-button">apply</p>
+        </a>
       </div>
     </section>
 
@@ -615,15 +852,16 @@ const marqueeItems = [
       </div>
     </section>
 
-    <!-- ───────────────────────────── HERE TO HELP ───────────────────────────── -->
-    <section class="reveal flex flex-col gap-10 lg:gap-[72px] items-center justify-center min-h-[360px] lg:h-[469px] overflow-clip pb-16 lg:pb-[120px] pt-16 lg:pt-0 px-5 md:px-12 lg:px-[24px] relative w-full">
+    <!-- HERE TO HELP -->
+    <section class="reveal flex flex-col items-center justify-center min-h-[360px] lg:h-[469px] overflow-clip px-5 md:px-12 lg:px-[24px] py-16 lg:py-[120px] relative w-full">
       <div aria-hidden class="absolute inset-0 pointer-events-none">
-        <img alt="" class="absolute inset-0 size-full object-cover" src={imgFrame63} loading="lazy" />
-        <div class="absolute bg-[rgba(46,29,15,0.5)] inset-0"></div>
+        <img alt="" class="absolute inset-0 size-full object-cover" src={imgHereToHelp} loading="lazy" />
       </div>
-      <h2 class="text-display-hero text-white text-center relative">HERE TO HELP</h2>
       <div class="flex flex-col gap-8 lg:gap-[32px] items-center justify-center max-w-[638px] relative">
-        <p class="text-body-3 lg:text-body-2 text-white text-center">Every purchase deserves a little confidence. Book a private viewing to see your shortlisted pieces in person, or join a guided shopping call for one-on-one advice on finishes, sizes, and what works best for your space.</p>
+        <div class="flex flex-col gap-3 items-center text-center">
+          <h2 class="text-h2 text-white">Here To Help</h2>
+          <p class="text-body-2 text-white text-center">Every purchase deserves a little confidence. Book a private viewing to see your shortlisted pieces in person, or join a guided shopping call for one-on-one advice on finishes, sizes, and what works best for your space.</p>
+        </div>
         <div class="flex flex-col sm:flex-row gap-6 lg:gap-[32px] items-center">
           <a class="btn-text border-b border-white" href="#">
             <p class="text-button text-white">book private meeting</p>
@@ -686,5 +924,818 @@ const marqueeItems = [
         </div>
       </div>
     </footer>
+    <!-- Mega Menu — Dining Room -->
+    <div id="mega-dining" class="hidden fixed inset-0 z-50 overflow-y-auto" onmouseleave="closeMega(this.id)">
+      <div class="min-h-full bg-[#f9f6f1]">
+        <!-- Utility bar (same as page, stays dark) -->
+        <div class="bg-dark flex flex-wrap items-center justify-between px-5 md:px-12 lg:px-[80px] py-3 w-full text-body-3 text-white">
+          <div class="flex gap-6 items-center">
+            <p>Free shipping across US &amp; Canada</p>
+            <span class="bg-white/30 size-[4px] rounded-full shrink-0" aria-hidden></span>
+            <p>Free returns within 7 days</p>
+            <span class="bg-white/30 size-[4px] rounded-full shrink-0" aria-hidden></span>
+            <p>Book a private viewing · 1-855-738-1378</p>
+          </div>
+          <div class="hidden md:flex gap-4 text-body-3 text-white">
+            <p>EN</p>
+            <p>USD</p>
+          </div>
+        </div>
+        <!-- Logo bar (same sizing as hero, dark text on mega-menu bg) -->
+        <div class="flex flex-wrap gap-4 lg:gap-0 h-auto lg:h-[120px] items-center justify-between px-5 md:px-12 lg:px-[120px] py-5 lg:py-0 w-full">
+          <a href="/uwc-website/" class="leading-none text-[44px] sm:text-[64px] lg:text-[96px] text-dark tracking-tight lg:tracking-[-3.84px] whitespace-nowrap">
+            <span class="font-light lg:tracking-[-0.64px]">urban</span><span class="font-bold lg:tracking-[-0.64px]">woodcraft</span>
+          </a>
+          <nav class="hidden md:flex gap-4 lg:gap-[24px] items-center text-button text-dark order-3 lg:order-none w-full lg:w-auto justify-center lg:justify-start">
+            <a href="#" class="link-hover">Menu</a>
+            <a href="#" class="link-hover">Search</a>
+            <a href="#" class="link-hover">account</a>
+            <a href="#" class="link-hover">Cart (0)</a>
+          </nav>
+          <a href="#" class="bg-dark flex items-center px-[18px] py-[12px] rounded-full">
+            <p class="text-button text-white">SALE!</p>
+          </a>
+        </div>
+        <!-- Category nav (same sizing, dining highlighted) -->
+        <nav class="border-dark/10 border-b border-t text-button w-full">
+          <div class="flex gap-6 lg:gap-0 h-[56px] lg:h-[72px] items-center lg:justify-between px-5 md:px-12 lg:px-[120px] overflow-x-auto whitespace-nowrap [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <a href="/uwc-website/dining/" class="text-dark">dining</a>
+            <a href="#" class="text-dark/40 link-hover">living</a>
+            <a href="#" class="text-dark/40 link-hover">bedroom</a>
+            <a href="#" class="text-dark/40 link-hover">STORAGE</a>
+            <a href="#" class="text-dark/40 link-hover">BARN DOORS</a>
+            <a href="#" class="text-dark/40 link-hover">vanities</a>
+            <a href="#" class="text-dark/40 link-hover">occassional</a>
+          </div>
+        </nav>
+        <!-- Dropdown content -->
+        <div class="flex flex-col gap-[55px] px-5 md:px-12 lg:px-[120px] py-10 lg:py-[64px] relative">
+          <button onclick="document.getElementById('mega-dining').classList.add('hidden')" class="absolute top-4 right-4 lg:right-8 z-10 size-[40px] flex items-center justify-center rounded-full bg-black/5 hover:bg-black/10 transition-colors" aria-label="Close menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="size-[16px] text-dark"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </button>
+          <p class="text-h3 text-black">Dining Room</p>
+          <div class="flex gap-8">
+            <div class="flex flex-col justify-between flex-1 max-w-[744px]">
+              <div class="flex gap-8">
+                <div class="flex flex-col gap-4 flex-1 min-w-[96px]">
+                  <p class="text-body-3 text-dark opacity-50">Tables</p>
+                  <div class="flex flex-col gap-4 text-body-3 text-dark">
+                    <a href="#" class="link-hover">Madera</a>
+                    <a href="#" class="link-hover">Stella</a>
+                    <a href="#" class="link-hover">Osaka</a>
+                    <a href="#" class="link-hover">Castello</a>
+                  </div>
+                  <a href="#" class="text-button text-dark mt-2">View All</a>
+                </div>
+                <div class="flex flex-col gap-4 flex-1 min-w-[96px]">
+                  <p class="text-body-3 text-dark opacity-50">Buffets</p>
+                  <div class="flex flex-col gap-4 text-body-3 text-dark">
+                    <a href="#" class="link-hover">Riverbed</a>
+                    <a href="#" class="link-hover">Teca</a>
+                    <a href="#" class="link-hover">Brookside</a>
+                    <a href="#" class="link-hover">Opus</a>
+                  </div>
+                  <a href="#" class="text-button text-dark mt-2">View All</a>
+                </div>
+                <div class="flex flex-col gap-4 flex-1 min-w-[96px]">
+                  <p class="text-body-3 text-dark opacity-50">Dining Chairs</p>
+                  <div class="flex flex-col gap-4 text-body-3 text-dark">
+                    <a href="#" class="link-hover">Alto 20" Metal Chair</a>
+                    <a href="#" class="link-hover">Alto 20" Wood Chair</a>
+                    <a href="#" class="link-hover">Kora Dining Chair</a>
+                  </div>
+                  <a href="#" class="text-button text-dark mt-2">View All</a>
+                </div>
+              </div>
+              <div class="flex flex-col gap-4 mt-8">
+                <p class="text-body-2 text-dark">Custom Finishes Available</p>
+                <div class="flex gap-2 items-center">
+                  <p class="text-body-2 text-dark">Archival Collection</p>
+                  <span class="bg-orange text-white text-chip px-3 py-2">Sale!</span>
+                </div>
+                <p class="text-body-2 text-dark">Personal Shopper</p>
+              </div>
+            </div>
+            <div class="hidden lg:flex flex-col gap-5 shrink-0">
+              <div class="relative size-[496px]">
+                <img alt="" class="absolute inset-0 size-full object-cover" src={imgMegaDiningPromo} loading="lazy" />
+                <div class="absolute bg-orange flex items-center px-3 py-2 rounded-full right-4 top-4">
+                  <p class="text-chip text-white">Save 15%</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-[2px]">
+                <div class="flex gap-5 items-start text-body-2-emph text-dark">
+                  <p class="flex-1">Hudson Dining Table + Bench</p>
+                  <div class="flex gap-2 items-center text-right">
+                    <p class="text-orange line-through text-body-2">$2,510</p>
+                    <p class="font-bold text-body-2">$1,999</p>
+                  </div>
+                </div>
+                <p class="text-body-3 text-secondary">Offer until end of July</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mega Menu — Living Room -->
+    <div id="mega-living" class="hidden fixed inset-0 z-50 overflow-y-auto" onmouseleave="closeMega(this.id)">
+      <div class="min-h-full bg-[#f9f6f1]">
+        <!-- Utility bar -->
+        <div class="bg-dark flex flex-wrap items-center justify-between px-5 md:px-12 lg:px-[80px] py-3 w-full text-body-3 text-white">
+          <div class="flex gap-6 items-center">
+            <p>Free shipping across US &amp; Canada</p>
+            <span class="bg-white/30 size-[4px] rounded-full shrink-0" aria-hidden></span>
+            <p>Free returns within 7 days</p>
+            <span class="bg-white/30 size-[4px] rounded-full shrink-0" aria-hidden></span>
+            <p>Book a private viewing · 1-855-738-1378</p>
+          </div>
+          <div class="hidden md:flex gap-4 text-body-3 text-white">
+            <p>EN</p>
+            <p>USD</p>
+          </div>
+        </div>
+        <!-- Logo bar -->
+        <div class="flex flex-wrap gap-4 lg:gap-0 h-auto lg:h-[120px] items-center justify-between px-5 md:px-12 lg:px-[120px] py-5 lg:py-0 w-full">
+          <a href="/uwc-website/" class="leading-none text-[44px] sm:text-[64px] lg:text-[96px] text-dark tracking-tight lg:tracking-[-3.84px] whitespace-nowrap">
+            <span class="font-light lg:tracking-[-0.64px]">urban</span><span class="font-bold lg:tracking-[-0.64px]">woodcraft</span>
+          </a>
+          <nav class="hidden md:flex gap-4 lg:gap-[24px] items-center text-button text-dark order-3 lg:order-none w-full lg:w-auto justify-center lg:justify-start">
+            <a href="#" class="link-hover">Menu</a>
+            <a href="#" class="link-hover">Search</a>
+            <a href="#" class="link-hover">account</a>
+            <a href="#" class="link-hover">Cart (0)</a>
+          </nav>
+          <a href="#" class="bg-dark flex items-center px-[18px] py-[12px] rounded-full">
+            <p class="text-button text-white">SALE!</p>
+          </a>
+        </div>
+        <!-- Category nav (living highlighted) -->
+        <nav class="border-dark/10 border-b border-t text-button w-full">
+          <div class="flex gap-6 lg:gap-0 h-[56px] lg:h-[72px] items-center lg:justify-between px-5 md:px-12 lg:px-[120px] overflow-x-auto whitespace-nowrap [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <a href="/uwc-website/dining/" class="text-dark/40 link-hover">dining</a>
+            <a href="#" class="text-dark">living</a>
+            <a href="#" class="text-dark/40 link-hover">bedroom</a>
+            <a href="#" class="text-dark/40 link-hover">STORAGE</a>
+            <a href="#" class="text-dark/40 link-hover">BARN DOORS</a>
+            <a href="#" class="text-dark/40 link-hover">vanities</a>
+            <a href="#" class="text-dark/40 link-hover">occassional</a>
+          </div>
+        </nav>
+        <!-- Dropdown content -->
+        <div class="flex flex-col gap-[55px] px-5 md:px-12 lg:px-[120px] py-10 lg:py-[64px] relative">
+          <button onclick="document.getElementById('mega-living').classList.add('hidden')" class="absolute top-4 right-4 lg:right-8 z-10 size-[40px] flex items-center justify-center rounded-full bg-black/5 hover:bg-black/10 transition-colors" aria-label="Close menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="size-[16px] text-dark"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </button>
+          <p class="text-h3 text-black">Living Room</p>
+          <div class="flex gap-8">
+            <div class="flex flex-col gap-20 flex-1 max-w-[744px]">
+              <div class="flex gap-8">
+                <div class="flex flex-col gap-4 flex-1 min-w-[96px]">
+                  <p class="text-body-3 text-dark opacity-50">TV Stands</p>
+                  <div class="flex flex-col gap-4 text-body-3 text-dark">
+                    <a href="#" class="link-hover">Soma</a>
+                    <a href="#" class="link-hover">Burma</a>
+                    <a href="#" class="link-hover">Parisian</a>
+                    <a href="#" class="link-hover">Brookside</a>
+                  </div>
+                  <a href="#" class="text-button text-dark mt-2">View All</a>
+                </div>
+                <div class="flex flex-col gap-4 flex-1 min-w-[96px]">
+                  <p class="text-body-3 text-dark opacity-50">Console Tables</p>
+                  <div class="flex flex-col gap-4 text-body-3 text-dark">
+                    <a href="#" class="link-hover">Parisian</a>
+                    <a href="#" class="link-hover">Hudson</a>
+                    <a href="#" class="link-hover">Metal Works</a>
+                  </div>
+                  <a href="#" class="text-button text-dark mt-2">View All</a>
+                </div>
+                <div class="flex flex-col gap-4 flex-1 min-w-[96px]">
+                  <p class="text-body-3 text-dark opacity-50">Wall Mantels</p>
+                  <div class="flex flex-col gap-4 text-body-3 text-dark">
+                    <a href="#" class="link-hover">Duluth</a>
+                    <a href="#" class="link-hover">Hudson</a>
+                  </div>
+                  <a href="#" class="text-button text-dark mt-2">View All</a>
+                </div>
+              </div>
+              <div class="flex gap-8">
+                <div class="flex flex-col gap-4 flex-1 min-w-[96px]">
+                  <p class="text-body-3 text-dark opacity-50">Coffee Tables</p>
+                  <div class="flex flex-col gap-4 text-body-3 text-dark">
+                    <a href="#" class="link-hover">Villa</a>
+                    <a href="#" class="link-hover">Madison</a>
+                    <a href="#" class="link-hover">Hudson</a>
+                    <a href="#" class="link-hover">Riverbend</a>
+                  </div>
+                  <a href="#" class="text-button text-dark mt-2">View All</a>
+                </div>
+                <div class="flex flex-col gap-4 flex-1 min-w-[96px]">
+                  <p class="text-body-3 text-dark opacity-50">Occassional</p>
+                  <div class="flex flex-col gap-4 text-body-3 text-dark">
+                    <a href="#" class="link-hover">2-Piece</a>
+                    <a href="#" class="link-hover">3-Piece</a>
+                    <a href="#" class="link-hover">Bauhaus</a>
+                    <a href="#" class="link-hover">Cross Leg</a>
+                  </div>
+                  <a href="#" class="text-button text-dark mt-2">View All</a>
+                </div>
+                <div class="flex-1 min-w-[96px]"></div>
+              </div>
+              <div class="flex flex-col gap-4">
+                <p class="text-body-2 text-dark">Custom Finishes Available</p>
+                <div class="flex gap-2 items-center">
+                  <p class="text-body-2 text-dark">Archival Collection</p>
+                  <span class="bg-orange text-white text-chip px-3 py-2">Sale!</span>
+                </div>
+                <p class="text-body-2 text-dark">Personal Shopper</p>
+              </div>
+            </div>
+            <div class="hidden lg:flex flex-col gap-5 shrink-0">
+              <div class="relative size-[496px]">
+                <img alt="" class="absolute inset-0 size-full object-cover" src={imgMegaLivingPromo} loading="lazy" />
+                <div class="absolute bg-white flex items-center justify-center p-2 right-4 top-4">
+                  <p class="text-chip text-dark">New</p>
+                </div>
+              </div>
+              <div class="flex flex-col gap-[2px]">
+                <div class="flex gap-5 items-start text-body-2-emph text-dark">
+                  <p class="flex-1">Madison Coffee Table</p>
+                  <p class="text-right font-bold text-body-2 whitespace-nowrap">From $1,240</p>
+                </div>
+                <p class="text-body-3 text-secondary">Natural Reclaimed Teak + Black Metal</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mega Menu — Bedroom -->
+    <div id="mega-bedroom" class="hidden fixed inset-0 z-50 overflow-y-auto" onmouseleave="closeMega(this.id)">
+      <div class="min-h-full bg-[#f9f6f1]">
+        <!-- Utility bar -->
+        <div class="bg-dark flex flex-wrap items-center justify-between px-5 md:px-12 lg:px-[80px] py-3 w-full text-body-3 text-white">
+          <div class="flex gap-6 items-center">
+            <p>Free shipping across US &amp; Canada</p>
+            <span class="bg-white/30 size-[4px] rounded-full shrink-0" aria-hidden></span>
+            <p>Free returns within 7 days</p>
+            <span class="bg-white/30 size-[4px] rounded-full shrink-0" aria-hidden></span>
+            <p>Book a private viewing · 1-855-738-1378</p>
+          </div>
+          <div class="hidden md:flex gap-4 text-body-3 text-white">
+            <p>EN</p>
+            <p>USD</p>
+          </div>
+        </div>
+        <!-- Logo bar -->
+        <div class="flex flex-wrap gap-4 lg:gap-0 h-auto lg:h-[120px] items-center justify-between px-5 md:px-12 lg:px-[120px] py-5 lg:py-0 w-full">
+          <a href="/uwc-website/" class="leading-none text-[44px] sm:text-[64px] lg:text-[96px] text-dark tracking-tight lg:tracking-[-3.84px] whitespace-nowrap">
+            <span class="font-light lg:tracking-[-0.64px]">urban</span><span class="font-bold lg:tracking-[-0.64px]">woodcraft</span>
+          </a>
+          <nav class="hidden md:flex gap-4 lg:gap-[24px] items-center text-button text-dark order-3 lg:order-none w-full lg:w-auto justify-center lg:justify-start">
+            <a href="#" class="link-hover">Menu</a>
+            <a href="#" class="link-hover">Search</a>
+            <a href="#" class="link-hover">account</a>
+            <a href="#" class="link-hover">Cart (0)</a>
+          </nav>
+          <a href="#" class="bg-dark flex items-center px-[18px] py-[12px] rounded-full">
+            <p class="text-button text-white">SALE!</p>
+          </a>
+        </div>
+        <!-- Category nav (bedroom highlighted) -->
+        <nav class="border-dark/10 border-b border-t text-button w-full">
+          <div class="flex gap-6 lg:gap-0 h-[56px] lg:h-[72px] items-center lg:justify-between px-5 md:px-12 lg:px-[120px] overflow-x-auto whitespace-nowrap [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <a href="/uwc-website/dining/" class="text-dark/40 link-hover">dining</a>
+            <a href="#" class="text-dark/40 link-hover">living</a>
+            <a href="#" class="text-dark">bedroom</a>
+            <a href="#" class="text-dark/40 link-hover">STORAGE</a>
+            <a href="#" class="text-dark/40 link-hover">BARN DOORS</a>
+            <a href="#" class="text-dark/40 link-hover">vanities</a>
+            <a href="#" class="text-dark/40 link-hover">occassional</a>
+          </div>
+        </nav>
+        <!-- Dropdown content -->
+        <div class="flex flex-col gap-[55px] px-5 md:px-12 lg:px-[120px] py-10 lg:py-[64px] relative">
+          <button onclick="document.getElementById('mega-bedroom').classList.add('hidden')" class="absolute top-4 right-4 lg:right-8 z-10 size-[40px] flex items-center justify-center rounded-full bg-black/5 hover:bg-black/10 transition-colors" aria-label="Close menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="size-[16px] text-dark"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </button>
+          <p class="text-h3 text-black">Bedroom</p>
+          <div class="flex gap-8">
+            <div class="flex flex-col justify-between flex-1 max-w-[744px]">
+              <div class="flex gap-8">
+                <div class="flex flex-col gap-4 flex-1 min-w-[96px]">
+                  <p class="text-body-3 text-dark opacity-50">Beds</p>
+                  <div class="flex flex-col gap-4 text-body-3 text-dark">
+                    <a href="#" class="link-hover">Riviera</a>
+                    <a href="#" class="link-hover">Lugano</a>
+                    <a href="#" class="link-hover">Atelier</a>
+                    <a href="#" class="link-hover">Madera</a>
+                  </div>
+                  <a href="#" class="text-button text-dark mt-2">View All</a>
+                </div>
+                <div class="flex flex-col gap-4 flex-1 min-w-[96px]">
+                  <p class="text-body-3 text-dark opacity-50">Nightstands</p>
+                  <div class="flex flex-col gap-4 text-body-3 text-dark">
+                    <a href="#" class="link-hover">Hudson</a>
+                    <a href="#" class="link-hover">Soma</a>
+                    <a href="#" class="link-hover">Parisian</a>
+                  </div>
+                  <a href="#" class="text-button text-dark mt-2">View All</a>
+                </div>
+                <div class="flex flex-col gap-4 flex-1 min-w-[96px]">
+                  <p class="text-body-3 text-dark opacity-50">Dressers</p>
+                  <div class="flex flex-col gap-4 text-body-3 text-dark">
+                    <a href="#" class="link-hover">Brookside</a>
+                    <a href="#" class="link-hover">Camden</a>
+                    <a href="#" class="link-hover">Riviera</a>
+                  </div>
+                  <a href="#" class="text-button text-dark mt-2">View All</a>
+                </div>
+              </div>
+              <div class="flex flex-col gap-4 mt-8">
+                <p class="text-body-2 text-dark">Custom Finishes Available</p>
+                <div class="flex gap-2 items-center">
+                  <p class="text-body-2 text-dark">Archival Collection</p>
+                  <span class="bg-orange text-white text-chip px-3 py-2">Sale!</span>
+                </div>
+                <p class="text-body-2 text-dark">Personal Shopper</p>
+              </div>
+            </div>
+            <div class="hidden lg:flex flex-col gap-5 shrink-0">
+              <div class="relative size-[496px]">
+                <img alt="" class="absolute inset-0 size-full object-cover" src={imgRectangle3} loading="lazy" />
+              </div>
+              <div class="flex flex-col gap-[2px]">
+                <div class="flex gap-5 items-start text-body-2-emph text-dark">
+                  <p class="flex-1">Riviera Bed Frame</p>
+                  <p class="text-right font-bold text-body-2 whitespace-nowrap">from $2,199</p>
+                </div>
+                <p class="text-body-3 text-secondary">Natural Reclaimed Teak</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mega Menu — Storage -->
+    <div id="mega-storage" class="hidden fixed inset-0 z-50 overflow-y-auto" onmouseleave="closeMega(this.id)">
+      <div class="min-h-full bg-[#f9f6f1]">
+        <!-- Utility bar -->
+        <div class="bg-dark flex flex-wrap items-center justify-between px-5 md:px-12 lg:px-[80px] py-3 w-full text-body-3 text-white">
+          <div class="flex gap-6 items-center">
+            <p>Free shipping across US &amp; Canada</p>
+            <span class="bg-white/30 size-[4px] rounded-full shrink-0" aria-hidden></span>
+            <p>Free returns within 7 days</p>
+            <span class="bg-white/30 size-[4px] rounded-full shrink-0" aria-hidden></span>
+            <p>Book a private viewing · 1-855-738-1378</p>
+          </div>
+          <div class="hidden md:flex gap-4 text-body-3 text-white">
+            <p>EN</p>
+            <p>USD</p>
+          </div>
+        </div>
+        <!-- Logo bar -->
+        <div class="flex flex-wrap gap-4 lg:gap-0 h-auto lg:h-[120px] items-center justify-between px-5 md:px-12 lg:px-[120px] py-5 lg:py-0 w-full">
+          <a href="/uwc-website/" class="leading-none text-[44px] sm:text-[64px] lg:text-[96px] text-dark tracking-tight lg:tracking-[-3.84px] whitespace-nowrap">
+            <span class="font-light lg:tracking-[-0.64px]">urban</span><span class="font-bold lg:tracking-[-0.64px]">woodcraft</span>
+          </a>
+          <nav class="hidden md:flex gap-4 lg:gap-[24px] items-center text-button text-dark order-3 lg:order-none w-full lg:w-auto justify-center lg:justify-start">
+            <a href="#" class="link-hover">Menu</a>
+            <a href="#" class="link-hover">Search</a>
+            <a href="#" class="link-hover">account</a>
+            <a href="#" class="link-hover">Cart (0)</a>
+          </nav>
+          <a href="#" class="bg-dark flex items-center px-[18px] py-[12px] rounded-full">
+            <p class="text-button text-white">SALE!</p>
+          </a>
+        </div>
+        <!-- Category nav (STORAGE highlighted) -->
+        <nav class="border-dark/10 border-b border-t text-button w-full">
+          <div class="flex gap-6 lg:gap-0 h-[56px] lg:h-[72px] items-center lg:justify-between px-5 md:px-12 lg:px-[120px] overflow-x-auto whitespace-nowrap [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <a href="/uwc-website/dining/" class="text-dark/40 link-hover">dining</a>
+            <a href="#" class="text-dark/40 link-hover">living</a>
+            <a href="#" class="text-dark/40 link-hover">bedroom</a>
+            <a href="#" class="text-dark">STORAGE</a>
+            <a href="#" class="text-dark/40 link-hover">BARN DOORS</a>
+            <a href="#" class="text-dark/40 link-hover">vanities</a>
+            <a href="#" class="text-dark/40 link-hover">occassional</a>
+          </div>
+        </nav>
+        <!-- Dropdown content -->
+        <div class="flex flex-col gap-[55px] px-5 md:px-12 lg:px-[120px] py-10 lg:py-[64px] relative">
+          <button onclick="document.getElementById('mega-storage').classList.add('hidden')" class="absolute top-4 right-4 lg:right-8 z-10 size-[40px] flex items-center justify-center rounded-full bg-black/5 hover:bg-black/10 transition-colors" aria-label="Close menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="size-[16px] text-dark"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </button>
+          <p class="text-h3 text-black">Storage</p>
+          <div class="flex gap-8">
+            <div class="flex flex-col justify-between flex-1 max-w-[744px]">
+              <div class="flex gap-8">
+                <div class="flex flex-col gap-4 flex-1 min-w-[96px]">
+                  <p class="text-body-3 text-dark opacity-50">Sideboards</p>
+                  <div class="flex flex-col gap-4 text-body-3 text-dark">
+                    <a href="#" class="link-hover">Wadi</a>
+                    <a href="#" class="link-hover">Madera</a>
+                    <a href="#" class="link-hover">Hudson</a>
+                    <a href="#" class="link-hover">Osaka</a>
+                  </div>
+                  <a href="#" class="text-button text-dark mt-2">View All</a>
+                </div>
+                <div class="flex flex-col gap-4 flex-1 min-w-[96px]">
+                  <p class="text-body-3 text-dark opacity-50">Bookshelves</p>
+                  <div class="flex flex-col gap-4 text-body-3 text-dark">
+                    <a href="#" class="link-hover">Parisian</a>
+                    <a href="#" class="link-hover">Camden</a>
+                    <a href="#" class="link-hover">Brookside</a>
+                  </div>
+                  <a href="#" class="text-button text-dark mt-2">View All</a>
+                </div>
+                <div class="flex flex-col gap-4 flex-1 min-w-[96px]">
+                  <p class="text-body-3 text-dark opacity-50">Cabinets</p>
+                  <div class="flex flex-col gap-4 text-body-3 text-dark">
+                    <a href="#" class="link-hover">Metal Works</a>
+                    <a href="#" class="link-hover">Soma</a>
+                    <a href="#" class="link-hover">Burma</a>
+                  </div>
+                  <a href="#" class="text-button text-dark mt-2">View All</a>
+                </div>
+              </div>
+              <div class="flex flex-col gap-4 mt-8">
+                <p class="text-body-2 text-dark">Custom Finishes Available</p>
+                <div class="flex gap-2 items-center">
+                  <p class="text-body-2 text-dark">Archival Collection</p>
+                  <span class="bg-orange text-white text-chip px-3 py-2">Sale!</span>
+                </div>
+                <p class="text-body-2 text-dark">Personal Shopper</p>
+              </div>
+            </div>
+            <div class="hidden lg:flex flex-col gap-5 shrink-0">
+              <div class="relative size-[496px]">
+                <img alt="" class="absolute inset-0 size-full object-cover" src={imgRectangle1} loading="lazy" />
+              </div>
+              <div class="flex flex-col gap-[2px]">
+                <div class="flex gap-5 items-start text-body-2-emph text-dark">
+                  <p class="flex-1">Wadi Sideboard</p>
+                  <p class="text-right font-bold text-body-2 whitespace-nowrap">$1,145</p>
+                </div>
+                <p class="text-body-3 text-secondary">Natural Mango Wood</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mega Menu — Barn Doors -->
+    <div id="mega-barndoors" class="hidden fixed inset-0 z-50 overflow-y-auto" onmouseleave="closeMega(this.id)">
+      <div class="min-h-full bg-[#f9f6f1]">
+        <!-- Utility bar -->
+        <div class="bg-dark flex flex-wrap items-center justify-between px-5 md:px-12 lg:px-[80px] py-3 w-full text-body-3 text-white">
+          <div class="flex gap-6 items-center">
+            <p>Free shipping across US &amp; Canada</p>
+            <span class="bg-white/30 size-[4px] rounded-full shrink-0" aria-hidden></span>
+            <p>Free returns within 7 days</p>
+            <span class="bg-white/30 size-[4px] rounded-full shrink-0" aria-hidden></span>
+            <p>Book a private viewing · 1-855-738-1378</p>
+          </div>
+          <div class="hidden md:flex gap-4 text-body-3 text-white">
+            <p>EN</p>
+            <p>USD</p>
+          </div>
+        </div>
+        <!-- Logo bar -->
+        <div class="flex flex-wrap gap-4 lg:gap-0 h-auto lg:h-[120px] items-center justify-between px-5 md:px-12 lg:px-[120px] py-5 lg:py-0 w-full">
+          <a href="/uwc-website/" class="leading-none text-[44px] sm:text-[64px] lg:text-[96px] text-dark tracking-tight lg:tracking-[-3.84px] whitespace-nowrap">
+            <span class="font-light lg:tracking-[-0.64px]">urban</span><span class="font-bold lg:tracking-[-0.64px]">woodcraft</span>
+          </a>
+          <nav class="hidden md:flex gap-4 lg:gap-[24px] items-center text-button text-dark order-3 lg:order-none w-full lg:w-auto justify-center lg:justify-start">
+            <a href="#" class="link-hover">Menu</a>
+            <a href="#" class="link-hover">Search</a>
+            <a href="#" class="link-hover">account</a>
+            <a href="#" class="link-hover">Cart (0)</a>
+          </nav>
+          <a href="#" class="bg-dark flex items-center px-[18px] py-[12px] rounded-full">
+            <p class="text-button text-white">SALE!</p>
+          </a>
+        </div>
+        <!-- Category nav (BARN DOORS highlighted) -->
+        <nav class="border-dark/10 border-b border-t text-button w-full">
+          <div class="flex gap-6 lg:gap-0 h-[56px] lg:h-[72px] items-center lg:justify-between px-5 md:px-12 lg:px-[120px] overflow-x-auto whitespace-nowrap [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <a href="/uwc-website/dining/" class="text-dark/40 link-hover">dining</a>
+            <a href="#" class="text-dark/40 link-hover">living</a>
+            <a href="#" class="text-dark/40 link-hover">bedroom</a>
+            <a href="#" class="text-dark/40 link-hover">STORAGE</a>
+            <a href="#" class="text-dark">BARN DOORS</a>
+            <a href="#" class="text-dark/40 link-hover">vanities</a>
+            <a href="#" class="text-dark/40 link-hover">occassional</a>
+          </div>
+        </nav>
+        <!-- Dropdown content -->
+        <div class="flex flex-col gap-[55px] px-5 md:px-12 lg:px-[120px] py-10 lg:py-[64px] relative">
+          <button onclick="document.getElementById('mega-barndoors').classList.add('hidden')" class="absolute top-4 right-4 lg:right-8 z-10 size-[40px] flex items-center justify-center rounded-full bg-black/5 hover:bg-black/10 transition-colors" aria-label="Close menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="size-[16px] text-dark"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </button>
+          <p class="text-h3 text-black">Barn Doors</p>
+          <div class="flex gap-8">
+            <div class="flex flex-col justify-between flex-1 max-w-[744px]">
+              <div class="flex gap-8">
+                <div class="flex flex-col gap-4 flex-1 min-w-[96px]">
+                  <p class="text-body-3 text-dark opacity-50">Sliding Doors</p>
+                  <div class="flex flex-col gap-4 text-body-3 text-dark">
+                    <a href="#" class="link-hover">Grand X</a>
+                    <a href="#" class="link-hover">Parisian</a>
+                    <a href="#" class="link-hover">Hudson</a>
+                    <a href="#" class="link-hover">Rustic</a>
+                  </div>
+                  <a href="#" class="text-button text-dark mt-2">View All</a>
+                </div>
+                <div class="flex flex-col gap-4 flex-1 min-w-[96px]">
+                  <p class="text-body-3 text-dark opacity-50">Hardware</p>
+                  <div class="flex flex-col gap-4 text-body-3 text-dark">
+                    <a href="#" class="link-hover">Track Kits</a>
+                    <a href="#" class="link-hover">Handle Sets</a>
+                    <a href="#" class="link-hover">Soft Close</a>
+                  </div>
+                  <a href="#" class="text-button text-dark mt-2">View All</a>
+                </div>
+                <div class="flex flex-col gap-4 flex-1 min-w-[96px]">
+                  <p class="text-body-3 text-dark opacity-50">By Style</p>
+                  <div class="flex flex-col gap-4 text-body-3 text-dark">
+                    <a href="#" class="link-hover">Modern</a>
+                    <a href="#" class="link-hover">Rustic</a>
+                    <a href="#" class="link-hover">Farmhouse</a>
+                    <a href="#" class="link-hover">Industrial</a>
+                  </div>
+                  <a href="#" class="text-button text-dark mt-2">View All</a>
+                </div>
+              </div>
+              <div class="flex flex-col gap-4 mt-8">
+                <p class="text-body-2 text-dark">Custom Finishes Available</p>
+                <p class="text-body-2 text-dark">Installation Guide</p>
+                <p class="text-body-2 text-dark">Free Consultation</p>
+              </div>
+            </div>
+            <div class="hidden lg:flex flex-col gap-5 shrink-0">
+              <div class="relative size-[496px]">
+                <img alt="" class="absolute inset-0 size-full object-cover" src={imgSaleBarnDoors} loading="lazy" />
+              </div>
+              <div class="flex flex-col gap-[2px]">
+                <div class="flex gap-5 items-start text-body-2-emph text-dark">
+                  <p class="flex-1">Grand X Barn Door</p>
+                  <p class="text-right font-bold text-body-2 whitespace-nowrap">from $885</p>
+                </div>
+                <p class="text-body-3 text-secondary">Reclaimed Teak + Black Hardware</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mega Menu — Vanities -->
+    <div id="mega-vanities" class="hidden fixed inset-0 z-50 overflow-y-auto" onmouseleave="closeMega(this.id)">
+      <div class="min-h-full bg-[#f9f6f1]">
+        <!-- Utility bar -->
+        <div class="bg-dark flex flex-wrap items-center justify-between px-5 md:px-12 lg:px-[80px] py-3 w-full text-body-3 text-white">
+          <div class="flex gap-6 items-center">
+            <p>Free shipping across US &amp; Canada</p>
+            <span class="bg-white/30 size-[4px] rounded-full shrink-0" aria-hidden></span>
+            <p>Free returns within 7 days</p>
+            <span class="bg-white/30 size-[4px] rounded-full shrink-0" aria-hidden></span>
+            <p>Book a private viewing · 1-855-738-1378</p>
+          </div>
+          <div class="hidden md:flex gap-4 text-body-3 text-white">
+            <p>EN</p>
+            <p>USD</p>
+          </div>
+        </div>
+        <!-- Logo bar -->
+        <div class="flex flex-wrap gap-4 lg:gap-0 h-auto lg:h-[120px] items-center justify-between px-5 md:px-12 lg:px-[120px] py-5 lg:py-0 w-full">
+          <a href="/uwc-website/" class="leading-none text-[44px] sm:text-[64px] lg:text-[96px] text-dark tracking-tight lg:tracking-[-3.84px] whitespace-nowrap">
+            <span class="font-light lg:tracking-[-0.64px]">urban</span><span class="font-bold lg:tracking-[-0.64px]">woodcraft</span>
+          </a>
+          <nav class="hidden md:flex gap-4 lg:gap-[24px] items-center text-button text-dark order-3 lg:order-none w-full lg:w-auto justify-center lg:justify-start">
+            <a href="#" class="link-hover">Menu</a>
+            <a href="#" class="link-hover">Search</a>
+            <a href="#" class="link-hover">account</a>
+            <a href="#" class="link-hover">Cart (0)</a>
+          </nav>
+          <a href="#" class="bg-dark flex items-center px-[18px] py-[12px] rounded-full">
+            <p class="text-button text-white">SALE!</p>
+          </a>
+        </div>
+        <!-- Category nav (vanities highlighted) -->
+        <nav class="border-dark/10 border-b border-t text-button w-full">
+          <div class="flex gap-6 lg:gap-0 h-[56px] lg:h-[72px] items-center lg:justify-between px-5 md:px-12 lg:px-[120px] overflow-x-auto whitespace-nowrap [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <a href="/uwc-website/dining/" class="text-dark/40 link-hover">dining</a>
+            <a href="#" class="text-dark/40 link-hover">living</a>
+            <a href="#" class="text-dark/40 link-hover">bedroom</a>
+            <a href="#" class="text-dark/40 link-hover">STORAGE</a>
+            <a href="#" class="text-dark/40 link-hover">BARN DOORS</a>
+            <a href="#" class="text-dark">vanities</a>
+            <a href="#" class="text-dark/40 link-hover">occassional</a>
+          </div>
+        </nav>
+        <!-- Dropdown content -->
+        <div class="flex flex-col gap-[55px] px-5 md:px-12 lg:px-[120px] py-10 lg:py-[64px] relative">
+          <button onclick="document.getElementById('mega-vanities').classList.add('hidden')" class="absolute top-4 right-4 lg:right-8 z-10 size-[40px] flex items-center justify-center rounded-full bg-black/5 hover:bg-black/10 transition-colors" aria-label="Close menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="size-[16px] text-dark"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </button>
+          <p class="text-h3 text-black">Vanities</p>
+          <div class="flex gap-8">
+            <div class="flex flex-col justify-between flex-1 max-w-[744px]">
+              <div class="flex gap-8">
+                <div class="flex flex-col gap-4 flex-1 min-w-[96px]">
+                  <p class="text-body-3 text-dark opacity-50">Bathroom Vanities</p>
+                  <div class="flex flex-col gap-4 text-body-3 text-dark">
+                    <a href="#" class="link-hover">Vamo</a>
+                    <a href="#" class="link-hover">Soma</a>
+                    <a href="#" class="link-hover">Hudson</a>
+                    <a href="#" class="link-hover">Parisian</a>
+                  </div>
+                  <a href="#" class="text-button text-dark mt-2">View All</a>
+                </div>
+                <div class="flex flex-col gap-4 flex-1 min-w-[96px]">
+                  <p class="text-body-3 text-dark opacity-50">Mirrors</p>
+                  <div class="flex flex-col gap-4 text-body-3 text-dark">
+                    <a href="#" class="link-hover">Round</a>
+                    <a href="#" class="link-hover">Rectangular</a>
+                    <a href="#" class="link-hover">Farmhouse</a>
+                  </div>
+                  <a href="#" class="text-button text-dark mt-2">View All</a>
+                </div>
+                <div class="flex flex-col gap-4 flex-1 min-w-[96px]">
+                  <p class="text-body-3 text-dark opacity-50">Accessories</p>
+                  <div class="flex flex-col gap-4 text-body-3 text-dark">
+                    <a href="#" class="link-hover">Towel Racks</a>
+                    <a href="#" class="link-hover">Shelving</a>
+                    <a href="#" class="link-hover">Hooks</a>
+                  </div>
+                  <a href="#" class="text-button text-dark mt-2">View All</a>
+                </div>
+              </div>
+              <div class="flex flex-col gap-4 mt-8">
+                <p class="text-body-2 text-dark">Custom Finishes Available</p>
+                <div class="flex gap-2 items-center">
+                  <p class="text-body-2 text-dark">Archival Collection</p>
+                  <span class="bg-orange text-white text-chip px-3 py-2">Sale!</span>
+                </div>
+                <p class="text-body-2 text-dark">Personal Shopper</p>
+              </div>
+            </div>
+            <div class="hidden lg:flex flex-col gap-5 shrink-0">
+              <div class="relative size-[496px]">
+                <img alt="" class="absolute inset-0 size-full object-cover" src={imgRectangle4} loading="lazy" />
+              </div>
+              <div class="flex flex-col gap-[2px]">
+                <div class="flex gap-5 items-start text-body-2-emph text-dark">
+                  <p class="flex-1">Vamo Bathroom Vanity</p>
+                  <p class="text-right font-bold text-body-2 whitespace-nowrap">$2,035</p>
+                </div>
+                <p class="text-body-3 text-secondary">Rustic Grey Finish</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mega Menu — Occasional -->
+    <div id="mega-occasional" class="hidden fixed inset-0 z-50 overflow-y-auto" onmouseleave="closeMega(this.id)">
+      <div class="min-h-full bg-[#f9f6f1]">
+        <!-- Utility bar -->
+        <div class="bg-dark flex flex-wrap items-center justify-between px-5 md:px-12 lg:px-[80px] py-3 w-full text-body-3 text-white">
+          <div class="flex gap-6 items-center">
+            <p>Free shipping across US &amp; Canada</p>
+            <span class="bg-white/30 size-[4px] rounded-full shrink-0" aria-hidden></span>
+            <p>Free returns within 7 days</p>
+            <span class="bg-white/30 size-[4px] rounded-full shrink-0" aria-hidden></span>
+            <p>Book a private viewing · 1-855-738-1378</p>
+          </div>
+          <div class="hidden md:flex gap-4 text-body-3 text-white">
+            <p>EN</p>
+            <p>USD</p>
+          </div>
+        </div>
+        <!-- Logo bar -->
+        <div class="flex flex-wrap gap-4 lg:gap-0 h-auto lg:h-[120px] items-center justify-between px-5 md:px-12 lg:px-[120px] py-5 lg:py-0 w-full">
+          <a href="/uwc-website/" class="leading-none text-[44px] sm:text-[64px] lg:text-[96px] text-dark tracking-tight lg:tracking-[-3.84px] whitespace-nowrap">
+            <span class="font-light lg:tracking-[-0.64px]">urban</span><span class="font-bold lg:tracking-[-0.64px]">woodcraft</span>
+          </a>
+          <nav class="hidden md:flex gap-4 lg:gap-[24px] items-center text-button text-dark order-3 lg:order-none w-full lg:w-auto justify-center lg:justify-start">
+            <a href="#" class="link-hover">Menu</a>
+            <a href="#" class="link-hover">Search</a>
+            <a href="#" class="link-hover">account</a>
+            <a href="#" class="link-hover">Cart (0)</a>
+          </nav>
+          <a href="#" class="bg-dark flex items-center px-[18px] py-[12px] rounded-full">
+            <p class="text-button text-white">SALE!</p>
+          </a>
+        </div>
+        <!-- Category nav (occassional highlighted) -->
+        <nav class="border-dark/10 border-b border-t text-button w-full">
+          <div class="flex gap-6 lg:gap-0 h-[56px] lg:h-[72px] items-center lg:justify-between px-5 md:px-12 lg:px-[120px] overflow-x-auto whitespace-nowrap [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <a href="/uwc-website/dining/" class="text-dark/40 link-hover">dining</a>
+            <a href="#" class="text-dark/40 link-hover">living</a>
+            <a href="#" class="text-dark/40 link-hover">bedroom</a>
+            <a href="#" class="text-dark/40 link-hover">STORAGE</a>
+            <a href="#" class="text-dark/40 link-hover">BARN DOORS</a>
+            <a href="#" class="text-dark/40 link-hover">vanities</a>
+            <a href="#" class="text-dark">occassional</a>
+          </div>
+        </nav>
+        <!-- Dropdown content -->
+        <div class="flex flex-col gap-[55px] px-5 md:px-12 lg:px-[120px] py-10 lg:py-[64px] relative">
+          <button onclick="document.getElementById('mega-occasional').classList.add('hidden')" class="absolute top-4 right-4 lg:right-8 z-10 size-[40px] flex items-center justify-center rounded-full bg-black/5 hover:bg-black/10 transition-colors" aria-label="Close menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="size-[16px] text-dark"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </button>
+          <p class="text-h3 text-black">Occasional</p>
+          <div class="flex gap-8">
+            <div class="flex flex-col justify-between flex-1 max-w-[744px]">
+              <div class="flex gap-8">
+                <div class="flex flex-col gap-4 flex-1 min-w-[96px]">
+                  <p class="text-body-3 text-dark opacity-50">Nesting Tables</p>
+                  <div class="flex flex-col gap-4 text-body-3 text-dark">
+                    <a href="#" class="link-hover">2-Piece</a>
+                    <a href="#" class="link-hover">3-Piece</a>
+                    <a href="#" class="link-hover">Bauhaus</a>
+                  </div>
+                  <a href="#" class="text-button text-dark mt-2">View All</a>
+                </div>
+                <div class="flex flex-col gap-4 flex-1 min-w-[96px]">
+                  <p class="text-body-3 text-dark opacity-50">Accent Tables</p>
+                  <div class="flex flex-col gap-4 text-body-3 text-dark">
+                    <a href="#" class="link-hover">Cross Leg</a>
+                    <a href="#" class="link-hover">Soma</a>
+                    <a href="#" class="link-hover">Parisian</a>
+                  </div>
+                  <a href="#" class="text-button text-dark mt-2">View All</a>
+                </div>
+                <div class="flex flex-col gap-4 flex-1 min-w-[96px]">
+                  <p class="text-body-3 text-dark opacity-50">Shelving</p>
+                  <div class="flex flex-col gap-4 text-body-3 text-dark">
+                    <a href="#" class="link-hover">Wall Mount</a>
+                    <a href="#" class="link-hover">Freestanding</a>
+                    <a href="#" class="link-hover">Corner</a>
+                  </div>
+                  <a href="#" class="text-button text-dark mt-2">View All</a>
+                </div>
+              </div>
+              <div class="flex flex-col gap-4 mt-8">
+                <p class="text-body-2 text-dark">Custom Finishes Available</p>
+                <div class="flex gap-2 items-center">
+                  <p class="text-body-2 text-dark">Archival Collection</p>
+                  <span class="bg-orange text-white text-chip px-3 py-2">Sale!</span>
+                </div>
+                <p class="text-body-2 text-dark">Personal Shopper</p>
+              </div>
+            </div>
+            <div class="hidden lg:flex flex-col gap-5 shrink-0">
+              <div class="relative size-[496px]">
+                <img alt="" class="absolute inset-0 size-full object-cover" src={imgRectangle2} loading="lazy" />
+              </div>
+              <div class="flex flex-col gap-[2px]">
+                <div class="flex gap-5 items-start text-body-2-emph text-dark">
+                  <p class="flex-1">Villa Coffee Table</p>
+                  <p class="text-right font-bold text-body-2 whitespace-nowrap">from $1,450</p>
+                </div>
+                <p class="text-body-3 text-secondary">Natural Reclaimed Teak</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
+<script is:inline>
+function openMega(id) {
+  document.querySelectorAll('[id^="mega-"]').forEach(el => { if(el.id !== id) el.classList.add('hidden'); });
+  document.getElementById(id)?.classList.remove('hidden');
+}
+function closeMega(id) {
+  setTimeout(() => {
+    const el = document.getElementById(id);
+    if (el && !el.matches(':hover')) el.classList.add('hidden');
+  }, 300);
+}
+function switchBundle(idx) {
+  document.querySelectorAll('.bundle-row').forEach((row, i) => {
+    const isActive = i === idx;
+    row.classList.toggle('is-active', isActive);
+    row.classList.toggle('border-dark', isActive);
+    row.classList.toggle('border-black/10', !isActive);
+    row.querySelector('.bundle-title').classList.toggle('text-dark', isActive);
+    row.querySelector('.bundle-title').classList.toggle('text-secondary', !isActive);
+    const sub = row.querySelector('.bundle-sub');
+    const btn = row.querySelector('.bundle-btn');
+    if (sub) sub.classList.toggle('hidden', !isActive);
+    if (btn) btn.classList.toggle('hidden', !isActive);
+  });
+  document.querySelectorAll('.bundle-panel').forEach((panel, i) => {
+    panel.classList.toggle('hidden', i !== idx);
+  });
+}
+</script>
 </Base>
